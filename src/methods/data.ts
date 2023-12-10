@@ -3,8 +3,13 @@ import books from './data.json';
 
 const data = books.map((book) => {
   return {
-    ...book,
-    id: uuid(),
+    description: '',
+    canDeleted: false,
+    title: book.title,
+    price: book.price,
+    author: book.author,
+    id: uuid().slice(0, 8),
+    category: book.category,
     image: `/public/thumbnails/${book.image}.jpg`,
   };
 });
