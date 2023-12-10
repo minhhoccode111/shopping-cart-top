@@ -355,7 +355,7 @@
     "title": "Tô bình yên vẽ hạnh phúc",
     "author": "Kulzsc",
     "price": 68,
-    "category": "_",
+    "category": "Thường thức",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/97/bc/ae/7fe8a253cce6da248aebe6679bb9c88f.jpg",
     "image": "tobinhyenvehanhphuc"
   },
@@ -393,7 +393,7 @@
   },
   {
     "title": "Xuân yến",
-    "author": "An Ni BảoBối",
+    "author": "An Ni Bảo Bối",
     "price": 130,
     "category": "Tiểu thuyết",
     "link": "https://salt.tikicdn.com/media/catalog/product/x/u/xuanyen1biaobi--1--u3059-d20170421-t154602-754741.u3781.d20170421.t223147.512966.jpg",
@@ -410,8 +410,8 @@
   {
     "title": "Nhân tố Enzyme | Phương thức sống lành mạnh",
     "author": "Hiromi Shinya",
-    "price": "_",
-    "category": "_",
+    "price": 85,
+    "category": "Sức khỏe",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/66/fd/46/adcf0ad981ffbfecee8fd50069e4b711.jpg",
     "image": "nhantoenzymephuongthucsonglanhmanh"
   },
@@ -475,7 +475,7 @@
     "title": "How to make someone fall in love with you in 90 minutes or less",
     "author": "Nicholas Boothman",
     "price": 190,
-    "category": "_",
+    "category": "Tâm lý",
     "link": "https://m.media-amazon.com/images/I/51ZVD1dKjLL.jpg",
     "image": "howtomakesomeonefallinlovewithyouin90minutesorless"
   },
@@ -545,7 +545,7 @@
   },
   {
     "title": "Gáy người thì lạnh",
-    "author": "Nguyễn NgọcTư",
+    "author": "Nguyễn Ngọc Tư",
     "price": 55,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/n/x/nxbtre_thumb_14492017_024905.u2769.d20170319.t194656.161730.jpg",
@@ -754,7 +754,7 @@
   {
     "title": "Đời thay đổi khi chúng ta thay đổi",
     "author": "Andrew Matthews",
-    "price": "_",
+    "price": 50,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/media/catalog/product/f/u/full-img-2741328146930.jpg",
     "image": "doithaydoikhichungtathaydoi"
@@ -984,14 +984,6 @@
     "image": "chiemtinhhocnhapmon"
   },
   {
-    "title": "Người thắp sao trời- cuốn thứ 2",
-    "author": "Tự từ",
-    "price": 60,
-    "category": "Văn học",
-    "link": "https://cdn0.fahasa.com/media/catalog/product/n/g/nguoi-thap-sao-troi.jpg",
-    "image": "nguoithapsaotroi"
-  },
-  {
     "title": "Giữa trời và đất là tình yêu",
     "author": "Vi Lam",
     "price": 78,
@@ -1209,9 +1201,9 @@
   },
   {
     "title": "Ngôn ngữ cơ thể",
-    "author": "_",
-    "price": "_",
-    "category": "_",
+    "author": "Allan, Barbara Pease",
+    "price": 40,
+    "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/ts/product/6f/e9/0c/3008cc78076b1ac7240c55bc014580d7.jpg",
     "image": "ngonngucothe"
   },
