@@ -1,8 +1,9 @@
 import { Outlet, NavLink, Link } from 'react-router-dom';
+
 const Root: React.FC = () => {
   return (
     <>
-      <header className="flex gap-4 items-center bg-red-300">
+      <header className="flex gap-4 items-center bg-red-300 fixed top-0 left-0 right-0 z-10">
         <h1 className="text-3xl">
           <Link to={'/'}>VQS</Link>
         </h1>
@@ -16,24 +17,12 @@ const Root: React.FC = () => {
           <NavLink className={({ isActive, isPending }) => (isActive ? 'underline' : isPending ? 'pending' : '')} to={'/shop'}>
             Shop
           </NavLink>
-          <NavLink className={({ isActive, isPending }) => (isActive ? 'underline' : isPending ? 'pending' : '')} to={'/login'}>
-            Login
-          </NavLink>
-          <NavLink className={({ isActive, isPending }) => (isActive ? 'underline' : isPending ? 'pending' : '')} to={'/about'}>
-            About
-          </NavLink>
-          <NavLink className={({ isActive, isPending }) => (isActive ? 'underline' : isPending ? 'pending' : '')} to={'/cart'}>
-            Cart
-          </NavLink>
-          <NavLink className={({ isActive, isPending }) => (isActive ? 'underline' : isPending ? 'pending' : '')} to={'/add'}>
-            Add
-          </NavLink>
         </nav>
       </header>
-      <main className="h-4/5">
+      <main className="h-screen my-10">
         <Outlet />
       </main>
-      <footer className="text-center bg-slate-500">
+      <footer className="text-center bg-slate-500 fixed bottom-0 left-0 right-0 z-10">
         <p>Copyright 2022</p>
       </footer>
     </>

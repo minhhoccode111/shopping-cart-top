@@ -1,14 +1,9 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from './routes/error-page';
-import Index from './routes/index';
 import Root from './routes/root';
-import Shop from './routes/shop';
-import About from './routes/about';
-import Add from './routes/add';
-import Cart from './routes/cart';
-import Login from './routes/login';
-import Book from './routes/book';
-import ViewImage from './routes/view-image';
+import Index from './routes';
+import Shop, { loader as shopLoader } from './routes/shop';
+import Book, { loader as bookLoader } from './routes/book';
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -24,37 +19,15 @@ const Router = () => {
         {
           path: 'shop',
           children: [
+            { index: true, element: <Shop />, loader: shopLoader },
             {
-              index: true,
-              element: <Shop />,
-            },
-            {
-              path: 'shop/:bookId',
+              path: 'book/:bookId',
               element: <Book />,
-            },
-            {
-              path: 'shop/:bookId/view',
-              element: <ViewImage />,
+              loader: bookLoader,
             },
           ],
         },
-        {
-          path: 'about',
-          element: <About />,
-        },
-        {
-          path: 'cart',
-          element: <Cart />,
-        },
-        {
-          path: 'add',
-          element: <Add />,
-        },
       ],
-    },
-    {
-      path: 'login',
-      element: <Login />,
     },
   ]);
   return <RouterProvider router={router} />;

@@ -17,7 +17,7 @@
     "@types/uuid": "^9.0.7",
     "framer-motion": "^10.16.16",
     "jsdom": "^23.0.1",
-    "localforage": "^1.10.0",
+    "localforage": "v1.10.0",
     "match-sorter": "^6.3.1",
     "prettier": "^3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.9",

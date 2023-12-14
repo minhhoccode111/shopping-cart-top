@@ -1,57 +1,43 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useRouteError, useNavigate } from 'react-router-dom';
 
 const ErrorPage: React.FC = () => {
+  const error = useRouteError();
+  console.error(error);
+  const navigate = useNavigate();
   return (
     <>
-      <header className="flex gap-4 items-center bg-red-300">
+      <header className="flex gap-4 items-center bg-red-300 fixed top-0 left-0 right-0">
         <h1 className="text-3xl">
           <Link to={'/'}>VQS</Link>
         </h1>
         <div className="uppercase">
           <button type="button">vi</button>
         </div>
-        <nav className="">
-          <ul className="flex gap-4 items-center">
-            <li>
-              <NavLink className={({ isActive, isPending }) => (isActive ? 'underline' : isPending ? 'pending' : '')} to={'/'}>
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink className={({ isActive, isPending }) => (isActive ? 'underline' : isPending ? 'pending' : '')} to={'/shop'}>
-                Shop
-              </NavLink>
-            </li>
-            <li>
-              <NavLink className={({ isActive, isPending }) => (isActive ? 'underline' : isPending ? 'pending' : '')} to={'/about'}>
-                About
-              </NavLink>
-            </li>
-            <li>
-              <NavLink className={({ isActive, isPending }) => (isActive ? 'underline' : isPending ? 'pending' : '')} to={'/cart'}>
-                Cart
-              </NavLink>
-            </li>
-            <li>
-              <NavLink className={({ isActive, isPending }) => (isActive ? 'underline' : isPending ? 'pending' : '')} to={'/blog'}>
-                Blog
-              </NavLink>
-            </li>
-            <li>
-              <NavLink className={({ isActive, isPending }) => (isActive ? 'underline' : isPending ? 'pending' : '')} to={'/add'}>
-                Add
-              </NavLink>
-            </li>
-          </ul>
+        <nav className="flex items-center gap-4">
+          <NavLink className={({ isActive, isPending }) => (isActive ? 'underline' : isPending ? 'pending' : '')} to={'/'}>
+            Home
+          </NavLink>
+          <NavLink className={({ isActive, isPending }) => (isActive ? 'underline' : isPending ? 'pending' : '')} to={'/shop'}>
+            Shop
+          </NavLink>
         </nav>
       </header>
       <main>
-        <h1>Oops! Something went wrong</h1>
-        <i>404 Page Not Found</i>
-        <p>Please navigate back </p>
+        <div id="error-page" className="flex flex-col gap-4 p-4 text-4xl h-screen items-center justify-center">
+          <h1 className="">Oops!</h1>
+          <p className="">Sorry, an unexpected error has occurred.</p>
+          <p className="">
+            <i>{error.statusText || error.message}</i>
+          </p>
+          <p>
+            <button className="underline" type="button" onClick={() => navigate(-1)}>
+              Go back
+            </button>
+          </p>
+        </div>
       </main>
-      <footer className="text-center bg-slate-500">
+      <footer className="text-center bg-slate-500 fixed bottom-0 left-0 right-0">
         <p>Copyright 2022</p>
       </footer>
     </>
