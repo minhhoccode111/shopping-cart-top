@@ -7,7 +7,7 @@ const ErrorPage: React.FC = () => {
   const navigate = useNavigate();
   return (
     <>
-      <header className="flex gap-4 items-center bg-red-300 fixed top-0 left-0 right-0">
+      <header className="flex gap-4 items-center bg-red-300">
         <h1 className="text-3xl">
           <Link to={'/'}>VQS</Link>
         </h1>
@@ -24,7 +24,7 @@ const ErrorPage: React.FC = () => {
         </nav>
       </header>
       <main>
-        <div id="error-page" className="flex flex-col gap-4 p-4 text-4xl h-screen items-center justify-center">
+        <div id="error-page" className="flex flex-col gap-4 p-4 text-4xl items-center justify-center">
           <h1 className="">Oops!</h1>
           <p className="">Sorry, an unexpected error has occurred.</p>
           <p className="">
@@ -37,7 +37,7 @@ const ErrorPage: React.FC = () => {
           </p>
         </div>
       </main>
-      <footer className="text-center bg-slate-500 fixed bottom-0 left-0 right-0">
+      <footer className="text-center bg-slate-500">
         <p>Copyright 2022</p>
       </footer>
     </>

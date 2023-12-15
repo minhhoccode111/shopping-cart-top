@@ -4,14 +4,15 @@ import books from './data.json';
 
 const data = books.map((book) => {
   return {
-    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius error eum, architecto similique accusamus eligendi, molestias ab mollitia, reprehenderit voluptatibus perferendis culpa ex repellat obcaecati totam consequatur dolorum numquam aspernatur? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci animi consectetur alias mollitia corporis odio nihil tempore, velit repudiandae commodi eligendi explicabo fugit deleniti minima quo iste, dicta repellendus id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, vitae quia quis porro necessitatibus nostrum, ducimus doloribus culpa labore, omnis illum quasi. Voluptatibus reiciendis laboriosam incidunt quo hic numquam totam!`,
-    canDeleted: false,
+    description: ``,
     title: book.title,
     price: book.price,
     author: book.author,
     category: book.category,
     image: `/public/thumbnails/${book.image}.jpg`,
+    canDeleted: false,
     id: uuid().slice(0, 8), // unique id
+    inCart: book.title === 'Sự an ủi của triết học' || book.title === 'Chủ nghĩa khắc kỷ' ? true : false,
     sale: Math.floor(Math.random() * 25) + 5, // a random sale % between 5% and 30% to make user feel good but don't actually on sale
   };
 });
@@ -41,4 +42,13 @@ export const getCategory = async (category) => {
     return { ...total, [category]: [...count, current] };
   }, {});
   return categories[category];
+};
+
+export const updateBook = async (id, updates) => {
+  const books = await getBooks();
+  const book = books.find((book) => book.id === id);
+  if (!book) throw new Error('Book does not exist');
+  Object.assign(book, updates);
+  set(books);
+  return book;
 };

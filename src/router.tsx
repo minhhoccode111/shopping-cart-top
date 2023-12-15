@@ -4,7 +4,7 @@ import Root from './routes/root';
 import Index from './routes';
 import Shop, { loader as shopLoader } from './routes/shop';
 import Book, { loader as bookLoader, action as bookAction } from './routes/book';
-import Cart from './routes/cart';
+import Cart, { loader as cartLoader } from './routes/cart';
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -33,6 +33,7 @@ const Router = () => {
           path: 'cart',
           element: <Cart />,
           errorElement: <ErrorPage />,
+          loader: cartLoader,
         },
       ],
     },

@@ -1,9 +1,11 @@
-import { Outlet, NavLink, Link } from 'react-router-dom';
+import { Outlet, NavLink, Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Root: React.FC = () => {
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
   return (
     <>
-      <header className="flex gap-4 items-center bg-red-300 fixed top-0 left-0 right-0 z-10">
+      <header className="flex gap-4 items-center bg-red-300">
         <h1 className="text-3xl">
           <Link to={'/'}>VQS</Link>
         </h1>
@@ -14,18 +16,25 @@ const Root: React.FC = () => {
           <NavLink className={({ isActive, isPending }) => (isActive ? 'underline' : isPending ? 'pending' : '')} to={'/'}>
             Home
           </NavLink>
-          <NavLink className={({ isActive, isPending }) => (isActive ? 'underline' : isPending ? 'pending' : '')} to={'/shop'}>
+          <NavLink className={({ isActive, isPending }) => (isActive ? 'underline' : isPending ? 'pending' : '')} to={'shop'}>
             Shop
           </NavLink>
-          <NavLink className={({ isActive, isPending }) => (isActive ? 'underline' : isPending ? 'pending' : '')} to={'/cart/buy'}>
+          <NavLink className={({ isActive, isPending }) => (isActive ? 'underline' : isPending ? 'pending' : '')} to={'cart'}>
             Cart
           </NavLink>
         </nav>
       </header>
-      <main className="h-screen my-10">
+      <aside className="">
+        {pathname !== '/' && (
+          <button className="underline" onClick={() => navigate(-1)}>
+            Go back
+          </button>
+        )}
+      </aside>
+      <main className="flex-1">
         <Outlet />
       </main>
-      <footer className="text-center bg-slate-500 fixed bottom-0 left-0 right-0 z-10">
+      <footer className="text-center bg-slate-500">
         <p>Copyright 2022</p>
       </footer>
     </>

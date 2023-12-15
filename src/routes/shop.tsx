@@ -1,23 +1,20 @@
-import { Link, useLoaderData, useNavigate } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { getBooks } from '../methods/books';
+import { getCarts } from '../methods/carts';
 
 export const loader = async () => {
   const books = await getBooks();
+  // init carts
+  await getCarts();
   return { books };
 };
 
 const Shop: React.FC = () => {
-  const navigate = useNavigate();
   const { books } = useLoaderData();
-  console.log(books);
   return (
     <>
       <h1>This is in Shop</h1>
-      <div className="">
-        <button className="underline" type="button" onClick={() => navigate(-1)}>
-          Go back
-        </button>
-      </div>
+
       <div className="grid grid-cols-autoFit200 gap-4 p-4">
         {books.map((book) => (
           <Link className="border p-4 block hover:sepia" key={book.id} to={`book/${book.id}`}>
@@ -26,6 +23,7 @@ const Shop: React.FC = () => {
             <p>{book.price}</p>
             <p>{book.category}</p>
             <p>{book.id}</p>
+            <p className="text-green-700">{book.inCart ? 'Added' : ''}</p>
           </Link>
         ))}
       </div>
