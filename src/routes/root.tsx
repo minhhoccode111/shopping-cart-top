@@ -17,6 +17,9 @@ const Root: React.FC = () => {
           <NavLink className={({ isActive, isPending }) => (isActive ? 'underline' : isPending ? 'pending' : '')} to={'/shop'}>
             Shop
           </NavLink>
+          <NavLink className={({ isActive, isPending }) => (isActive ? 'underline' : isPending ? 'pending' : '')} to={'/cart/buy'}>
+            Cart
+          </NavLink>
         </nav>
       </header>
       <main className="h-screen my-10">

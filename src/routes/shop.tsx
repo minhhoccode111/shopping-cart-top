@@ -1,7 +1,6 @@
 import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 import { getBooks } from '../methods/books';
 
-// add loader to prepare data
 export const loader = async () => {
   const books = await getBooks();
   return { books };
