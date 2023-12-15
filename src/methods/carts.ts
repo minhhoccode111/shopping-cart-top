@@ -19,3 +19,43 @@ export const getCarts = async () => {
     return data;
   } else return JSON.parse(carts);
 };
+
+export const getCart = async (id) => {
+  if (!id) throw new Error('Cart does not exist');
+  const carts = await getCarts();
+  const cart = carts.find((cart) => cart.id === id);
+  return cart;
+};
+
+export const addCart = async (book) => {
+  if (!book) throw new Error('Book does not exist');
+  const carts = await getCarts();
+  const cart = {
+    id: book.id,
+    buyQuantity: 1,
+    inputBuyQuantity: 0,
+    borrowQuantity: book.price,
+    inputBorrowQuantity: 0,
+  };
+  carts.push(cart);
+  set(carts);
+  return cart;
+};
+
+export const deleteCart = async (id) => {
+  const carts = await getCarts();
+  const index = carts.findIndex((cart) => cart.id === id);
+  if (!index) throw new Error('That cart does not exist');
+  carts.splice(index, 1);
+  set(carts);
+  return carts;
+};
+
+export const updateCart = async (id, updates) => {
+  const carts = await getCarts();
+  const cart = carts.find((cart) => cart.id === id);
+  if (!cart) throw new Error('Cart does not exist');
+  Object.assign(cart, updates);
+  set(carts);
+  return cart;
+};

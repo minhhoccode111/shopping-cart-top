@@ -13,6 +13,11 @@ export const loader = async ({ params: { bookId } }) => {
   return { book };
 };
 
+export const action = async () => {
+  console.log('action in book has been called');
+  return {};
+};
+
 const Book: React.FC = () => {
   const { book } = useLoaderData();
   const navigate = useNavigate();

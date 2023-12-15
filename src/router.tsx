@@ -3,10 +3,8 @@ import ErrorPage from './routes/error-page';
 import Root from './routes/root';
 import Index from './routes';
 import Shop, { loader as shopLoader } from './routes/shop';
-import Book, { loader as bookLoader } from './routes/book';
-import CartBorrow from './routes/cart-borrow';
-import CartBuy from './routes/cart-buy';
-import Cart from './routes/cart-default';
+import Book, { loader as bookLoader, action as bookAction } from './routes/book';
+import Cart from './routes/cart';
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -27,22 +25,14 @@ const Router = () => {
               path: 'book/:bookId',
               element: <Book />,
               loader: bookLoader,
+              action: bookAction,
             },
           ],
         },
         {
           path: 'cart',
           element: <Cart />,
-          children: [
-            {
-              path: 'buy',
-              element: <CartBuy />,
-            },
-            {
-              path: 'borrow',
-              element: <CartBorrow />,
-            },
-          ],
+          errorElement: <ErrorPage />,
         },
       ],
     },
