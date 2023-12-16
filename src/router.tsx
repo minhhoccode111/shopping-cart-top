@@ -5,6 +5,7 @@ import Index from './routes';
 import Shop, { loader as shopLoader } from './routes/shop';
 import Book, { loader as bookLoader, action as bookAction } from './routes/book';
 import Cart, { loader as cartLoader } from './routes/cart';
+import View, { loader as viewLoader } from './routes/view-image';
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -26,6 +27,11 @@ const Router = () => {
               element: <Book />,
               loader: bookLoader,
               action: bookAction,
+            },
+            {
+              path: 'book/:bookId/view',
+              element: <View />,
+              loader: viewLoader,
             },
           ],
         },

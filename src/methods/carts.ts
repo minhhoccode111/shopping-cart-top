@@ -1,23 +1,13 @@
-import { getBooks, getBook, updateBook } from './books';
-
-const data = [];
+import { updateBook } from './books';
+import { carts as defaultCarts } from './books';
 
 const set = async (data) => localStorage.setItem('vaiquyensach-carts', JSON.stringify(data));
 
 export const getCarts = async () => {
   const carts = localStorage.getItem('vaiquyensach-carts');
   if (carts === null) {
-    const books = await getBooks();
-    for (const book of books) {
-      if (book.title === 'Sự an ủi của triết học' || book.title === 'Chủ nghĩa khắc kỷ') {
-        // init state of cart data
-        // buyQuantity is book left in our store that user can buy
-        // borrowQuantity is the maximum day user can borrow the book (we will suggest user to buy the book if they try to borrow the book beyond the cost of the book itself)
-        data.push({ ...book, buyQuantity: 1, inputBuyQuantity: 0, borrowQuantity: book.price, inputBorrowQuantity: 0 });
-      }
-    }
-    set(data);
-    return data;
+    set(defaultCarts);
+    return defaultCarts;
   } else {
     return JSON.parse(carts);
   }

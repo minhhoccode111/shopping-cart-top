@@ -1,9 +1,26 @@
 import { v4 as uuid } from 'uuid';
-// import localforage from 'localforage';
 import books from './data.json';
+import { addCart } from './carts';
+
+export const carts: {
+  inCart: boolean;
+  buyQuantity: number;
+  inputBuyQuantity: number;
+  inputBorrowQuantity: number;
+  borrowQuantity: number;
+  description: string;
+  title: string;
+  price: number;
+  author: string;
+  category: string;
+  image: string;
+  canDeleted: boolean;
+  id: string;
+  sale: number;
+}[] = [];
 
 const data = books.map((book) => {
-  return {
+  const preparedBook = {
     description: ``,
     title: book.title,
     price: book.price,
@@ -12,9 +29,22 @@ const data = books.map((book) => {
     image: `/public/thumbnails/${book.image}.jpg`,
     canDeleted: false,
     id: uuid().slice(0, 8), // unique id
-    inCart: book.title === 'Sự an ủi của triết học' || book.title === 'Chủ nghĩa khắc kỷ' ? true : false,
+    inCart: false,
     sale: Math.floor(Math.random() * 25) + 5, // a random sale % between 5% and 30% to make user feel good but don't actually on sale
   };
+  // default data
+  if (book.title === 'Chủ nghĩa khắc kỷ' || book.title === 'Sự an ủi của triết học') {
+    preparedBook.inCart = true;
+    carts.push({
+      ...preparedBook,
+      inCart: true,
+      buyQuantity: 1,
+      inputBuyQuantity: 0,
+      inputBorrowQuantity: 0,
+      borrowQuantity: book.price,
+    });
+  }
+  return preparedBook;
 });
 
 const set = (data) => localStorage.setItem('vaiquyensach-books', JSON.stringify(data));
@@ -22,6 +52,11 @@ const set = (data) => localStorage.setItem('vaiquyensach-books', JSON.stringify(
 export const getBooks = async () => {
   const books = localStorage.getItem('vaiquyensach-books');
   if (books === null) {
+    data.forEach(async (book) => {
+      if (book.title === 'Chủ nghĩa khắc kỷ' || book.title === 'Sự an ủi của triết học') {
+        await addCart(book);
+      }
+    });
     set(data);
     return data;
   }

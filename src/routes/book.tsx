@@ -35,11 +35,11 @@ const Book: React.FC = () => {
 
       <div className="flex gap-4">
         <div className="flex-1">
-          <Link to={'view'} className="max-w-[500px]">
-            <img src={book.image} alt="Book image" className="w-full" />
+          <Link to={'view'} className="max-w-[400px] block mx-auto">
+            <img src={book.image} alt="Book image" className="w-full block" />
           </Link>
         </div>
-        <div className="max-w-[300px] border p-4">
+        <div className="w-96 border p-4">
           <p className="">Title: {book.title}</p>
           <p className="">Author: {book.author}</p>
           <p className="">Price: {book.price}</p>

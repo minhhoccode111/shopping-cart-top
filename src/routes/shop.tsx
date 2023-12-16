@@ -1,11 +1,8 @@
 import { Link, useLoaderData } from 'react-router-dom';
 import { getBooks } from '../methods/books';
-import { getCarts } from '../methods/carts';
 
 export const loader = async () => {
   const books = await getBooks();
-  // init carts
-  await getCarts();
   return { books };
 };
 
