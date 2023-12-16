@@ -41,8 +41,10 @@ export const addCart = async (book) => {
 export const deleteCart = async (id) => {
   const carts = await getCarts();
   const index = carts.findIndex((cart) => cart.id === id);
-  console.log('before throw');
-  if (!index) throw new Error('That cart does not exist');
+  if (!index) {
+    console.log('before throw');
+    throw new Error('That cart does not exist');
+  }
   const [cart] = carts.splice(index, 1);
   await updateBook(cart.id, { inCart: false });
   await set(carts);
@@ -52,7 +54,10 @@ export const deleteCart = async (id) => {
 export async function updateCart(id, updates) {
   const carts = await getCarts();
   const cart = carts.find((cart) => cart.id === id);
-  if (!cart) throw new Error('Cart does not exist');
+  if (!cart) {
+    console.log('before throw cart');
+    throw new Error('Cart does not exist');
+  }
   Object.assign(cart, updates);
   await set(carts);
   return cart;
@@ -65,4 +70,16 @@ export const clearCarts = async () => {
   }
   await set([]);
   return null;
+};
+
+export const sumCarts = async () => {
+  const carts = await getCarts();
+  const total = carts.reduce((total, current) => {
+    if (current.isBuying) {
+      return total + current.price * Number(current.inputBuyQuantity);
+    } else {
+      return total + 1 * Number(current.inputBorrowQuantity);
+    }
+  }, 0);
+  return total;
 };

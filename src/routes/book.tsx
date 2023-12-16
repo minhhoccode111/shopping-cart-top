@@ -35,7 +35,7 @@ const Book: React.FC = () => {
 
       <div className="flex gap-4">
         <div className="flex-1">
-          <Link to={'view'} className="max-w-[400px] block mx-auto">
+          <Link to={'/cart'} className="max-w-[400px] block mx-auto">
             <img src={book.image} alt="Book image" className="w-full block" />
           </Link>
         </div>
