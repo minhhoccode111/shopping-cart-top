@@ -26,7 +26,7 @@ const data = books.map((book) => {
     price: book.price,
     author: book.author,
     category: book.category,
-    image: `/public/thumbnails/${book.image}.jpg`,
+    image: `/thumbnails/${book.image}.jpg`,
     canDeleted: false,
     id: uuid().slice(0, 8), // unique id
     inCart: false,

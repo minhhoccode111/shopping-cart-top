@@ -6,6 +6,7 @@ import Shop, { loader as shopLoader } from './routes/shop';
 import Book, { loader as bookLoader, action as bookAction } from './routes/book';
 import Cart, { loader as cartLoader, action as cartAction } from './routes/cart';
 import View, { loader as viewLoader } from './routes/view-image';
+import Checkout, { action as checkoutAction } from './routes/checkout';
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -41,6 +42,11 @@ const Router = () => {
           errorElement: <ErrorPage />,
           loader: cartLoader,
           action: cartAction,
+        },
+        {
+          path: 'cart/checkout',
+          element: <Checkout />,
+          action: checkoutAction,
         },
       ],
     },

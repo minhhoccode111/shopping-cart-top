@@ -1,4 +1,5 @@
-import { useLoaderData, Link, useFetcher } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useLoaderData, Link, Form, useFetcher } from 'react-router-dom';
 import { getCarts, deleteCart, getCart, updateCart, sumCarts } from '../methods/carts';
 
 export const loader = async () => {
@@ -117,6 +118,12 @@ const CartForm = ({ cart }) => {
 
 const Cart = () => {
   const { carts, sum } = useLoaderData();
+  const [warnEmptyCart, setWarnEmptyCart] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setWarnEmptyCart(false);
+    }, 5000);
+  }, [warnEmptyCart]);
   return (
     <section className="">
       <h1 className="text-xs">This is in Cart you can choose to either buy or borrow the book with the quantity you want</h1>
@@ -146,9 +153,30 @@ const Cart = () => {
       </div>
 
       {carts.length !== 0 && (
-        <h2 className="text-right p-4">
-          Subtotal: {sum} 000<span className="underline">đ</span>
-        </h2>
+        <div className="">
+          <h2 className="text-right p-4">
+            Subtotal: {sum} 000<span className="underline">đ</span>
+          </h2>
+          <div className="">
+            <Form
+              className=""
+              method="post"
+              action="checkout"
+              onSubmit={(e) => {
+                if (sum === 0) {
+                  console.log(`Can't checkout empty cart`);
+                  setWarnEmptyCart(true);
+                  e.preventDefault();
+                }
+              }}
+            >
+              <button name="sum" value={sum} className="uppercase py-4 px-8 border-2" type="submit">
+                Checkout
+              </button>
+              {warnEmptyCart ? <p className="text-red-500 font-bold">Nothing to checkout</p> : null}
+            </Form>
+          </div>
+        </div>
       )}
     </section>
   );
