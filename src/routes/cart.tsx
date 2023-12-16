@@ -1,18 +1,32 @@
 import { useLoaderData, Link, useSubmit, Form, useFetcher } from 'react-router-dom';
-import { getCarts, updateCart, sumCarts } from '../methods/carts';
+import { getCarts, getCart, updateCart, sumCarts } from '../methods/carts';
 
 export const loader = async () => {
   const carts = await getCarts();
   const sum = await sumCarts();
-  console.log(carts);
   return { carts, sum };
 };
 
 export const action = async ({ request }) => {
-  const data = await request.formData();
-  const obj = Object.fromEntries(data);
-  obj.isBuying = obj.isBuying === 'true';
-  await updateCart(obj.id, obj);
+  const formData = await request.formData();
+  const data = Object.fromEntries(formData);
+  const id = data.id;
+  console.log(data);
+  if (data.action === 'toggle') {
+    await updateCart(id, { isBuying: data.isBuying === 'true' });
+    return null;
+  }
+  const cart = await getCart(id);
+  const value = Number(data.value);
+  if (data.isBuying === 'true') {
+    const buyQuantity = cart.inputBuyQuantity + value;
+    if (buyQuantity < 0) alert('Please use positive quantity!');
+    else await updateCart(id, { inputBuyQuantity: buyQuantity });
+    return null;
+  }
+  const borrowQuantity = cart.inputBorrowQuantity + value;
+  if (borrowQuantity < 0) alert('Please use positive quantity!');
+  else await updateCart(id, { inputBorrowQuantity: borrowQuantity });
   return null;
 };
 
@@ -52,30 +66,45 @@ const CartForm = ({ cart }) => {
         <p className="">{cart.author}</p>
         {jsxPrice}
       </div>
-      {/* <div className="flex items-center gap-4 justify-between relative"> */}
       <fetcher.Form method="post" className="absolute z-10 top-0 right-0">
-        <input type="text" hidden aria-hidden readOnly placeholder="This input is used for transfer data" name="id" value={cart.id} />
+        <input type="text" hidden aria-hidden readOnly placeholder="read cart id" name="id" value={cart.id} />
+        <input type="text" hidden aria-hidden readOnly placeholder="read cart action" name="action" value={'toggle'} />
         <button name="isBuying" value={cart.isBuying ? 'false' : 'true'} className={'px-4 py-2 underline'} type="submit">
           {cart.isBuying ? 'Buy' : 'Borrow'}
         </button>
       </fetcher.Form>
       <fetcher.Form method="post" className="">
-        <input type="text" hidden aria-hidden readOnly placeholder="This input is used for transfer data" name="id" value={cart.id} />
-        <button name="decrease" value={'true'} className="px-4 py-2 rounded-lg border-2 font-bold text-red-400 border-red-400">
+        <input type="text" hidden aria-hidden readOnly placeholder="read card id" name="id" value={cart.id} />
+        <input type="text" hidden aria-hidden readOnly placeholder="read card action" name="action" value="change" />
+        <input type="text" hidden aria-hidden readOnly placeholder="read card isBuying" name="isBuying" value={cart.isBuying ? 'true' : 'false'} />
+        <button name={'value'} value={-1} className="px-4 py-2 rounded-lg border-2 font-bold text-red-800 border-red-800" type="submit">
           -
         </button>
-        <button className="px-4 py-2 rounded-lg border-2 font-bold text-green-400 border-green-400">+</button>
-        <input
-          type="number"
-          className="p-2 w-12 rounded-md"
-          min={0}
-          max={cart.isBuying ? cart.buyQuantity : cart.borrowQuantity}
-          readOnly={cart.isBuying ? true : false}
-          defaultValue={cart.isBuying ? cart.inputBuyQuantity : cart.inputBorrowQuantity}
-        />
-        <span className="text-xs text-gray-50">{cart.isBuying ? 'book(s)' : 'day(s)'}*</span>
       </fetcher.Form>
-      {/* </div> */}
+      <fetcher.Form method="post" className="">
+        <input type="text" hidden aria-hidden readOnly placeholder="read card id" name="id" value={cart.id} />
+        <input type="text" hidden aria-hidden readOnly placeholder="read card action" name="action" value="change" />
+        <input type="text" hidden aria-hidden readOnly placeholder="read card isBuying" name="isBuying" value={cart.isBuying ? 'true' : 'false'} />
+        <button name={'value'} value={1} className="px-4 py-2 rounded-lg border-2 font-bold text-green-800 border-green-800" type="submit">
+          +
+        </button>
+      </fetcher.Form>
+      {/* <input
+        required
+        type="number"
+        className="p-2 w-8 rounded-md bg-transparent"
+        min={0}
+        max={cart.isBuying ? cart.buyQuantity : cart.borrowQuantity}
+        readOnly={cart.isBuying ? true : false}
+        value={cart.isBuying ? cart.inputBuyQuantity : cart.inputBorrowQuantity}
+      />
+      <span className="text-xs text-gray-50">{cart.isBuying ? 'book(s)' : 'day(s)'}</span> */}
+      <p className="">
+        {cart.isBuying
+          ? `You buy this book. Quantity: ${cart.inputBuyQuantity}. Total: ${cart.inputBuyQuantity * cart.price} 000`
+          : `You borrow this book. Quantity: ${cart.inputBorrowQuantity} day(s). Total: ${cart.inputBorrowQuantity} 000`}
+        <span className="underline">đ</span>
+      </p>
     </>
   );
 };
@@ -100,7 +129,9 @@ const Cart = () => {
           </div>
         ))}
       </div>
-      <h2 className="text-right p-4">Subtotal: {sum}</h2>
+      <h2 className="text-right p-4">
+        Subtotal: {sum} 000<span className="underline">đ</span>{' '}
+      </h2>
     </section>
   );
 };

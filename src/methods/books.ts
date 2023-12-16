@@ -4,7 +4,6 @@ import { addCart } from './carts';
 
 export const carts: {
   inCart: boolean;
-  buyQuantity: number;
   inputBuyQuantity: number;
   inputBorrowQuantity: number;
   borrowQuantity: number;
@@ -40,7 +39,6 @@ const data = books.map((book) => {
       ...preparedBook,
       inCart: true,
       isBuying: true,
-      buyQuantity: 1,
       inputBuyQuantity: 0,
       inputBorrowQuantity: 0,
       borrowQuantity: book.price,
