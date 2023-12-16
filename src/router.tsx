@@ -4,7 +4,7 @@ import Root from './routes/root';
 import Index from './routes';
 import Shop, { loader as shopLoader } from './routes/shop';
 import Book, { loader as bookLoader, action as bookAction } from './routes/book';
-import Cart, { loader as cartLoader } from './routes/cart';
+import Cart, { loader as cartLoader, action as cartAction } from './routes/cart';
 import View, { loader as viewLoader } from './routes/view-image';
 
 const Router = () => {
@@ -40,6 +40,7 @@ const Router = () => {
           element: <Cart />,
           errorElement: <ErrorPage />,
           loader: cartLoader,
+          action: cartAction,
         },
       ],
     },

@@ -17,6 +17,7 @@ export const carts: {
   canDeleted: boolean;
   id: string;
   sale: number;
+  isBuying: boolean;
 }[] = [];
 
 const data = books.map((book) => {
@@ -38,6 +39,7 @@ const data = books.map((book) => {
     carts.push({
       ...preparedBook,
       inCart: true,
+      isBuying: true,
       buyQuantity: 1,
       inputBuyQuantity: 0,
       inputBorrowQuantity: 0,
@@ -52,11 +54,6 @@ const set = (data) => localStorage.setItem('vaiquyensach-books', JSON.stringify(
 export const getBooks = async () => {
   const books = localStorage.getItem('vaiquyensach-books');
   if (books === null) {
-    data.forEach(async (book) => {
-      if (book.title === 'Chủ nghĩa khắc kỷ' || book.title === 'Sự an ủi của triết học') {
-        await addCart(book);
-      }
-    });
     set(data);
     return data;
   }

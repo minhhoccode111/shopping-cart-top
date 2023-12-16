@@ -16,7 +16,7 @@ const Index: React.FC = () => {
         console.log(error);
       }
     };
-    getQuote();
+    // getQuote(); // TODO turn on back when finishing develop
   }, [flag]);
   return (
     <>

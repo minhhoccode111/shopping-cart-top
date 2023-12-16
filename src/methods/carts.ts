@@ -30,6 +30,7 @@ export const addCart = async (book) => {
     inputBuyQuantity: 0,
     borrowQuantity: book.price,
     inputBorrowQuantity: 0,
+    isBuying: true,
   };
   await updateBook(cart.id, { inCart: true });
   carts.push(cart);
