@@ -12,7 +12,6 @@ export const action = async ({ request }) => {
   const data = await request.formData();
   const obj = Object.fromEntries(data);
   obj.isBuying = obj.isBuying === 'true';
-  console.log(obj);
   await updateCart(obj.id, obj);
   return null;
 };

@@ -1,9 +1,8 @@
-import { useLoaderData, Link, Form, redirect } from 'react-router-dom';
+import { useLoaderData, Link, Form } from 'react-router-dom';
 import { getBooks, getBook } from '../methods/books';
 import { addCart, deleteCart } from '../methods/carts';
 
 export const loader = async ({ params: { bookId } }) => {
-  console.log('loader in book has been called');
   const books = await getBooks();
   const book = books.find((book) => book.id === bookId);
   if (!book) {
@@ -15,8 +14,6 @@ export const loader = async ({ params: { bookId } }) => {
 };
 
 export const action = async ({ params }) => {
-  console.log('action  in book has been called');
-  console.log(params.bookId);
   const id = params.bookId;
   const book = await getBook(id);
   if (book.inCart) {
