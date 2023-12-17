@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from './routes/error-page';
 import Root from './routes/root';
 import Index from './routes';
-import Shop, { loader as shopLoader } from './routes/shop';
+import Shop, { loader as shopLoader, action as shopAction } from './routes/shop';
 import Book, { loader as bookLoader, action as bookAction } from './routes/book';
 import Cart, { loader as cartLoader, action as cartAction } from './routes/cart';
 import View, { loader as viewLoader } from './routes/view-image';
@@ -22,7 +22,7 @@ const Router = () => {
         {
           path: 'shop',
           children: [
-            { index: true, element: <Shop />, loader: shopLoader },
+            { index: true, element: <Shop />, loader: shopLoader, action: shopAction },
             {
               path: 'book/:bookId',
               element: <Book />,

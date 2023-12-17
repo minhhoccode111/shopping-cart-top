@@ -65,6 +65,26 @@ export const getBook = async (id) => {
 
 export const getCategory = async (category) => {
   const books = await getBooks();
+  const table = {
+    truyen: 'Truyện',
+    'tam-ly': 'Tâm lý',
+    'van-hoc': 'Văn học',
+    'lich-su': 'Lịch sử',
+    'suc-khoe': 'Sức khỏe',
+    'triet-hoc': 'Triết học',
+    'thieu-nhi': 'Thiếu nhi',
+    'trinh-tham': 'Trinh thám',
+    'tieu-thuyet': 'Tiểu thuyết',
+    'thuong-thuc': 'Thường thức',
+    'ky-nang-song': 'Kỹ năng sống',
+    'nuoi-day-con': 'Nuôi dạy con',
+    'ky-nang-lam-viec': 'Kỹ năng làm việc',
+    'kien-thuc-tong-hop': 'Kiến thức tổng hợp',
+    'marketing-ban-hang': 'Marketing - Bán hàng',
+    'phat-trien-ban-than': 'Phát triển bản thân',
+  };
+  category = table[category];
+  if (!category) return books;
   const categories = books.reduce((total, current) => {
     const category = current.category;
     const count = total[category] || [];
