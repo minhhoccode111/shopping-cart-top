@@ -7,11 +7,11 @@ const Root: React.FC = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const [isVietnamese, setIsVietnamese] = useState(true);
-  const [isShowMenu, setIsShowMenu] = useState(true);
+  const [isShowMenu, setIsShowMenu] = useState(false);
 
   return (
     <>
-      <header id="header" className="flex gap-3 sm:gap-5 md:gap-7 lg:gap-9 items-center p-4 sm:p-5 md:p-6 lg:p-7 shadow-lg text-slate-700">
+      <header id="header" className="flex gap-3 sm:gap-5 md:gap-7 lg:gap-9 items-center p-4 sm:p-5 md:p-6 lg:p-7 shadow-lg text-slate-700 rounded-b-xl">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-mono flex-1 whitespace-nowrap">
           <Link to={'/'}>Vài Quyển Sách</Link>
         </h1>
@@ -42,39 +42,49 @@ const Root: React.FC = () => {
           }
         >
           <button className="mt-1 text-4xl absolute top-0 right-0 p-4" onClick={() => setIsShowMenu(!isShowMenu)}>
-            <IoIosCloseCircleOutline className="text-red-500" />
+            <IoIosCloseCircleOutline className="text-red-500 rounded-full hover:text-white hover:bg-red-500 transition-colors" />
           </button>
           <NavLink
             onClick={() => setIsShowMenu(!isShowMenu)}
-            className={({ isActive, isPending }) => (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '')}
+            className={({ isActive, isPending }) =>
+              (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') + ' ' + 'transition-colors hover:bg-sky-200 p-4 rounded-3xl'
+            }
             to={'/'}
           >
             Home
           </NavLink>
           <NavLink
             onClick={() => setIsShowMenu(!isShowMenu)}
-            className={({ isActive, isPending }) => (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '')}
+            className={({ isActive, isPending }) =>
+              (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') + ' ' + 'transition-colors hover:bg-sky-200 p-4 rounded-3xl'
+            }
             to={'shop'}
           >
             Shop
           </NavLink>
           <NavLink
             onClick={() => setIsShowMenu(!isShowMenu)}
-            className={({ isActive, isPending }) => (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '')}
+            className={({ isActive, isPending }) =>
+              (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') + ' ' + 'transition-colors hover:bg-sky-200 p-4 rounded-3xl'
+            }
             to={'cart'}
           >
             Cart
           </NavLink>
           <NavLink
             onClick={() => setIsShowMenu(!isShowMenu)}
-            className={({ isActive, isPending }) => (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '')}
+            className={({ isActive, isPending }) =>
+              (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') + ' ' + 'transition-colors hover:bg-sky-200 p-4 rounded-3xl'
+            }
             to={'about'}
           >
             About
           </NavLink>
           <NavLink
             onClick={() => setIsShowMenu(!isShowMenu)}
-            className={({ isActive, isPending }) => (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '')}
+            className={({ isActive, isPending }) =>
+              (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') + ' ' + 'transition-colors hover:bg-sky-200 p-4 rounded-3xl'
+            }
             to={'login'}
           >
             Login
@@ -106,7 +116,7 @@ const Root: React.FC = () => {
           </button>
         </aside>
       )}
-      <main className="flex-1 p-2 sm:p-4 md:p-5 flex flex-col">
+      <main className="flex-1 flex flex-col">
         <Outlet />
       </main>
       {pathname !== '/' && (

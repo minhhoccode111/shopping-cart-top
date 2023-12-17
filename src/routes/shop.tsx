@@ -1,5 +1,6 @@
-import { useFetcher, Link, useLoaderData, useSubmit } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import { RiArrowUpDoubleLine } from 'react-icons/ri';
+import { useFetcher, Link, useLoaderData, useSubmit } from 'react-router-dom';
 import { getCategory, sortBooks, searchBooks } from '../methods/books';
 
 export const loader = async ({ request }) => {
@@ -7,7 +8,6 @@ export const loader = async ({ request }) => {
   const category = url.searchParams.get('category');
   const sort = url.searchParams.get('sort');
   const q = url.searchParams.get('q');
-  console.log(q);
   const booksInCategory = await getCategory(category);
   const booksSorted = await sortBooks(booksInCategory, sort);
   const books = await searchBooks(booksSorted, q);
@@ -22,11 +22,36 @@ const Shop: React.FC = () => {
   const { books } = useLoaderData();
   const fetcher = useFetcher();
   const submit = useSubmit();
+  const [isSticky, setIsSticky] = useState(false);
+  useEffect(() => {
+    const stickSearch = document.getElementById('stick-search');
+    const sticky = stickSearch?.offsetTop;
+    const handleScroll = () => {
+      if (!sticky) return;
+      if (window.scrollY > sticky) setIsSticky(true);
+      else setIsSticky(false);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <>
-      <h2 className="">This is in Shop</h2>
-
-      <>
+      <div id="stick-search" className={'flex gap-4 items-center justify-between border transition-all p-8 bg-semi-transparent' + ' ' + (isSticky ? 'fixed top-0 left-0 right-0 z-10' : '')}>
+        <div className="">
+          <fetcher.Form method="get" role="search" className="">
+            <input
+              type="search"
+              placeholder="Search"
+              className=""
+              name="q"
+              onChange={(e) => {
+                submit(e.target.form);
+              }}
+            />
+          </fetcher.Form>
+        </div>
         <div className="">
           <fetcher.Form method="get" className="">
             <label className="">
@@ -73,21 +98,7 @@ const Shop: React.FC = () => {
             </label>
           </fetcher.Form>
         </div>
-
-        <div className="">
-          <fetcher.Form method="get" role="search" className="">
-            <input
-              type="search"
-              placeholder="Search"
-              className=""
-              name="q"
-              onChange={(e) => {
-                submit(e.target.form);
-              }}
-            />
-          </fetcher.Form>
-        </div>
-      </>
+      </div>
 
       <div className="grid grid-cols-auto gap-2 p-4">
         {books.map((book) => {

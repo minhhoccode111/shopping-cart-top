@@ -30,7 +30,7 @@ const Index: React.FC = () => {
   return (
     <section className="flex-1 flex flex-col">
       <div className="flex-1 flex flex-col items-center justify-center gap-16 sm:gap-32">
-        <div className="flex flex-col gap-4 text-slate-700">
+        <div className="flex flex-col gap-4 text-slate-700 p-4 sm:p-6 lg:p-8">
           {loadingQuoteError ? (
             <Error />
           ) : isLoadingQuote ? (
@@ -63,7 +63,7 @@ const Index: React.FC = () => {
           </button>
         </div>
       </div>
-      <div className="flex justify-end">
+      <div className="flex justify-end p-4 sm:p-6 lg:p-8">
         <Link className="ripper pl-8 pr-4 py-8 underline hover:decoration-2 underline-offset-4 flex items-center" to={'shop'}>
           <span className="tracking-widest text-xl font-bold mb-1">Shop now! </span>
           <span className="text-4xl">
