@@ -1,5 +1,6 @@
 import { v4 as uuid } from 'uuid';
 import books from './data.json';
+import sortBy from 'sort-by';
 
 export const carts: {
   inCart: boolean;
@@ -100,4 +101,12 @@ export const updateBook = async (id, updates) => {
   Object.assign(book, updates);
   set(books);
   return book;
+};
+
+export const sortBooks = async (books, type) => {
+  if (!type) return books;
+  if (type === 'a-z') return books.sort(sortBy('title', 'price'));
+  if (type === 'z-a') return books.sort(sortBy('-title', 'price'));
+  if (type === '0-9') return books.sort(sortBy('price', 'title'));
+  return books.sort(sortBy('-price', 'title'));
 };

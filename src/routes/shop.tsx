@@ -1,10 +1,13 @@
 import { useFetcher, Link, useLoaderData, useSubmit } from 'react-router-dom';
-import { getCategory } from '../methods/books';
+import { getCategory, sortBooks } from '../methods/books';
 
 export const loader = async ({ request }) => {
   const url = new URL(request.url);
   const category = url.searchParams.get('category');
-  const books = await getCategory(category);
+  const sort = url.searchParams.get('sort');
+  console.log(category, sort);
+  const booksInCategory = await getCategory(category);
+  const books = await sortBooks(booksInCategory, sort);
   return { books };
 };
 
@@ -29,6 +32,7 @@ const Shop: React.FC = () => {
               onChange={(e) => {
                 submit(e.target.form);
               }}
+              className="uppercase"
             >
               <option value="all">All</option>
               <option value="tam-ly">Tâm lý</option>
@@ -47,6 +51,20 @@ const Shop: React.FC = () => {
               <option value="trinh-tham">Trinh thám</option>
               <option value="ky-nang-lam-viec">Kỹ năng làm việc</option>
               <option value="lich-su">Lịch sử</option>
+            </select>
+          </label>
+          <label className="">
+            <span className="">Sort:</span>
+            <select
+              name="sort"
+              onChange={(e) => {
+                submit(e.target.form);
+              }}
+            >
+              <option value="a-z">Title A-Z</option>
+              <option value="z-a">Title Z-A</option>
+              <option value="0-9">Price 0-9</option>
+              <option value="9-0">Price 9-0</option>
             </select>
           </label>
         </fetcher.Form>
