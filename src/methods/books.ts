@@ -1,6 +1,7 @@
 import { v4 as uuid } from 'uuid';
 import books from './data.json';
 import sortBy from 'sort-by';
+import { matchSorter } from 'match-sorter';
 
 export const carts: {
   inCart: boolean;
@@ -109,4 +110,8 @@ export const sortBooks = async (books, type) => {
   if (type === 'z-a') return books.sort(sortBy('-title', 'price'));
   if (type === '0-9') return books.sort(sortBy('price', 'title'));
   return books.sort(sortBy('-price', 'title'));
+};
+
+export const searchBooks = async (books, query) => {
+  return matchSorter(books, query, { keys: ['title', 'author'] });
 };

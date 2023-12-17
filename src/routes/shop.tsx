@@ -1,13 +1,14 @@
 import { useFetcher, Link, useLoaderData, useSubmit } from 'react-router-dom';
-import { getCategory, sortBooks } from '../methods/books';
+import { getCategory, sortBooks, searchBooks } from '../methods/books';
 
 export const loader = async ({ request }) => {
   const url = new URL(request.url);
   const category = url.searchParams.get('category');
   const sort = url.searchParams.get('sort');
-  console.log(category, sort);
+  const q = url.searchParams.get('q');
   const booksInCategory = await getCategory(category);
-  const books = await sortBooks(booksInCategory, sort);
+  const booksSorted = await sortBooks(booksInCategory, sort);
+  const books = await searchBooks(booksSorted, q);
   return { books };
 };
 
@@ -67,6 +68,20 @@ const Shop: React.FC = () => {
               <option value="9-0">Price 9-0</option>
             </select>
           </label>
+        </fetcher.Form>
+      </div>
+
+      <div className="">
+        <fetcher.Form method="get" role="search" className="">
+          <input
+            type="search"
+            placeholder="Search"
+            className=""
+            name="q"
+            onChange={(e) => {
+              submit(e.target.form);
+            }}
+          />
         </fetcher.Form>
       </div>
 
