@@ -1,8 +1,10 @@
+import { AiOutlineLoading } from 'react-icons/ai';
+
 const Loading = () => {
   return (
-    <>
-      <h1 className="">Loading...</h1>
-    </>
+    <h2 className="animate-spin">
+      <AiOutlineLoading className="text-8xl" />
+    </h2>
   );
 };
 
