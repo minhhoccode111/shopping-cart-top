@@ -1,4 +1,5 @@
 import { useFetcher, Link, useLoaderData, useSubmit } from 'react-router-dom';
+import { RiArrowUpDoubleLine } from 'react-icons/ri';
 import { getCategory, sortBooks, searchBooks } from '../methods/books';
 
 export const loader = async ({ request }) => {
@@ -25,66 +26,68 @@ const Shop: React.FC = () => {
     <>
       <h2 className="">This is in Shop</h2>
 
-      <div className="">
-        <fetcher.Form method="get" className="">
-          <label className="">
-            <span className="">Filter:</span>
-            <select
-              name="category"
-              onChange={(e) => {
-                submit(e.target.form);
-              }}
-              className="uppercase"
-            >
-              <option value="all">All</option>
-              <option value="tam-ly">Tâm lý</option>
-              <option value="phat-trien-ban-than">Phát triển bản thân</option>
-              <option value="tieu-thuyet">Tiểu thuyết</option>
-              <option value="kien-thuc-tong-hop">Kiến thức tổng hợp</option>
-              <option value="van-hoc">Văn học</option>
-              <option value="triet-hoc">Triết học</option>
-              <option value="suc-khoe">Sức khỏe</option>
-              <option value="ky-nang-song">Kỹ năng sống</option>
-              <option value="marketing-ban-hang">Marketing - Bán hàng</option>
-              <option value="truyen">Truyện</option>
-              <option value="thuong-thuc">Thường thức</option>
-              <option value="thieu-nhi">Thiếu nhi</option>
-              <option value="nuoi-day-con">Nuôi dạy con</option>
-              <option value="trinh-tham">Trinh thám</option>
-              <option value="ky-nang-lam-viec">Kỹ năng làm việc</option>
-              <option value="lich-su">Lịch sử</option>
-            </select>
-          </label>
-          <label className="">
-            <span className="">Sort:</span>
-            <select
-              name="sort"
-              onChange={(e) => {
-                submit(e.target.form);
-              }}
-            >
-              <option value="a-z">Title A-Z</option>
-              <option value="z-a">Title Z-A</option>
-              <option value="0-9">Price 0-9</option>
-              <option value="9-0">Price 9-0</option>
-            </select>
-          </label>
-        </fetcher.Form>
-      </div>
+      <>
+        <div className="">
+          <fetcher.Form method="get" className="">
+            <label className="">
+              <span className="">Filter:</span>
+              <select
+                name="category"
+                onChange={(e) => {
+                  submit(e.target.form);
+                }}
+                className=""
+              >
+                <option value="all">All</option>
+                <option value="tam-ly">Tâm lý</option>
+                <option value="phat-trien-ban-than">Phát triển bản thân</option>
+                <option value="tieu-thuyet">Tiểu thuyết</option>
+                <option value="kien-thuc-tong-hop">Kiến thức tổng hợp</option>
+                <option value="van-hoc">Văn học</option>
+                <option value="triet-hoc">Triết học</option>
+                <option value="suc-khoe">Sức khỏe</option>
+                <option value="ky-nang-song">Kỹ năng sống</option>
+                <option value="marketing-ban-hang">Marketing - Bán hàng</option>
+                <option value="truyen">Truyện</option>
+                <option value="thuong-thuc">Thường thức</option>
+                <option value="thieu-nhi">Thiếu nhi</option>
+                <option value="nuoi-day-con">Nuôi dạy con</option>
+                <option value="trinh-tham">Trinh thám</option>
+                <option value="ky-nang-lam-viec">Kỹ năng làm việc</option>
+                <option value="lich-su">Lịch sử</option>
+              </select>
+            </label>
+            <label className="">
+              <span className="">Sort:</span>
+              <select
+                name="sort"
+                onChange={(e) => {
+                  submit(e.target.form);
+                }}
+              >
+                <option value="a-z">Title A-Z</option>
+                <option value="z-a">Title Z-A</option>
+                <option value="0-9">Price 0-9</option>
+                <option value="9-0">Price 9-0</option>
+              </select>
+            </label>
+          </fetcher.Form>
+        </div>
 
-      <div className="">
-        <fetcher.Form method="get" role="search" className="">
-          <input
-            type="search"
-            placeholder="Search"
-            className=""
-            name="q"
-            onChange={(e) => {
-              submit(e.target.form);
-            }}
-          />
-        </fetcher.Form>
-      </div>
+        <div className="">
+          <fetcher.Form method="get" role="search" className="">
+            <input
+              type="search"
+              placeholder="Search"
+              className=""
+              name="q"
+              onChange={(e) => {
+                submit(e.target.form);
+              }}
+            />
+          </fetcher.Form>
+        </div>
+      </>
 
       <div className="grid grid-cols-auto gap-2 p-4">
         {books.map((book) => {
@@ -117,6 +120,11 @@ const Shop: React.FC = () => {
             </Link>
           );
         })}
+      </div>
+      <div className="fixed right-5 bottom-5">
+        <a href="#header" className="">
+          <RiArrowUpDoubleLine className="text-4xl text-white bg-black flex items-center justify-center w-12 h-12 rounded-full" />
+        </a>
       </div>
     </>
   );

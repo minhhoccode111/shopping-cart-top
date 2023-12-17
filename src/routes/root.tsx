@@ -1,42 +1,115 @@
+import { useState } from 'react';
 import { Outlet, NavLink, Link, useNavigate, useLocation } from 'react-router-dom';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { IoIosCloseCircleOutline } from 'react-icons/io';
 
 const Root: React.FC = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
+  const [isVietnamese, setIsVietnamese] = useState(true);
+  const [isShowMenu, setIsShowMenu] = useState(true);
+
   return (
     <>
-      <header className="flex gap-4 items-center bg-red-300">
-        <h1 className="text-3xl">
-          <Link to={'/'}>VQS</Link>
+      <header id="header" className="flex gap-3 sm:gap-5 md:gap-7 lg:gap-9 items-center p-4 sm:p-5 md:p-6 lg:p-7 shadow-lg text-slate-700">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-mono flex-1 whitespace-nowrap">
+          <Link to={'/'}>Vài Quyển Sách</Link>
         </h1>
-        <div className="uppercase">
-          <button type="button">vi</button>
+        <div className="">
+          <button
+            type="button"
+            className=""
+            onClick={() => {
+              setIsVietnamese(!isVietnamese);
+            }}
+          >
+            {isVietnamese ? 'Vie' : 'Eng'}
+          </button>
         </div>
-        <nav className="flex items-center gap-4">
-          <NavLink className={({ isActive, isPending }) => (isActive ? 'underline' : isPending ? 'pending' : '')} to={'/'}>
+
+        <nav className={'sm:hidden'}>
+          <button className="mt-1 text-xl" onClick={() => setIsShowMenu(!isShowMenu)}>
+            <GiHamburgerMenu />
+          </button>
+        </nav>
+
+        {/* mobile hamburger menu */}
+        {isShowMenu && (
+          <nav className="flex flex-col gap-3 sm:gap-5 md:gap-7 lg:gap-9 text-4xl fixed top-0 bottom-0 right-0 z-20 bg-semi-transparent px-8 py-16 w-3/4 shadow-2xl text-right">
+            <button className="mt-1 text-4xl absolute top-0 right-0 p-4" onClick={() => setIsShowMenu(!isShowMenu)}>
+              <IoIosCloseCircleOutline className="text-red-500" />
+            </button>
+            <NavLink
+              onClick={() => setIsShowMenu(!isShowMenu)}
+              className={({ isActive, isPending }) => (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '')}
+              to={'/'}
+            >
+              Home
+            </NavLink>
+            <NavLink
+              onClick={() => setIsShowMenu(!isShowMenu)}
+              className={({ isActive, isPending }) => (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '')}
+              to={'shop'}
+            >
+              Shop
+            </NavLink>
+            <NavLink
+              onClick={() => setIsShowMenu(!isShowMenu)}
+              className={({ isActive, isPending }) => (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '')}
+              to={'cart'}
+            >
+              Cart
+            </NavLink>
+            <NavLink
+              onClick={() => setIsShowMenu(!isShowMenu)}
+              className={({ isActive, isPending }) => (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '')}
+              to={'about'}
+            >
+              About
+            </NavLink>
+            <NavLink
+              onClick={() => setIsShowMenu(!isShowMenu)}
+              className={({ isActive, isPending }) => (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '')}
+              to={'login'}
+            >
+              Login
+            </NavLink>
+          </nav>
+        )}
+
+        <nav className="max-sm:hidden flex items-center gap-3 sm:gap-5 md:gap-7 lg:gap-9 sm:text-lg md:text-xl">
+          <NavLink className={({ isActive, isPending }) => (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '')} to={'/'}>
             Home
           </NavLink>
-          <NavLink className={({ isActive, isPending }) => (isActive ? 'underline' : isPending ? 'pending' : '')} to={'shop'}>
+          <NavLink className={({ isActive, isPending }) => (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '')} to={'shop'}>
             Shop
           </NavLink>
-          <NavLink className={({ isActive, isPending }) => (isActive ? 'underline' : isPending ? 'pending' : '')} to={'cart'}>
+          <NavLink className={({ isActive, isPending }) => (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '')} to={'cart'}>
             Cart
+          </NavLink>
+          <NavLink className={({ isActive, isPending }) => (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '')} to={'about'}>
+            About
+          </NavLink>
+          <NavLink className={({ isActive, isPending }) => (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '')} to={'login'}>
+            Login
           </NavLink>
         </nav>
       </header>
-      <aside className="">
-        {pathname !== '/' && (
+      {pathname !== '/' && (
+        <aside className="p-2 sm:p-4 md:p-5">
           <button className="underline" onClick={() => navigate(-1)}>
             Go back
           </button>
-        )}
-      </aside>
-      <main className="flex-1">
+        </aside>
+      )}
+      <main className="flex-1 p-2 sm:p-4 md:p-5 flex flex-col">
         <Outlet />
       </main>
-      <footer className="text-center bg-slate-500">
-        <p>Copyright 2022</p>
-      </footer>
+      {pathname !== '/' && (
+        <footer className="text-center">
+          <p>Copyright 2022</p>
+        </footer>
+      )}
     </>
   );
 };

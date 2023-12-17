@@ -4,7 +4,10 @@ export default {
   theme: {
     extend: {
       gridTemplateColumns: {
-        auto: 'repeat(auto-fit, minmax(240px, 1fr))',
+        auto: 'repeat(auto-fit, minmax(300px, 1fr))',
+      },
+      colors: {
+        'semi-transparent': '#ffffffe2',
       },
     },
   },

@@ -5,8 +5,10 @@ import Index from './routes';
 import Shop, { loader as shopLoader, action as shopAction } from './routes/shop';
 import Book, { loader as bookLoader, action as bookAction } from './routes/book';
 import Cart, { loader as cartLoader, action as cartAction } from './routes/cart';
+import Login from './routes/login';
 import View, { loader as viewLoader } from './routes/view-image';
 import Checkout, { loader as checkoutLoader, action as checkoutAction } from './routes/checkout';
+import About from './routes/about';
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -48,6 +50,14 @@ const Router = () => {
           element: <Checkout />,
           loader: checkoutLoader,
           action: checkoutAction,
+        },
+        {
+          path: 'login',
+          element: <Login />,
+        },
+        {
+          path: 'about',
+          element: <About />,
         },
       ],
     },

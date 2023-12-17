@@ -1,10 +1,14 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { RiArrowRightDoubleLine } from 'react-icons/ri';
+import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 
 const Index: React.FC = () => {
   const [flag, setFlag] = useState(0);
   const [currentQuote, setCurrentQuote] = useState('');
   const [currentAuthor, setCurrentAuthor] = useState('');
+  const [isLoadingQuote, setIsLoadingQuote] = useState(true);
+  const [loadingQuoteError, setLoadingQuoteError] = useState();
   useEffect(() => {
     const getQuote = async () => {
       try {
@@ -14,23 +18,49 @@ const Index: React.FC = () => {
         setCurrentAuthor(data.author);
       } catch (error) {
         console.log(error);
+        setLoadingQuoteError(error);
+      } finally {
+        setIsLoadingQuote(false);
       }
     };
-    // getQuote(); // TODO turn on back when finishing develop
+    getQuote(); // TODO turn on back when finishing develop
   }, [flag]);
   return (
-    <>
-      <section className="p-4">
-        <h1 className="">{currentQuote}</h1>
-        <h2 className="">{currentAuthor}</h2>
-        <button className="border rounded border-sky-500 text-sky-500 px-4 py-2" onClick={() => setFlag(Math.random())}>
-          New quote
-        </button>
-        <Link className="underline" to={'shop'}>
-          Shop now!
+    <section className="flex-1 flex flex-col md:flex-row">
+      <div className="flex-1 flex flex-col items-center justify-center gap-16 sm:gap-32">
+        <div className="flex flex-col gap-4 text-slate-700">
+          <h2 className="flex items-center justify-center text-2xl sm:text-4xl">
+            <span className="self-start">
+              <FaQuoteLeft />
+            </span>
+            <span className="text-center">{currentQuote}</span>
+            <span className="self-end">
+              <FaQuoteRight />
+            </span>
+          </h2>
+          <h3 className="text-2xl text-center text-slate-900 font-bold">-{currentAuthor}-</h3>
+        </div>
+        <div className="border-2 h-0 border-sky-500 relative self-stretch">
+          <button
+            className="ripper px-8 py-8 underline hover:decoration-2 underline-offset-4 flex items-center tracking-widest absolute right-1/2 translate-x-1/2 bottom-0 translate-y-1/2 z-10"
+            onClick={() => {
+              setFlag(Math.random());
+              setIsLoadingQuote(true);
+            }}
+          >
+            <span className="text-xl font-bold whitespace-nowrap">New quote</span>
+          </button>
+        </div>
+      </div>
+      <div className="flex justify-end sm:items-end">
+        <Link className="ripper pl-8 pr-4 py-8 underline hover:decoration-2 underline-offset-4 flex items-center" to={'shop'}>
+          <span className="tracking-widest text-xl font-bold mb-1">Shop now! </span>
+          <span className="text-4xl">
+            <RiArrowRightDoubleLine />
+          </span>
         </Link>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 
