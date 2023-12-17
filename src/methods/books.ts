@@ -1,6 +1,5 @@
 import { v4 as uuid } from 'uuid';
 import books from './data.json';
-import { addCart } from './carts';
 
 export const carts: {
   inCart: boolean;

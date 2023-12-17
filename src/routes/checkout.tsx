@@ -1,14 +1,21 @@
 import { useState } from 'react';
-import { useActionData, Form, Link } from 'react-router-dom';
+import { Link, useLoaderData, useFetcher } from 'react-router-dom';
+import { clearCarts, sumCarts } from '../methods/carts';
 
-export const action = async ({ request }) => {
-  const formData = await request.formData();
-  const { sum } = Object.fromEntries(formData);
+export const loader = async () => {
+  const sum = await sumCarts();
   return { sum };
 };
 
+export const action = async () => {
+  await clearCarts();
+  console.log('Clear Carts');
+  return null;
+};
+
 const Checkout = () => {
-  const { sum } = useActionData();
+  const { sum } = useLoaderData();
+  const fetcher = useFetcher();
   const [isFinished, setIsFinished] = useState(false);
   return (
     <>
@@ -19,14 +26,19 @@ const Checkout = () => {
             So your bill cost: {sum} 000<span className="underline">đ</span>
           </h2>
           <div className="">
-            <Form
-              onSubmit={(e) => {
+            <fetcher.Form
+              method="post"
+              onSubmit={() => {
                 setIsFinished(true);
-                e.preventDefault();
               }}
             >
-              <button className="border p-4">Confirm order</button>
-            </Form>
+              <Link className="" to={'/cart'}>
+                Cancel
+              </Link>
+              <button className="border p-4" type="submit">
+                Confirm order
+              </button>
+            </fetcher.Form>
           </div>
         </div>
       ) : (

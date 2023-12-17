@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useLoaderData, Link, Form, useFetcher } from 'react-router-dom';
+import { useLoaderData, Link, Navigate, useFetcher } from 'react-router-dom';
 import { getCarts, deleteCart, getCart, updateCart, sumCarts } from '../methods/carts';
 
 export const loader = async () => {
@@ -23,7 +23,7 @@ export const action = async ({ request }) => {
     await deleteCart(id);
     return null;
   }
-
+  // else data.action === 'change' below this
   const cart = await getCart(id);
   const value = Number(data.value);
 
@@ -33,7 +33,7 @@ export const action = async ({ request }) => {
     else await updateCart(id, { inputBuyQuantity: buyQuantity });
     return null;
   }
-
+  // else data.isBuying === false
   const borrowQuantity = cart.inputBorrowQuantity + value;
   if (borrowQuantity < 0) alert('Please use positive quantity!');
   else await updateCart(id, { inputBorrowQuantity: borrowQuantity });
@@ -119,6 +119,7 @@ const CartForm = ({ cart }) => {
 const Cart = () => {
   const { carts, sum } = useLoaderData();
   const [warnEmptyCart, setWarnEmptyCart] = useState(false);
+  const [willNavigate, setWillNavigate] = useState(false);
   useEffect(() => {
     setTimeout(() => {
       setWarnEmptyCart(false);
@@ -158,26 +159,22 @@ const Cart = () => {
             Subtotal: {sum} 000<span className="underline">đ</span>
           </h2>
           <div className="">
-            <Form
-              className=""
-              method="post"
-              action="checkout"
-              onSubmit={(e) => {
-                if (sum === 0) {
-                  console.log(`Can't checkout empty cart`);
-                  setWarnEmptyCart(true);
-                  e.preventDefault();
-                }
+            <p className="text-red-500 font-bold">{warnEmptyCart && 'Nothing to checkout'}</p>
+            <button
+              name="sum"
+              value={sum}
+              className="uppercase py-4 px-8 border-2"
+              onClick={() => {
+                if (sum === 0) setWarnEmptyCart(true);
+                else setWillNavigate(true);
               }}
             >
-              <button name="sum" value={sum} className="uppercase py-4 px-8 border-2" type="submit">
-                Checkout
-              </button>
-              {warnEmptyCart ? <p className="text-red-500 font-bold">Nothing to checkout</p> : null}
-            </Form>
+              Checkout
+            </button>
           </div>
         </div>
       )}
+      {willNavigate && <Navigate to={'checkout'} />}
     </section>
   );
 };
