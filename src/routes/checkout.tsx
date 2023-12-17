@@ -32,12 +32,39 @@ const Checkout = () => {
                 setIsFinished(true);
               }}
             >
-              <Link className="" to={'/cart'}>
-                Cancel
-              </Link>
-              <button className="border p-4" type="submit">
-                Confirm order
-              </button>
+              <div className="div">
+                <label className="">
+                  <span className="">*Name: </span>
+                  <input type="text" required className="" placeholder="Enter your name" minLength={2} />
+                </label>
+              </div>
+              <div className="div">
+                <label className="">
+                  <span className="">*Address: </span>
+                  <input type="text" required className="" placeholder="Enter your address" minLength={5} />
+                </label>
+              </div>
+              <div className="div">
+                <label className="">
+                  <span className="">*Phone: </span>
+                  <input type="tel" required className="" placeholder="Enter your phone number" minLength={9} />
+                </label>
+              </div>
+              <div className="div">
+                <label className="">
+                  <span className="">*Email: </span>
+                  <input type="email" required className="" placeholder="Enter your email" />
+                </label>
+              </div>
+
+              <div className="">
+                <Link className="" to={'/cart'}>
+                  Cancel
+                </Link>
+                <button className="border p-4" type="submit">
+                  Confirm order
+                </button>
+              </div>
             </fetcher.Form>
           </div>
         </div>

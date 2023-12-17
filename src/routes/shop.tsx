@@ -6,6 +6,7 @@ export const loader = async ({ request }) => {
   const category = url.searchParams.get('category');
   const sort = url.searchParams.get('sort');
   const q = url.searchParams.get('q');
+  console.log(q);
   const booksInCategory = await getCategory(category);
   const booksSorted = await sortBooks(booksInCategory, sort);
   const books = await searchBooks(booksSorted, q);

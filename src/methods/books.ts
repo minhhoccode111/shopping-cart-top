@@ -113,5 +113,6 @@ export const sortBooks = async (books, type) => {
 };
 
 export const searchBooks = async (books, query) => {
-  return matchSorter(books, query, { keys: ['title', 'author'] });
+  if (!query) return books;
+  return matchSorter(books, query, { keys: ['title', 'author', 'category'] });
 };
