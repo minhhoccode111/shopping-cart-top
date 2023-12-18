@@ -38,30 +38,58 @@ const Shop: React.FC = () => {
   }, []);
   return (
     <>
-      <div id="stick-search" className={'flex gap-4 items-center justify-between border transition-all p-8 bg-semi-transparent' + ' ' + (isSticky ? 'fixed top-0 left-0 right-0 z-10' : '')}>
-        <div className="">
+      {/* padding element so that the header don't seem like teleport when it sticky to top */}
+      <div className={'text-transparent px-8 py-4 border' + ' ' + (isSticky ? '' : 'hidden')}>Made with love by minhhoccode111</div>
+      <div
+        id="stick-search"
+        className={
+          'flex gap-2 sm:gap-3 md:gap-4 items-end justify-center md:justify-end transition-all px-4 py-2 sm:px-8 sm:py-4 bg-white' + ' ' + (isSticky ? 'fixed top-0 left-0 right-0 z-10 shadow-xl' : '')
+        }
+      >
+        {/* divider */}
+        <div className="hidden md:block border-b-8 border-sky-500 flex-1 scale-x-150 origin-right"></div>
+        <div className="max-sm:w-1/3">
           <fetcher.Form method="get" role="search" className="">
-            <input
-              type="search"
-              placeholder="Search"
-              className=""
-              name="q"
-              onChange={(e) => {
-                submit(e.target.form);
-              }}
-            />
-          </fetcher.Form>
-        </div>
-        <div className="">
-          <fetcher.Form method="get" className="">
-            <label className="">
-              <span className="">Filter:</span>
-              <select
-                name="category"
+            {/*
+              Heads up! 👋  
+              Plugins:
+                - @tailwindcss/forms
+          */}
+            <label
+              htmlFor="search-input"
+              className="relative block rounded-md sm:rounded-lg border border-gray-200 shadow-sm focus-within:border-sky-500 focus-within:ring-1 focus-within:ring-sky-500"
+            >
+              <input
+                id="search-input"
+                className="peer border-none bg-transparent placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 sm:text-lg"
+                placeholder="Search for..."
+                type="search"
+                name="q"
                 onChange={(e) => {
                   submit(e.target.form);
                 }}
-                className=""
+              />
+
+              <span className="pointer-events-none absolute start-2.5 top-0 -translate-y-1/2 bg-white p-0.5 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:-top-1 peer-focus:text-xs peer-focus:sm:text-sm">
+                Search
+              </span>
+            </label>
+          </fetcher.Form>
+        </div>
+        <div className="">
+          <fetcher.Form method="get" className="flex gap-2 sm:gap-3 md:gap-4">
+            <div className="">
+              <label htmlFor="filter-by" className="block text-sm font-medium text-gray-900">
+                {' '}
+                Category{' '}
+              </label>
+              <select
+                name="category"
+                id="filter-by"
+                className="mt-1.5 w-full rounded-lg border-gray-300 bg-white border shadow-sm focus-within:border-sky-500 focus-within:ring-1 focus-within:ring-sky-500 text-gray-700 sm:text-sm md:text-base px-2 py-1 sm:px-3 sm:py-1.5"
+                onChange={(e) => {
+                  submit(e.target.form);
+                }}
               >
                 <option value="all">All</option>
                 <option value="tam-ly">Tâm lý</option>
@@ -81,21 +109,27 @@ const Shop: React.FC = () => {
                 <option value="ky-nang-lam-viec">Kỹ năng làm việc</option>
                 <option value="lich-su">Lịch sử</option>
               </select>
-            </label>
-            <label className="">
-              <span className="">Sort:</span>
+            </div>
+
+            <div className="">
+              <label htmlFor="sort-by" className="block text-sm font-medium text-gray-900">
+                {' '}
+                Sort{' '}
+              </label>
               <select
-                name="sort"
                 onChange={(e) => {
                   submit(e.target.form);
                 }}
+                name="sort"
+                id="sort-by"
+                className="mt-1.5 w-full rounded-lg border-gray-300 text-gray-700 sm:text-sm md:text-base px-2 py-1 sm:px-3 sm:py-1.5 bg-white border shadow-sm focus-within:border-sky-500 focus-within:ring-1 focus-within:ring-sky-500 "
               >
-                <option value="a-z">Title A-Z</option>
-                <option value="z-a">Title Z-A</option>
-                <option value="0-9">Price 0-9</option>
-                <option value="9-0">Price 9-0</option>
+                <option value="a-z"> a-z </option>
+                <option value="z-a"> z-a </option>
+                <option value="0-9"> 1-9 </option>
+                <option value="9-0"> 9-1 </option>
               </select>
-            </label>
+            </div>
           </fetcher.Form>
         </div>
       </div>
@@ -106,7 +140,7 @@ const Shop: React.FC = () => {
           const before = Math.round((book.price * (100 + percent)) / 100);
           const after = book.price;
           return (
-            <Link className="border" key={book.id} to={`book/${book.id}`}>
+            <Link className="border place-self-start" key={book.id} to={`book/${book.id}`}>
               <div className="grid grid-cols-2 gap-1 aspect-video">
                 <div className="">
                   <img src={book.image} alt={`${book.title} image`} className="object-center object-contain block w-full" />

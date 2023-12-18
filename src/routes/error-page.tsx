@@ -7,39 +7,24 @@ const ErrorPage: React.FC = () => {
   const navigate = useNavigate();
   return (
     <>
-      <header className="flex gap-4 items-center bg-red-300">
-        <h1 className="text-3xl">
-          <Link to={'/'}>VQS</Link>
-        </h1>
-        <div className="uppercase">
-          <button type="button">vi</button>
-        </div>
-        <nav className="flex items-center gap-4">
-          <NavLink className={({ isActive, isPending }) => (isActive ? 'underline' : isPending ? 'pending' : '')} to={'/'}>
-            Home
-          </NavLink>
-          <NavLink className={({ isActive, isPending }) => (isActive ? 'underline' : isPending ? 'pending' : '')} to={'/shop'}>
-            Shop
-          </NavLink>
-        </nav>
-      </header>
       <main>
-        <div id="error-page" className="flex flex-col gap-4 p-4 text-4xl items-center justify-center">
-          <h1 className="">Oops!</h1>
-          <p className="">Sorry, an unexpected error has occurred.</p>
-          <p className="">
-            <i>{error.statusText || error.message}</i>
-          </p>
-          <p>
-            <button className="underline" type="button" onClick={() => navigate(-1)}>
-              Go back
-            </button>
-          </p>
+        <div className="grid place-content-center h-screen bg-white px-4">
+          <div className="text-center">
+            <h1 className="text-9xl font-black text-gray-200">404</h1>
+
+            <p className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">Uh-oh!</p>
+
+            <p className="mt-4 text-gray-500">We can't find that page.</p>
+            <p className="">
+              <i className="">{error.statusText || error.message}</i>
+            </p>
+
+            <Link to={'/'} className="mt-6 inline-block rounded bg-indigo-600 px-5 py-3 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring">
+              Go Back Home
+            </Link>
+          </div>
         </div>
       </main>
-      <footer className="text-center bg-slate-500">
-        <p>Copyright 2022</p>
-      </footer>
     </>
   );
 };

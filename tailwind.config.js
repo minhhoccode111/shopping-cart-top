@@ -7,9 +7,8 @@ export default {
         auto: 'repeat(auto-fit, minmax(300px, 1fr))',
       },
       colors: {
-        'semi-transparent': '#ffffffe2',
+        'semi-transparent': '#ffffffef',
       },
     },
   },
-  plugins: [],
 };

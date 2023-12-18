@@ -1,17 +1,16 @@
 import { useState } from 'react';
-import { Outlet, NavLink, Link, useNavigate, useLocation } from 'react-router-dom';
+import { Outlet, NavLink, Link, useLocation } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoIosCloseCircleOutline } from 'react-icons/io';
 
 const Root: React.FC = () => {
-  const navigate = useNavigate();
   const { pathname } = useLocation();
   const [isVietnamese, setIsVietnamese] = useState(true);
   const [isShowMenu, setIsShowMenu] = useState(false);
 
   return (
     <>
-      <header id="header" className="flex gap-3 sm:gap-5 md:gap-7 lg:gap-9 items-center p-4 sm:p-5 md:p-6 lg:p-7 shadow-lg text-slate-700 rounded-b-xl">
+      <header id="header" className={'flex gap-3 sm:gap-5 md:gap-7 lg:gap-9 items-center p-4 sm:p-5 md:p-6 lg:p-7 shadow-lg text-slate-700 bg-white' + ' ' + (pathname !== '/' && 'bg-slate-50')}>
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-mono flex-1 whitespace-nowrap">
           <Link to={'/'}>Vài Quyển Sách</Link>
         </h1>
@@ -36,7 +35,7 @@ const Root: React.FC = () => {
         {/* mobile hamburger menu */}
         <nav
           className={
-            'flex flex-col gap-3 sm:gap-5 md:gap-7 lg:gap-9 text-4xl fixed top-0 bottom-0 right-0 z-20 bg-semi-transparent px-8 py-16 shadow-2xl text-right transition-all w-3/4 origin-right' +
+            'flex flex-col gap-3 sm:gap-5 md:gap-7 lg:gap-9 text-4xl fixed top-0 bottom-0 right-0 z-20 bg-[#ffffff99] px-8 py-16 shadow-2xl text-right transition-all w-3/4 origin-right backdrop-blur-sm' +
             ' ' +
             (isShowMenu ? 'scale-x-100' : 'scale-x-0')
           }
@@ -47,7 +46,9 @@ const Root: React.FC = () => {
           <NavLink
             onClick={() => setIsShowMenu(!isShowMenu)}
             className={({ isActive, isPending }) =>
-              (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') + ' ' + 'transition-colors hover:bg-sky-200 p-4 rounded-3xl'
+              (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') +
+              ' ' +
+              'transition-colors hover:bg-sky-500 hover:text-slate-100 hover:shadow-xl my-2 p-4 rounded-3xl'
             }
             to={'/'}
           >
@@ -56,7 +57,9 @@ const Root: React.FC = () => {
           <NavLink
             onClick={() => setIsShowMenu(!isShowMenu)}
             className={({ isActive, isPending }) =>
-              (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') + ' ' + 'transition-colors hover:bg-sky-200 p-4 rounded-3xl'
+              (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') +
+              ' ' +
+              'transition-colors hover:bg-sky-500 hover:text-slate-100 hover:shadow-xl my-2 p-4 rounded-3xl'
             }
             to={'shop'}
           >
@@ -65,7 +68,9 @@ const Root: React.FC = () => {
           <NavLink
             onClick={() => setIsShowMenu(!isShowMenu)}
             className={({ isActive, isPending }) =>
-              (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') + ' ' + 'transition-colors hover:bg-sky-200 p-4 rounded-3xl'
+              (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') +
+              ' ' +
+              'transition-colors hover:bg-sky-500 hover:text-slate-100 hover:shadow-xl my-2 p-4 rounded-3xl'
             }
             to={'cart'}
           >
@@ -74,7 +79,9 @@ const Root: React.FC = () => {
           <NavLink
             onClick={() => setIsShowMenu(!isShowMenu)}
             className={({ isActive, isPending }) =>
-              (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') + ' ' + 'transition-colors hover:bg-sky-200 p-4 rounded-3xl'
+              (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') +
+              ' ' +
+              'transition-colors hover:bg-sky-500 hover:text-slate-100 hover:shadow-xl my-2 p-4 rounded-3xl'
             }
             to={'about'}
           >
@@ -83,7 +90,9 @@ const Root: React.FC = () => {
           <NavLink
             onClick={() => setIsShowMenu(!isShowMenu)}
             className={({ isActive, isPending }) =>
-              (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') + ' ' + 'transition-colors hover:bg-sky-200 p-4 rounded-3xl'
+              (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') +
+              ' ' +
+              'transition-colors hover:bg-sky-500 hover:text-slate-100 hover:shadow-xl my-2 p-4 rounded-3xl'
             }
             to={'login'}
           >
@@ -109,13 +118,7 @@ const Root: React.FC = () => {
           </NavLink>
         </nav>
       </header>
-      {pathname !== '/' && (
-        <aside className="p-2 sm:p-4 md:p-5">
-          <button className="underline" onClick={() => navigate(-1)}>
-            Go back
-          </button>
-        </aside>
-      )}
+
       <main className="flex-1 flex flex-col">
         <Outlet />
       </main>
