@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { RiArrowUpDoubleLine } from 'react-icons/ri';
+import { IoBagCheckOutline } from 'react-icons/io5';
 import { useFetcher, Link, useLoaderData, useSubmit } from 'react-router-dom';
 import { getCategory, sortBooks, searchBooks } from '../methods/books';
 
@@ -24,6 +25,7 @@ const Shop: React.FC = () => {
   const submit = useSubmit();
   const [isSticky, setIsSticky] = useState(false);
   useEffect(() => {
+    // make search bar stick to the top when start scrolling
     const stickSearch = document.getElementById('stick-search');
     const sticky = stickSearch?.offsetTop;
     const handleScroll = () => {
@@ -37,7 +39,7 @@ const Shop: React.FC = () => {
     };
   }, []);
   return (
-    <>
+    <section className="">
       {/* padding element so that the header don't seem like teleport when it sticky to top */}
       <div className={'text-transparent px-8 py-4 border' + ' ' + (isSticky ? '' : 'hidden')}>Made with love by minhhoccode111</div>
       <div
@@ -134,44 +136,52 @@ const Shop: React.FC = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-auto gap-2 p-4">
+      <div className="p-2 sm:p-4 grid grid-cols-auto-sm sm:grid-cols-auto-md md:grid-cols-auto gap-2 sm:gap-3 md:gap-4 bg-white">
         {books.map((book) => {
           const percent = book.sale;
           const before = Math.round((book.price * (100 + percent)) / 100);
           const after = book.price;
+          const title = book.title.length > 30 ? book.title.slice(0, 28) + '...' : book.title;
+          const shortAuthor = book.author.length > 20 ? book.author.slice(0, 18) + '...' : book.author;
           return (
-            <Link className="border place-self-start" key={book.id} to={`book/${book.id}`}>
-              <div className="grid grid-cols-2 gap-1 aspect-video">
-                <div className="">
-                  <img src={book.image} alt={`${book.title} image`} className="object-center object-contain block w-full" />
-                </div>
-                <div className="">
-                  <div className="p-2 aspect-video border">
-                    <p className="">
-                      <span className="text-sm line-through">{before} 000</span>
-                      <span className="border border-red-500 text-red-500 text-xs p-1 rounded">-{percent}%</span>
-                    </p>
-                    <p className="">{after} 000</p>
-                  </div>
-                  <div className="">
-                    <h2 className="">{book.title}</h2>
-                    <p>{book.author}</p>
-                    <p>{book.category}</p>
-                    <p>{book.id}</p>
-                    <p className="text-green-700">{book.inCart ? 'Added' : ''}</p>
-                  </div>
-                </div>
+            <div className="text-slate-700 flex flex-col hover:brightness-90 hover:scale-105 transition-all" key={book.id}>
+              <div className="border border-gray-400 border-b-0 w-6 h-6 rounded-t-md self-end grid place-items-center bg-white">
+                {book.inCart ? <IoBagCheckOutline className="text-green-700" /> : ''}
               </div>
-            </Link>
+
+              <Link className="block h-full bg-white" to={`book/${book.id}`}>
+                <div className="flex border border-gray-400 h-full p-1 sm:p-2 gap-2 pr-2">
+                  <div className="w-16 sm:w-20 md:w-24 aspect-2/3">
+                    <img src={book.image} alt={`${book.title} image`} className="block w-full h-full" />
+                  </div>
+                  <div className="flex-1 flex flex-col justify-between">
+                    <div className="">
+                      <h2 className="text-sm sm:text-base md:text-lg font-bold">{title}</h2>
+                      <p className="text-gray-500 max-sm:hidden text-xs sm:text-sm md:text-base text-right">{book.author}</p>
+                      <p className="text-gray-500 max-sm:block hidden text-xs sm:text-sm md:text-base text-right">{shortAuthor}</p>
+                      {/* <p className="text-green-700">{book.inCart ? 'Added' : ''}</p> */}
+                    </div>
+                    <div className="self-stretch text-right">
+                      <p className="text-sm max-sm:hidden">
+                        <span className="text-gray-500 decoration-2 line-through">{before} 000</span> <span className="border border-red-500 text-red-500 p-0.5 sm:p-1 rounded ml-1">-{percent}%</span>
+                      </p>
+                      <p className="text-sm font-bold sm:text-base md:text-lg">
+                        {after} 000<span className="underline">đ</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
           );
         })}
       </div>
-      <div className="fixed right-5 bottom-5">
-        <a href="#header" className="">
-          <RiArrowUpDoubleLine className="text-4xl text-white bg-black flex items-center justify-center w-12 h-12 rounded-full" />
+      <div className="fixed right-2 bottom-2 z-10">
+        <a href="#header" className="grid place-items-center w-12 h-12 bg-white border border-sky-500 rounded-full hover:bg-sky-500 text-sky-500 hover:text-white transition-all">
+          <RiArrowUpDoubleLine className="text-4xl" />
         </a>
       </div>
-    </>
+    </section>
   );
 };
 
