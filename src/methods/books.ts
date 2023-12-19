@@ -2,6 +2,7 @@ import { v4 as uuid } from 'uuid';
 import books from './data.json';
 import sortBy from 'sort-by';
 import { matchSorter } from 'match-sorter';
+import { getCarts } from './carts';
 
 export const carts: {
   inCart: boolean;

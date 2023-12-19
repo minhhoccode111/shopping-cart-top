@@ -176,10 +176,17 @@ const Shop: React.FC = () => {
           );
         })}
       </div>
-      <div className="fixed right-2 bottom-2 z-10">
-        <a href="#header" className="grid place-items-center w-12 h-12 bg-white border border-sky-500 rounded-full hover:bg-sky-500 text-sky-500 hover:text-white transition-all">
+      <div className={'fixed right-2 bottom-2 z-10' + ' ' + (isSticky ? 'block' : 'hidden')}>
+        <button
+          onClick={() => {
+            // scroll to top
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+          }}
+          className="grid place-items-center w-12 h-12 bg-white border-2 border-sky-500 rounded-full hover:bg-sky-500 text-sky-500 hover:text-white transition-all"
+        >
           <RiArrowUpDoubleLine className="text-4xl" />
-        </a>
+        </button>
       </div>
     </section>
   );

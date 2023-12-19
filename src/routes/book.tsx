@@ -1,6 +1,8 @@
-import { useLoaderData, Link, Form } from 'react-router-dom';
+import { useLoaderData, Link, Form, useNavigate } from 'react-router-dom';
+import { MdKeyboardBackspace } from 'react-icons/md';
 import { getBooks, getBook } from '../methods/books';
 import { addCart, deleteCart } from '../methods/carts';
+import { IoBagCheckOutline } from 'react-icons/io5';
 
 export const loader = async ({ params: { bookId } }) => {
   const books = await getBooks();
@@ -26,35 +28,70 @@ export const action = async ({ params }) => {
 
 const Book: React.FC = () => {
   const { book } = useLoaderData();
+  const navigate = useNavigate();
   return (
-    <section className="">
-      <h2>This is in Book</h2>
+    <section className="p-2 sm:p-4">
+      <div className="text-4xl">
+        <button className="grid place-items-center w-12 h-12 bg-white border-2 border-sky-500 rounded-full hover:bg-sky-500 text-sky-500 hover:text-white transition-all" onClick={() => navigate(-1)}>
+          <MdKeyboardBackspace />
+        </button>
+      </div>
 
-      <div className="flex gap-4">
-        <div className="flex-1">
-          <Link to={'/cart'} className="max-w-[400px] block mx-auto">
-            <img src={book.image} alt="Book image" className="w-full block" />
-          </Link>
-        </div>
-        <div className="w-96 border p-4">
-          <p className="">Title: {book.title}</p>
-          <p className="">Author: {book.author}</p>
-          <p className="">Price: {book.price}</p>
-          <p className="">Category: {book.category}</p>
-          <div className="border border-green-700 text-center">
-            <Form method="post" className="">
-              <button type="submit" className="w-full h-full px-4 py-2 ">
-                {book.inCart ? 'Added' : 'Add to cart'}
+      <div className="grid grid-cols-1 shadow-lg shadow-gray-600 border-t p-4 mx-auto max-w-2xl gap-4">
+        <div className="">
+          <div className="flow-root">
+            <dl className="-my-3 divide-y divide-gray-100 text-sm sm:text-base">
+              <div className="grid grid-cols-1 gap-1 py-3 sm:grid-cols-3 sm:gap-4">
+                <dt className="text-slate-900 font-bold">Title</dt>
+                <dd className="text-gray-700 sm:col-span-2">{book.title}</dd>
+              </div>
+
+              <div className="grid grid-cols-1 gap-1 py-3 sm:grid-cols-3 sm:gap-4">
+                <dt className="text-slate-900 font-bold">Author(s)</dt>
+                <dd className="text-gray-700 sm:col-span-2">{book.author}</dd>
+              </div>
+
+              <div className="grid grid-cols-1 gap-1 py-3 sm:grid-cols-3 sm:gap-4">
+                <dt className="text-slate-900 font-bold">Sale</dt>
+                <dd className="text-gray-700 sm:col-span-2">{book.sale}%</dd>
+              </div>
+
+              <div className="grid grid-cols-1 gap-1 py-3 sm:grid-cols-3 sm:gap-4">
+                <dt className="text-slate-900 font-bold">Price</dt>
+                <dd className="text-gray-700 sm:col-span-2">{book.price}</dd>
+              </div>
+
+              <div className="grid grid-cols-1 gap-1 py-3 sm:grid-cols-3 sm:gap-4">
+                <dt className="text-slate-900 font-bold">Description</dt>
+                <dd className="text-gray-700 sm:col-span-2">
+                  {book.description.length > 0
+                    ? book.description
+                    : 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et facilis debitis explicabo doloremque impedit nesciunt dolorem facere, dolor quasi veritatis quia fugit aperiam aspernatur neque molestiae labore aliquam soluta architecto?'}
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <div className="">
+            <Form method="post" className={'border-2 font-bold p-4 my-4' + ' ' + (book.inCart ? 'border-green-700 text-green-700' : 'border-sky-700 text-sky-700')}>
+              <button type="submit" className="uppercase w-full flex items-center justify-center">
+                {book.inCart ? (
+                  <>
+                    <IoBagCheckOutline className="text-2xl" />
+                    <span className="mt-1 ml-2">added</span>
+                  </>
+                ) : (
+                  'Add to cart'
+                )}
               </button>
             </Form>
+            <Link to={'/cart'} className="uppercase border-2 border-yellow-700 text-yellow-700 p-4 my-4 block font-bold text-center">
+              view cart
+            </Link>
           </div>
-          <details className="">
-            <summary className="">Description:</summary>
-            <p className="">
-              {book.description ||
-                `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius error eum, architecto similique accusamus eligendi, molestias ab mollitia, reprehenderit voluptatibus perferendis culpa ex repellat obcaecati totam consequatur dolorum numquam aspernatur? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci animi consectetur alias mollitia corporis odio nihil tempore, velit repudiandae commodi eligendi explicabo fugit deleniti minima quo iste, dicta repellendus id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, vitae quia quis porro necessitatibus nostrum, ducimus doloribus culpa labore, omnis illum quasi. Voluptatibus reiciendis laboriosam incidunt quo hic numquam totam!`}
-            </p>
-          </details>
+        </div>
+
+        <div className="">
+          <img src={book.image} alt="Book image" className="block w-full" />
         </div>
       </div>
     </section>
