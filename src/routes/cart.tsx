@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { useLoaderData, Link, Navigate, useFetcher } from 'react-router-dom';
+import { MdKeyboardBackspace } from 'react-icons/md';
+import { useLoaderData, Link, Navigate, useFetcher, useNavigate } from 'react-router-dom';
 import { getCarts, deleteCart, getCart, updateCart, sumCarts } from '../methods/carts';
 
 export const loader = async () => {
@@ -9,10 +10,10 @@ export const loader = async () => {
 };
 
 export const action = async ({ request }) => {
+  // this action handle 3 form submission
   const formData = await request.formData();
   const data = Object.fromEntries(formData);
   const id = data.id;
-  console.log(data);
 
   if (data.action === 'toggle') {
     await updateCart(id, { isBuying: data.isBuying === 'true' });
@@ -42,22 +43,22 @@ export const action = async ({ request }) => {
 
 const CartForm = ({ cart }) => {
   const fetcher = useFetcher();
-  const salePercent = `-${cart.sale}%`;
-  const beforeSale = Math.round(cart.price * (1 + cart.sale / 100));
-  const afterSale = cart.price;
+  const percent = `-${cart.sale}%`;
+  const before = Math.round(cart.price * (1 + cart.sale / 100));
+  const after = cart.price;
   let jsxPrice;
   if (cart.isBuying) {
     jsxPrice = (
       <>
         <p className="">
           <i className="text-slate-700 line-through">
-            {beforeSale} 000
+            {before} 000
             <span className="underline">đ</span>
           </i>{' '}
-          <span className="inline-block border border-red-500 text-red-500 text-xs ml-2 p-1 rounded">{salePercent}</span>
+          <span className="inline-block border border-red-500 text-red-500 text-xs ml-2 p-1 rounded">{percent}</span>
         </p>
         <p className="text-lg">
-          {afterSale} 000<span className="underline">đ</span>
+          {after} 000<span className="underline">đ</span>
         </p>
       </>
     );
@@ -120,6 +121,7 @@ const Cart = () => {
   const { carts, sum } = useLoaderData();
   const [warnEmptyCart, setWarnEmptyCart] = useState(false);
   const [willNavigate, setWillNavigate] = useState(false);
+  const navigate = useNavigate();
   useEffect(() => {
     setTimeout(() => {
       setWarnEmptyCart(false);
@@ -127,8 +129,11 @@ const Cart = () => {
   }, [warnEmptyCart]);
   return (
     <section className="">
-      <h1 className="text-xs">This is in Cart you can choose to either buy or borrow the book with the quantity you want</h1>
-
+      <div className="text-4xl p-4">
+        <button className="grid place-items-center w-12 h-12 bg-white border-2 border-sky-500 rounded-full hover:bg-sky-500 text-sky-500 hover:text-white transition-all" onClick={() => navigate(-1)}>
+          <MdKeyboardBackspace />
+        </button>
+      </div>
       <div className="">
         {carts.length ? (
           carts.map((cart) => (
