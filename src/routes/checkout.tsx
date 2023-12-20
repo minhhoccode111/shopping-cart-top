@@ -39,39 +39,39 @@ const Checkout = () => {
     <>
       {sum !== 0 ? (
         !isFinished ? (
-          <div>
-            <h1 className="">This is in Checkout</h1>
+          <article className="max-w-3xl mx-auto">
             <h2 className="">
               So your bill cost: {sum} 000<span className="underline">đ</span>
             </h2>
-            <div className="">
+            <div className="border">
               <fetcher.Form
                 method="post"
                 onSubmit={() => {
                   setIsFinished(true);
                 }}
+                className=""
               >
                 <div className="div">
                   <label className="">
-                    <span className="">*Name: </span>
+                    <span className="">Name: </span>
                     <input type="text" required className="" placeholder="Enter your name" minLength={2} />
                   </label>
                 </div>
                 <div className="div">
                   <label className="">
-                    <span className="">*Address: </span>
+                    <span className="">Address: </span>
                     <input type="text" required className="" placeholder="Enter your address" minLength={5} />
                   </label>
                 </div>
                 <div className="div">
                   <label className="">
-                    <span className="">*Phone: </span>
+                    <span className="">Phone: </span>
                     <input type="tel" required className="" placeholder="Enter your phone number" minLength={9} />
                   </label>
                 </div>
                 <div className="div">
                   <label className="">
-                    <span className="">*Email: </span>
+                    <span className="">Email: </span>
                     <input type="email" required className="" placeholder="Enter your email" />
                   </label>
                 </div>
@@ -86,7 +86,7 @@ const Checkout = () => {
                 </div>
               </fetcher.Form>
             </div>
-          </div>
+          </article>
         ) : (
           <div className="">
             <p className="">Congrats! You've successfully purchased</p>
