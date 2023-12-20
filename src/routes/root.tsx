@@ -123,8 +123,8 @@ const Root: React.FC = () => {
         <Outlet />
       </main>
       {pathname !== '/' && (
-        <footer className="text-center">
-          <p>Copyright 2022</p>
+        <footer className="hidden">
+          <h2 className="text-xl">Made with love by minhhoccode</h2>
         </footer>
       )}
     </>

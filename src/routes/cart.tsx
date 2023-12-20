@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
+import { CiSquareRemove } from 'react-icons/ci';
 import { MdKeyboardBackspace } from 'react-icons/md';
+import { FaCaretSquareDown, FaCaretSquareUp } from 'react-icons/fa';
+import { IoSyncCircleOutline } from 'react-icons/io5';
 import { useLoaderData, Link, Navigate, useFetcher, useNavigate } from 'react-router-dom';
 import { getCarts, deleteCart, getCart, updateCart, sumCarts } from '../methods/carts';
 
@@ -46,73 +49,84 @@ const CartForm = ({ cart }) => {
   const percent = `-${cart.sale}%`;
   const before = Math.round(cart.price * (1 + cart.sale / 100));
   const after = cart.price;
-  let jsxPrice;
-  if (cart.isBuying) {
-    jsxPrice = (
-      <>
-        <p className="">
-          <i className="text-slate-700 line-through">
-            {before} 000
-            <span className="underline">đ</span>
-          </i>{' '}
-          <span className="inline-block border border-red-500 text-red-500 text-xs ml-2 p-1 rounded">{percent}</span>
-        </p>
-        <p className="text-lg">
-          {after} 000<span className="underline">đ</span>
-        </p>
-      </>
-    );
-  } else {
-    jsxPrice = (
-      <p className="">
-        1 000<span className="underline">đ</span>/day
-      </p>
-    );
-  }
+  const isBuying = cart.isBuying;
   return (
     <>
       <div className="">
-        <p className="">{cart.title}</p>
-        <p className="">{cart.author}</p>
-        {jsxPrice}
+        <header className="flex items-center justify-between">
+          <h2 className="text-sm sm:text-base md:text-lg font-bold">{cart.title}</h2>
+          <fetcher.Form method="post" className="">
+            <input type="text" hidden aria-hidden readOnly placeholder="read cart id" name="id" value={cart.id} />
+            <button name="action" value={'delete'} className={'text-2xl sm:text-3xl md:text-4xl text-red-700'} type="submit">
+              <CiSquareRemove className="" />
+            </button>
+          </fetcher.Form>
+        </header>
+        <p className="text-xs sm:text-sm md:text-base">{cart.author}</p>
       </div>
-      <div className="absolute z-10 right-0 bottom-full flex items-center justify-between gap-2">
-        <fetcher.Form method="post" className="rounded-t-xl hover:shadow-inner transition-shadow shadow-gray-700 bg-gray-200 shadow-md">
-          <input type="text" hidden aria-hidden readOnly placeholder="read cart id" name="id" value={cart.id} />
-          <input type="text" hidden aria-hidden readOnly placeholder="read cart action" name="action" value={'toggle'} />
-          <button name="isBuying" value={cart.isBuying ? 'false' : 'true'} className={'px-4 py-2 underline'} type="submit">
-            {cart.isBuying ? 'Buy' : 'Borrow'}
-          </button>
-        </fetcher.Form>
-        <fetcher.Form method="post" className="rounded-t-xl hover:shadow-inner transition-shadow shadow-gray-700 bg-gray-200 shadow-md">
-          <input type="text" hidden aria-hidden readOnly placeholder="read cart id" name="id" value={cart.id} />
-          <button name="action" value={'delete'} className={'px-4 py-2'} type="submit">
-            Delete
-          </button>
-        </fetcher.Form>
+      <div className={'grid gap-1' + ' ' + (isBuying ? 'grid-cols-7' : 'grid-cols-6')}>
+        <div className="flex flex-col gap-1">
+          <h3 className="text-sm sm:text-base md:text-lg font-bold">Type</h3>
+          <p className="text-xs sm:text-sm md:text-base">{isBuying ? 'Buy' : 'Borrow'}</p>
+          {/* toggle to switch between buy and borrow mode */}
+          <fetcher.Form method="post" className="">
+            <input type="text" hidden aria-hidden readOnly placeholder="read cart id" name="id" value={cart.id} />
+            <input type="text" hidden aria-hidden readOnly placeholder="read cart action" name="action" value={'toggle'} />
+            <button name="isBuying" value={cart.isBuying ? 'false' : 'true'} className={'text-2xl sm:text-3xl md:text-4xl'} type="submit">
+              <IoSyncCircleOutline className="" />
+            </button>
+          </fetcher.Form>
+        </div>
+        <div className="flex flex-col items-center gap-1 col-span-2">
+          <h3 className="text-sm sm:text-base md:text-lg font-bold">Price</h3>
+          <p className="text-xs sm:text-sm md:text-base">
+            {isBuying ? (
+              <>
+                <span className="">{before}</span> <span className="">000</span> <span className="underline">đ</span>
+              </>
+            ) : (
+              <>
+                <span className="">1000</span>
+                <span className="underline">đ</span>
+                <span className="">/day</span>
+              </>
+            )}
+          </p>
+        </div>
+        <div className="flex flex-col items-center gap-1">
+          <h3 className="text-sm sm:text-base md:text-lg font-bold">Count</h3>
+          <p className="text-xs sm:text-sm md:text-base">{isBuying ? cart.inputBuyQuantity : cart.inputBorrowQuantity}</p>
+          <div className="flex items-center justify-between gap-1">
+            <fetcher.Form method="post" className="">
+              <input type="text" hidden aria-hidden readOnly placeholder="read card id" name="id" value={cart.id} />
+              <input type="text" hidden aria-hidden readOnly placeholder="read card action" name="action" value="change" />
+              <input type="text" hidden aria-hidden readOnly placeholder="read card isBuying" name="isBuying" value={cart.isBuying ? 'true' : 'false'} />
+              <button name={'value'} value={-1} className="text-xl sm:text-2xl bg-black text-white rounded" type="submit">
+                <FaCaretSquareDown className="" />
+              </button>
+            </fetcher.Form>
+            <fetcher.Form method="post" className="">
+              <input type="text" hidden aria-hidden readOnly placeholder="read card id" name="id" value={cart.id} />
+              <input type="text" hidden aria-hidden readOnly placeholder="read card action" name="action" value="change" />
+              <input type="text" hidden aria-hidden readOnly placeholder="read card isBuying" name="isBuying" value={cart.isBuying ? 'true' : 'false'} />
+              <button name={'value'} value={1} className="text-xl sm:text-2xl bg-black text-white rounded" type="submit">
+                <FaCaretSquareUp className="" />
+              </button>
+            </fetcher.Form>
+          </div>
+        </div>
+        <div className={'flex flex-col items-center gap-1' + ' ' + (cart.isBuying ? 'block' : 'hidden')}>
+          <h3 className="text-sm sm:text-base md:text-lg font-bold">Sale</h3>
+          <p className="text-xs sm:text-sm md:text-base">{percent}</p>
+        </div>
+        <div className="flex flex-col gap-1 items-end col-span-2 ">
+          <h3 className="text-sm sm:text-base md:text-lg font-bold">Total</h3>
+          <p className="text-xs sm:text-sm md:text-base font-extrabold text-green-700">
+            {isBuying ? cart.inputBuyQuantity * after : cart.inputBorrowQuantity} <span className="">{(isBuying ? cart.inputBuyQuantity * after : cart.inputBorrowQuantity) !== 0 ? '000' : ''}</span>
+            <span className="underline">đ</span>
+          </p>
+        </div>
       </div>
-      <fetcher.Form method="post" className="">
-        <input type="text" hidden aria-hidden readOnly placeholder="read card id" name="id" value={cart.id} />
-        <input type="text" hidden aria-hidden readOnly placeholder="read card action" name="action" value="change" />
-        <input type="text" hidden aria-hidden readOnly placeholder="read card isBuying" name="isBuying" value={cart.isBuying ? 'true' : 'false'} />
-        <button name={'value'} value={-1} className="rounded-lg h-4 w-8 flex items-center justify-center border-2 font-bold text-red-800 border-red-800" type="submit">
-          -
-        </button>
-      </fetcher.Form>
-      <fetcher.Form method="post" className="">
-        <input type="text" hidden aria-hidden readOnly placeholder="read card id" name="id" value={cart.id} />
-        <input type="text" hidden aria-hidden readOnly placeholder="read card action" name="action" value="change" />
-        <input type="text" hidden aria-hidden readOnly placeholder="read card isBuying" name="isBuying" value={cart.isBuying ? 'true' : 'false'} />
-        <button name={'value'} value={1} className="rounded-lg h-4 w-8 flex items-center justify-center border-2 font-bold text-green-800 border-green-800" type="submit">
-          +
-        </button>
-      </fetcher.Form>
-      <p className="">
-        {cart.isBuying
-          ? `You buy this book. Quantity: ${cart.inputBuyQuantity}. Total: ${cart.inputBuyQuantity * cart.price} 000`
-          : `You borrow this book. Quantity: ${cart.inputBorrowQuantity} day(s). Total: ${cart.inputBorrowQuantity} 000`}
-        <span className="underline">đ</span>
-      </p>
     </>
   );
 };
@@ -134,51 +148,62 @@ const Cart = () => {
           <MdKeyboardBackspace />
         </button>
       </div>
-      <div className="">
+      <div className="p-1 sm:p-2 md:p-3 max-w-3xl mx-auto">
         {carts.length ? (
           carts.map((cart) => (
-            <div key={cart.id} className="flex gap-2 m-4 border mt-8 mb-16 bg-white">
-              <Link to={`/shop/book/${cart.id}`} className="">
+            <article key={cart.id} className="flex gap-2 sm:gap-3 p-2 sm:p-3 my-2 sm:my-3 md:my-4 bg-white shadow shadow-gray-400 rounded text-slate-700">
+              <Link to={`/shop/book/${cart.id}`} className="block">
                 <div className="w-32 sm:w-36 md:w-40 lg:w-48">
                   <img src={cart.image} alt="Book image" className="object-center" />
                 </div>
               </Link>
-              <div className="flex-1 p-2 relative">
+              <div className="flex-1 p-2 flex flex-col gap-2 justify-between">
                 <CartForm cart={cart} />
               </div>
-            </div>
+            </article>
           ))
         ) : (
-          <div className="uppercase h-full flex flex-col items-center justify-center">
-            <p className="">Oops! Your cart is empty</p>
-            <p className="underline hover:no-underline transition-all">
-              <Link to={'/shop'}>Shop now!</Link>
-            </p>
-          </div>
+          <article className="max-w-3xl mx-auto uppercase font-bold text-center p-1">
+            <header className="">
+              <h2 className="text-xl sm:text-2xl md:text-4xl text-slate-900">Oops! Your cart is empty</h2>
+            </header>
+            <br className="my-4" />
+            <div className="">
+              <p className="underline decoration-dotted hover:decoration-solid text-sky-500">
+                <Link to={'/shop'}>Shop now!</Link>
+              </p>
+            </div>
+          </article>
+        )}
+
+        {carts.length !== 0 && (
+          <article className="max-w-3xl mx-auto my-8 p-1 flex flex-col items-end gap-2 sm:gap-4 md:gap-6">
+            <header className="">
+              <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold text-slate-900">
+                Subtotal: {sum} {sum !== 0 ? '000' : ''}
+                <span className="underline">đ</span>
+              </h2>
+            </header>
+            <div className="">
+              <p className="text-xl sm:text-2xl md:text-4xl text-red-500 font-bold">{warnEmptyCart && 'Nothing to checkout'}</p>
+            </div>
+            <div className="">
+              <button
+                name="sum"
+                value={sum}
+                className="text-xl sm:text-2xl md:text-4xl uppercase border-2 border-yellow-700 text-yellow-700 font-bold p-2 sm:p-4 md:p-6"
+                onClick={() => {
+                  if (sum === 0) setWarnEmptyCart(true);
+                  else setWillNavigate(true);
+                }}
+              >
+                Checkout
+              </button>
+            </div>
+          </article>
         )}
       </div>
 
-      {carts.length !== 0 && (
-        <div className="">
-          <h2 className="text-right p-4">
-            Subtotal: {sum} 000<span className="underline">đ</span>
-          </h2>
-          <div className="">
-            <p className="text-red-500 font-bold">{warnEmptyCart && 'Nothing to checkout'}</p>
-            <button
-              name="sum"
-              value={sum}
-              className="uppercase py-4 px-8 border-2"
-              onClick={() => {
-                if (sum === 0) setWarnEmptyCart(true);
-                else setWillNavigate(true);
-              }}
-            >
-              Checkout
-            </button>
-          </div>
-        </div>
-      )}
       {willNavigate && <Navigate to={'checkout'} />}
     </section>
   );
