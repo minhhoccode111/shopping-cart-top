@@ -57,7 +57,7 @@ const CartForm = ({ cart }) => {
           <h2 className="text-sm sm:text-base md:text-lg font-bold">{cart.title}</h2>
           <fetcher.Form method="post" className="">
             <input type="text" hidden aria-hidden readOnly placeholder="read cart id" name="id" value={cart.id} />
-            <button name="action" value={'delete'} className={'text-2xl sm:text-3xl md:text-4xl text-red-700'} type="submit">
+            <button name="action" value={'delete'} className={'text-2xl sm:text-3xl md:text-4xl text-red-700 bg-white hover:scale-110'} type="submit">
               <CiSquareRemove className="" />
             </button>
           </fetcher.Form>
@@ -72,7 +72,7 @@ const CartForm = ({ cart }) => {
           <fetcher.Form method="post" className="">
             <input type="text" hidden aria-hidden readOnly placeholder="read cart id" name="id" value={cart.id} />
             <input type="text" hidden aria-hidden readOnly placeholder="read cart action" name="action" value={'toggle'} />
-            <button name="isBuying" value={cart.isBuying ? 'false' : 'true'} className={'text-2xl sm:text-3xl md:text-4xl'} type="submit">
+            <button name="isBuying" value={cart.isBuying ? 'false' : 'true'} className={'text-2xl sm:text-3xl md:text-4xl bg-white hover:scale-110'} type="submit">
               <IoSyncCircleOutline className="" />
             </button>
           </fetcher.Form>
@@ -101,7 +101,7 @@ const CartForm = ({ cart }) => {
               <input type="text" hidden aria-hidden readOnly placeholder="read card id" name="id" value={cart.id} />
               <input type="text" hidden aria-hidden readOnly placeholder="read card action" name="action" value="change" />
               <input type="text" hidden aria-hidden readOnly placeholder="read card isBuying" name="isBuying" value={cart.isBuying ? 'true' : 'false'} />
-              <button name={'value'} value={-1} className="text-xl sm:text-2xl bg-black text-white rounded" type="submit">
+              <button name={'value'} value={-1} className="text-xl sm:text-2xl bg-black text-white rounded hover:scale-110" type="submit">
                 <FaCaretSquareDown className="" />
               </button>
             </fetcher.Form>
@@ -109,7 +109,7 @@ const CartForm = ({ cart }) => {
               <input type="text" hidden aria-hidden readOnly placeholder="read card id" name="id" value={cart.id} />
               <input type="text" hidden aria-hidden readOnly placeholder="read card action" name="action" value="change" />
               <input type="text" hidden aria-hidden readOnly placeholder="read card isBuying" name="isBuying" value={cart.isBuying ? 'true' : 'false'} />
-              <button name={'value'} value={1} className="text-xl sm:text-2xl bg-black text-white rounded" type="submit">
+              <button name={'value'} value={1} className="text-xl sm:text-2xl bg-black text-white rounded hover:scale-110" type="submit">
                 <FaCaretSquareUp className="" />
               </button>
             </fetcher.Form>
@@ -144,7 +144,10 @@ const Cart = () => {
   return (
     <section className="">
       <div className="text-4xl p-4">
-        <button className="grid place-items-center w-12 h-12 bg-white border-2 border-sky-500 rounded-full hover:bg-sky-500 text-sky-500 hover:text-white transition-all" onClick={() => navigate(-1)}>
+        <button
+          className="grid place-items-center w-12 h-12 bg-white border-2 border-sky-500 rounded-full hover:bg-sky-500 text-sky-500 hover:text-white transition-all hover:shadow-lg hover:shadow-gray-400"
+          onClick={() => navigate(-1)}
+        >
           <MdKeyboardBackspace />
         </button>
       </div>
@@ -191,7 +194,7 @@ const Cart = () => {
               <button
                 name="sum"
                 value={sum}
-                className="text-xl sm:text-2xl md:text-4xl uppercase border-2 border-yellow-700 text-yellow-700 font-bold p-2 sm:p-4 md:p-6"
+                className="text-xl sm:text-2xl md:text-4xl uppercase border-2 border-yellow-700 text-yellow-700 font-bold p-2 sm:p-4 md:p-6 transition-all bg-white hover:bg-yellow-700 hover:text-white hover:shadow-lg hover:shadow-gray-400 hover:scale-110"
                 onClick={() => {
                   if (sum === 0) setWarnEmptyCart(true);
                   else setWillNavigate(true);

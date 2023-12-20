@@ -5,7 +5,7 @@
     "price": 110,
     "category": "Tâm lý",
     "link": "https://cf.shopee.vn/file/f2de0d64b61a439f67d8cf8db84dd65d",
-    "image": "tamlyhoctinhcach"
+    "image": "/thumbnails/tamlyhoctinhcach.jpg"
   },
   {
     "title": "Quẳng gánh lo đi và vui sống",
@@ -13,7 +13,7 @@
     "price": 86,
     "category": "Phát triển bản thân",
     "link": "https://vnwriter.net/wp-content/uploads/2017/06/sach-quang-ganh-lo-di-va-vui-song.jpg",
-    "image": "quangganhlodivavuisong"
+    "image": "/thumbnails/quangganhlodivavuisong.jpg"
   },
   {
     "title": "Số đỏ",
@@ -21,7 +21,7 @@
     "price": 30,
     "category": "Tiểu thuyết",
     "link": "https://salt.tikicdn.com/ts/product/a7/14/57/2160a52816265cd80ea8cdc7519418f2.jpg",
-    "image": "sodo"
+    "image": "/thumbnails/sodo.jpg"
   },
   {
     "title": "Giải mã trí tuệ cảm xúc",
@@ -29,7 +29,7 @@
     "price": 88,
     "category": "Tâm lý",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/g/i/giai-ma-tri-tue-cam-xuc.jpg",
-    "image": "giaimatrituecamxuc"
+    "image": "/thumbnails/giaimatrituecamxuc.jpg"
   },
   {
     "title": "Lắt léo tiếng việt",
@@ -37,7 +37,7 @@
     "price": 81,
     "category": "Kiến thức tổng hợp",
     "link": "https://www.netabooks.vn/Data/Sites/1/Product/25165/lat-leo-tieng-viet.jpg",
-    "image": "latleotiengviet"
+    "image": "/thumbnails/latleotiengviet.jpg"
   },
   {
     "title": "Heidegger và con hà mã bước qua cổng thiên đường",
@@ -45,7 +45,7 @@
     "price": 105,
     "category": "Văn học",
     "link": "https://cf.shopee.vn/file/c9df882d1d7fc3e0566cf2cf15f3359c",
-    "image": "heideggervaconhamabuocquacongthienduong"
+    "image": "/thumbnails/heideggervaconhamabuocquacongthienduong.jpg"
   },
   {
     "title": "Nỗi lo âu về địa vị",
@@ -53,7 +53,7 @@
     "price": 115,
     "category": "Triết học",
     "link": "https://cdn0.fahasa.com/media/flashmagazine/images/page_images/noi_lo_au_ve_dia_vi_tai_ban_2020/2021_03_17_16_00_37_1-390x510.jpg",
-    "image": "noiloauvediavi"
+    "image": "/thumbnails/noiloauvediavi.jpg"
   },
   {
     "title": "Những đứa trẻ bị mắc kẹt",
@@ -61,7 +61,7 @@
     "price": 89,
     "category": "Văn học",
     "link": "https://bloganchoi.com/wp-content/uploads/2019/07/review-sach-nhung-dua-tre-bi-mac-ket-0.jpg",
-    "image": "nhungduatrebimacket"
+    "image": "/thumbnails/nhungduatrebimacket.jpg"
   },
   {
     "title": "Quân vương",
@@ -69,7 +69,7 @@
     "price": 160,
     "category": "Tiểu thuyết",
     "link": "https://cdn0.fahasa.com/media/flashmagazine/images/page_images/quan_vuong___thuat_cai_tri_tai_ban_2018/2020_05_06_17_02_15_1-390x510.JPG",
-    "image": "quanvuong"
+    "image": "/thumbnails/quanvuong.jpg"
   },
   {
     "title": "Tâm lý học trong nháy mắt 5",
@@ -77,7 +77,7 @@
     "price": 109,
     "category": "Tâm lý",
     "link": "https://cf.shopee.vn/file/7104b195a48e20d89a6a6f6be02e31f3",
-    "image": "tamlyhoctrongnhaymat5"
+    "image": "/thumbnails/tamlyhoctrongnhaymat5.jpg"
   },
   {
     "title": "Tâm lý học trong nháy mắt 3",
@@ -85,7 +85,7 @@
     "price": 146,
     "category": "Tâm lý",
     "link": "https://product.hstatic.net/200000273991/product/tam_ly_hoc_3_b1_a6cd2280433c4cdbb973c8952cfa7767_master.jpg",
-    "image": "tamlyhoctrongnhaymat3"
+    "image": "/thumbnails/tamlyhoctrongnhaymat3.jpg"
   },
   {
     "title": "Tâm lý học trong nháy mắt 2",
@@ -93,7 +93,7 @@
     "price": 132,
     "category": "Tâm lý",
     "link": "https://www.dtv-ebook.com/images/Cover/34346111284_64237b248c_o.jpg",
-    "image": "tamlyhoctrongnhaymat2"
+    "image": "/thumbnails/tamlyhoctrongnhaymat2.jpg"
   },
   {
     "title": "Tâm lý học trong nháy mắt 4",
@@ -101,7 +101,7 @@
     "price": 108,
     "category": "Tâm lý",
     "link": "https://cdn0.fahasa.com/media/flashmagazine/images/page_images/tam_ly_hoc_trong_nhay_mat_q4/2021_01_18_14_01_43_1-390x510.jpg",
-    "image": "tamlyhoctrongnhaymat4"
+    "image": "/thumbnails/tamlyhoctrongnhaymat4.jpg"
   },
   {
     "title": "Sao chúng ta lại ngủ",
@@ -109,7 +109,7 @@
     "price": 249,
     "category": "Sức khỏe",
     "link": "https://cdn0.fahasa.com/media/catalog/product/b/i/biaao-01_1.jpg",
-    "image": "saochungtalaingu"
+    "image": "/thumbnails/saochungtalaingu.jpg"
   },
   {
     "title": "Làm đĩ",
@@ -117,7 +117,7 @@
     "price": 55,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/ee/a9/50/d23e2d4dc76e4870cab66b76d48f8801.jpg",
-    "image": "lamdi"
+    "image": "/thumbnails/lamdi.jpg"
   },
   {
     "title": "Harvard bốn rưỡi sáng",
@@ -125,7 +125,7 @@
     "price": 139,
     "category": "Kỹ năng sống",
     "link": "https://vn-test-11.slatic.net/p/ecd7f0a0731d2220a77c6d749d907c36.jpg",
-    "image": "harvardbonruoisang"
+    "image": "/thumbnails/harvardbonruoisang.jpg"
   },
   {
     "title": "Đảo",
@@ -133,7 +133,7 @@
     "price": 55,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/6a/09/61/cba464fcf63b8ceda6696474ff2c00a0.jpg",
-    "image": "dao"
+    "image": "/thumbnails/dao.jpg"
   },
   {
     "title": "Nghệ thuật tinh tế của việc đếch quan tâm ",
@@ -141,7 +141,7 @@
     "price": 128,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/ts/product/e4/9b/b7/a8b3f9dfdd6a8eef63f20b7646c976d8.jpg",
-    "image": "nghethuattinhtecuaviecdechquantam"
+    "image": "/thumbnails/nghethuattinhtecuaviecdechquantam.jpg"
   },
   {
     "title": "Dám bị ghét",
@@ -149,7 +149,7 @@
     "price": 96,
     "category": "Tiểu thuyết",
     "link": "https://cdn0.fahasa.com/media/flashmagazine/images/page_images/dam_bi_ghet/2021_06_24_16_40_21_1-390x510.jpg",
-    "image": "dambighet"
+    "image": "/thumbnails/dambighet.jpg"
   },
   {
     "title": "Cô gái mặc váy tím",
@@ -157,7 +157,7 @@
     "price": 95,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/a8/cb/b0/b33459d45a191ed5fd9d232ca260f652.jpg",
-    "image": "cogaimacvaytim"
+    "image": "/thumbnails/cogaimacvaytim.jpg"
   },
   {
     "title": "Đánh thức phù thủy trí nhớ trong bạn",
@@ -165,7 +165,7 @@
     "price": 150,
     "category": "Kỹ năng sống",
     "link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzjt_AtwCTydcvlN-G8Rq7_m8E7uHQiuoOyU2r6QXi8_NDW-QVLAHn3UDZUn2qjI5fHBY&usqp=CAU",
-    "image": "danhthucphuthuytrinhotrongban"
+    "image": "/thumbnails/danhthucphuthuytrinhotrongban.jpg"
   },
   {
     "title": "Nếu biết trăm năm là hữu hạn",
@@ -173,7 +173,7 @@
     "price": 94,
     "category": "Văn học",
     "link": "https://www.khaitam.com/Data/Sites/1/Product/9615/neu-biet-tram-nam-la-huu-han-tai-ban-2018.png",
-    "image": "neubiettramnamlahuuhan"
+    "image": "/thumbnails/neubiettramnamlahuuhan.jpg"
   },
   {
     "title": "Thôi miên bằng ngôn từ",
@@ -181,7 +181,7 @@
     "price": 149,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/ea/ca/f8/97d6bd1464075fee2e013fd4b22a3736.jpg",
-    "image": "thoimienbangngontu"
+    "image": "/thumbnails/thoimienbangngontu.jpg"
   },
   {
     "title": "Thiên tài bên trái kẻ điên bên phải",
@@ -189,7 +189,7 @@
     "price": 179,
     "category": "Tâm lý",
     "link": "https://salt.tikicdn.com/ts/product/7c/e8/34/4d3636aadb471cad0bf2f45d681e4f23.jpg",
-    "image": "thientaibentraikedienbenphai"
+    "image": "/thumbnails/thientaibentraikedienbenphai.jpg"
   },
   {
     "title": "Những điều giữ tôi còn sống",
@@ -197,7 +197,7 @@
     "price": 119,
     "category": "Kỹ năng sống",
     "link": "https://xemsachhay.com/wp-content/uploads/2019/07/342462_p88073mnhungdieu.jpg",
-    "image": "nhungdieugiutoiconsong"
+    "image": "/thumbnails/nhungdieugiutoiconsong.jpg"
   },
   {
     "title": "Truyền sao cho thông",
@@ -205,7 +205,7 @@
     "price": 169,
     "category": "Kỹ năng sống",
     "link": "https://newshop.vn/public/uploads/products/43023/sach-truyen-sao-cho-thong.jpg",
-    "image": "truyensaochothong"
+    "image": "/thumbnails/truyensaochothong.jpg"
   },
   {
     "title": "Con đường trở thành Freelance Writer",
@@ -213,7 +213,7 @@
     "price": 220,
     "category": "Marketing - Bán hàng",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/bd/b6/cf/925f40201f2ddb7736ea5739ab6c5480.jpg",
-    "image": "conduongtrothanhfreelancewriter"
+    "image": "/thumbnails/conduongtrothanhfreelancewriter.jpg"
   },
   {
     "title": "Sự an ủi của triết học",
@@ -221,7 +221,7 @@
     "price": 109,
     "category": "Triết học",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/u/n/unimaged_4_4.jpg",
-    "image": "suanuicuatriethoc"
+    "image": "/thumbnails/suanuicuatriethoc.jpg"
   },
   {
     "title": "Những lời giáo huấn của Epictetus",
@@ -229,7 +229,7 @@
     "price": 239,
     "category": "Kỹ năng sống",
     "link": "https://thaihabooks.com/wp-content/uploads/2022/04/Nhung-loi-giao-huan-bia-1.jpg",
-    "image": "nhungloigiaohuancuaepictetus"
+    "image": "/thumbnails/nhungloigiaohuancuaepictetus.jpg"
   },
   {
     "title": "Bàn về ham muốn",
@@ -237,7 +237,7 @@
     "price": 169,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/c1/bb/5f/472bb21ec97ddc2dddba3af5309c6c45.jpg",
-    "image": "banvehammuon"
+    "image": "/thumbnails/banvehammuon.jpg"
   },
   {
     "title": "Little stories to have a nice day",
@@ -245,7 +245,7 @@
     "price": 65,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/ts/product/21/46/43/4f9dd2fc9b92921dfe96c2733835703e.jpg",
-    "image": "littlestoriestohaveaniceday"
+    "image": "/thumbnails/littlestoriestohaveaniceday.jpg"
   },
   {
     "title": "How Psychology Works",
@@ -253,7 +253,7 @@
     "price": 300,
     "category": "Tâm lý",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/2b/84/ff/cb34637573525a998596b58d6939411e.jpg",
-    "image": "howpsychologyworks"
+    "image": "/thumbnails/howpsychologyworks.jpg"
   },
   {
     "title": "Chủ nghĩa khắc kỷ",
@@ -261,7 +261,7 @@
     "price": 125,
     "category": "Tâm lý",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/97/61/91/a9b293f184d4dbbc2afc416b539f2bca.jpg",
-    "image": "chunghiakhacky"
+    "image": "/thumbnails/chunghiakhacky.jpg"
   },
   {
     "title": "Plato và con thú mỏ vịt bước vào quán bar..",
@@ -269,7 +269,7 @@
     "price": 100,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/p/l/plato-va-con-thu-mo-vit-buoc-vao-quan-bar.png",
-    "image": "platovaconthumovitbuocvaoquanbar"
+    "image": "/thumbnails/platovaconthumovitbuocvaoquanbar.jpg"
   },
   {
     "title": "Lỗi Error 404",
@@ -277,7 +277,7 @@
     "price": 89,
     "category": "Tiểu thuyết",
     "link": "https://salt.tikicdn.com/cache/750x750/media/catalog/product/p/a/page1.u4939.d20170403.t151055.174671.jpg.webp",
-    "image": "loierror404"
+    "image": "/thumbnails/loierror404.jpg"
   },
   {
     "title": "Để ngôn từ trở thành sức mạnh",
@@ -285,7 +285,7 @@
     "price": 59,
     "category": "Marketing - Bán hàng",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/b/i/bia_-de-ngon-tu-tro-thanh-su-manh_out-01.u547.d20160927.t091950.479391.jpg",
-    "image": "dengontutrothanhsucmanh"
+    "image": "/thumbnails/dengontutrothanhsucmanh.jpg"
   },
   {
     "title": "Bạn là những gì bạn ăn",
@@ -293,7 +293,7 @@
     "price": 75,
     "category": "Sức khỏe",
     "link": "https://cdn0.fahasa.com/media/catalog/product/b/_/b_n-l_-nh_ng-g_-b_n-_nb_a-1.jpg",
-    "image": "banlanhunggibanan"
+    "image": "/thumbnails/banlanhunggibanan.jpg"
   },
   {
     "title": "Cẩm nang phương pháp sư phạm",
@@ -301,7 +301,7 @@
     "price": 150,
     "category": "Kiến thức tổng hợp",
     "link": "https://salt.tikicdn.com/media/catalog/product/c/a/camnangppsupham.u84.d20161125.t123417.884704.jpg",
-    "image": "camnangphuongphapsupham"
+    "image": "/thumbnails/camnangphuongphapsupham.jpg"
   },
   {
     "title": "Cha mẹ độc hại",
@@ -309,7 +309,7 @@
     "price": 148,
     "category": "Tâm lý",
     "link": "https://thuviensach.vn/img/news/2022/08/larger/172-cha-me-doc-hai-1.jpg?v=4857",
-    "image": "chamedochai"
+    "image": "/thumbnails/chamedochai.jpg"
   },
   {
     "title": "Sang chấn tâm lý",
@@ -317,7 +317,7 @@
     "price": 350,
     "category": "Tâm lý",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/c6/62/e1/359cbfb80b5fa50d2fa8028db79b22b8.jpg",
-    "image": "sangchantamly"
+    "image": "/thumbnails/sangchantamly.jpg"
   },
   {
     "title": "Bàn tay kỳ diệu của Sachi",
@@ -325,7 +325,7 @@
     "price": 39,
     "category": "Truyện",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/b/a/ban-tay-ki-dieu.jpg",
-    "image": "bantaykydieucuasachi"
+    "image": "/thumbnails/bantaykydieucuasachi.jpg"
   },
   {
     "title": "Món ngon xứ Huế",
@@ -333,7 +333,7 @@
     "price": 139,
     "category": "Thường thức",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/02/39/6c/0eba0efa8210204ba48a5e9f7416220a.jpg",
-    "image": "monngonxuhue"
+    "image": "/thumbnails/monngonxuhue.jpg"
   },
   {
     "title": "Tôi đã sinh ra một lần nữa",
@@ -341,7 +341,7 @@
     "price": 69,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/cache/w300/ts/product/d2/89/29/3814f8d5f713ca78aa7b6f338a52f5c8.jpg",
-    "image": "toidasinhramotlannua"
+    "image": "/thumbnails/toidasinhramotlannua.jpg"
   },
   {
     "title": "Tự học 2000 từ vựng tiếng anh",
@@ -349,7 +349,7 @@
     "price": 65,
     "category": "Kiến thức tổng hợp",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/f3/27/cb/89a854446e7c683e5bd2372f3d1d29d6.jpg",
-    "image": "tuhoc2000tuvungtienganh"
+    "image": "/thumbnails/tuhoc2000tuvungtienganh.jpg"
   },
   {
     "title": "Tô bình yên vẽ hạnh phúc",
@@ -357,7 +357,7 @@
     "price": 68,
     "category": "Thường thức",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/97/bc/ae/7fe8a253cce6da248aebe6679bb9c88f.jpg",
-    "image": "tobinhyenvehanhphuc"
+    "image": "/thumbnails/tobinhyenvehanhphuc.jpg"
   },
   {
     "title": "Hòn đá xanh",
@@ -365,7 +365,7 @@
     "price": 99,
     "category": "Thiếu nhi",
     "link": "https://cf.shopee.vn/file/18ca183188ab018852469991c4ebfafe",
-    "image": "hondaxanh"
+    "image": "/thumbnails/hondaxanh.jpg"
   },
   {
     "title": "Ai che lưng cho bạn",
@@ -373,7 +373,7 @@
     "price": 110,
     "category": "Phát triển bản thân",
     "link": "https://salt.tikicdn.com/ts/product/a4/0d/59/bc28f653827780b3967a4904fb6d0a9a.jpg",
-    "image": "aichelungchoban"
+    "image": "/thumbnails/aichelungchoban.jpg"
   },
   {
     "title": "Đời ngắn đừng ngủ dài",
@@ -381,7 +381,7 @@
     "price": 60,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/d/o/doi-ngan-dung-ngu-dai.jpg",
-    "image": "doingandungngudai"
+    "image": "/thumbnails/doingandungngudai.jpg"
   },
   {
     "title": "Đến Nhật học về cuộc đời",
@@ -389,7 +389,7 @@
     "price": 85,
     "category": "Phát triển bản thân",
     "link": "https://salt.tikicdn.com/ts/product/7c/b0/ed/30678a908b5ffb812f520bda723dc383.jpg",
-    "image": "dennhathocvecuocdoi"
+    "image": "/thumbnails/dennhathocvecuocdoi.jpg"
   },
   {
     "title": "Xuân yến",
@@ -397,7 +397,7 @@
     "price": 130,
     "category": "Tiểu thuyết",
     "link": "https://salt.tikicdn.com/media/catalog/product/x/u/xuanyen1biaobi--1--u3059-d20170421-t154602-754741.u3781.d20170421.t223147.512966.jpg",
-    "image": "xuanyen"
+    "image": "/thumbnails/xuanyen.jpg"
   },
   {
     "title": "Có anh ở đây rồi, hạnh phúc cũng ở đây",
@@ -405,7 +405,7 @@
     "price": 69,
     "category": "Văn học",
     "link": "https://www.thivien.net/attachment/6CIpOWez4Hgm18681crSBg.1525595589.jpg",
-    "image": "coanhodayroihanhphuccungoday"
+    "image": "/thumbnails/coanhodayroihanhphuccungoday.jpg"
   },
   {
     "title": "Nhân tố Enzyme | Phương thức sống lành mạnh",
@@ -413,7 +413,7 @@
     "price": 85,
     "category": "Sức khỏe",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/66/fd/46/adcf0ad981ffbfecee8fd50069e4b711.jpg",
-    "image": "nhantoenzymephuongthucsonglanhmanh"
+    "image": "/thumbnails/nhantoenzymephuongthucsonglanhmanh.jpg"
   },
   {
     "title": "Lược sử thời gian",
@@ -421,7 +421,7 @@
     "price": 115,
     "category": "Kiến thức tổng hợp",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/90/e8/72/407ec67293dae7f2aef4fb71d4dda655.jpg",
-    "image": "luocsuthoigian"
+    "image": "/thumbnails/luocsuthoigian.jpg"
   },
   {
     "title": "Sức mạnh tiềm thức",
@@ -429,7 +429,7 @@
     "price": 128,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/media/catalog/product/i/m/img032_11.jpg",
-    "image": "sucmanhtiemthuc"
+    "image": "/thumbnails/sucmanhtiemthuc.jpg"
   },
   {
     "title": "Sức mạnh của tĩnh lặng",
@@ -437,7 +437,7 @@
     "price": 34,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/s/u/suc-manh-cua-tinh-lang.u547.d20160720.t134606.jpg",
-    "image": "sucmanhcuatinhlang"
+    "image": "/thumbnails/sucmanhcuatinhlang.jpg"
   },
   {
     "title": "Một lít nước mắt",
@@ -445,7 +445,7 @@
     "price": 80,
     "category": "Tiểu thuyết",
     "link": "https://www.khaitam.com/Data/Sites/1/Product/3446/mot-lit-nuoc-mat.jpg",
-    "image": "motlitnuocmat"
+    "image": "/thumbnails/motlitnuocmat.jpg"
   },
   {
     "title": "Còn nhớ nhau không",
@@ -453,7 +453,7 @@
     "price": 52,
     "category": "Văn học",
     "link": "https://cf.shopee.vn/file/8b778cf7afefa47b942c201acbf918cd",
-    "image": "connhonhaukhong"
+    "image": "/thumbnails/connhonhaukhong.jpg"
   },
   {
     "title": "Người thắp sao trời",
@@ -461,7 +461,7 @@
     "price": 60,
     "category": "Văn học",
     "link": "https://cdn0.fahasa.com/media/catalog/product/n/g/nguoi-thap-sao-troi.jpg",
-    "image": "nguoithapsaotroi"
+    "image": "/thumbnails/nguoithapsaotroi.jpg"
   },
   {
     "title": "Divergent",
@@ -469,7 +469,7 @@
     "price": 150,
     "category": "Tiểu thuyết",
     "link": "https://salt.tikicdn.com/cache/280x280/media/catalog/product/d/i/divergent_hq_1.jpg",
-    "image": "divergent"
+    "image": "/thumbnails/divergent.jpg"
   },
   {
     "title": "How to make someone fall in love with you in 90 minutes or less",
@@ -477,7 +477,7 @@
     "price": 190,
     "category": "Tâm lý",
     "link": "https://m.media-amazon.com/images/I/51ZVD1dKjLL.jpg",
-    "image": "howtomakesomeonefallinlovewithyouin90minutesorless"
+    "image": "/thumbnails/howtomakesomeonefallinlovewithyouin90minutesorless.jpg"
   },
   {
     "title": "Ngọn đèn không tắt",
@@ -485,7 +485,7 @@
     "price": 65,
     "category": "Văn học",
     "link": "https://cdn0.fahasa.com/media/catalog/product/8/9/8934974170952.jpg",
-    "image": "ngondenkhongtat"
+    "image": "/thumbnails/ngondenkhongtat.jpg"
   },
   {
     "title": "Tuyển tập truyện ngụ ngôn hay nhất của Aesop 2",
@@ -493,7 +493,7 @@
     "price": 46,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/ts/product/bb/40/44/59625284588caa304eacba634c72ebbc.jpg",
-    "image": "tuyentapngungonhaynhatcuaaesop2"
+    "image": "/thumbnails/tuyentapngungonhaynhatcuaaesop2.jpg"
   },
   {
     "title": "Tuyển tập những câu chuyện hay nhất của Aesop 1",
@@ -501,7 +501,7 @@
     "price": 50,
     "category": "Văn học",
     "link": "https://cdn0.fahasa.com/media/catalog/product/8/9/8935086847015.jpg",
-    "image": "tuyentapngungonhaynhatcuaaesop1"
+    "image": "/thumbnails/tuyentapngungonhaynhatcuaaesop1.jpg"
   },
   {
     "title": "Từ điển tâm lý",
@@ -509,7 +509,7 @@
     "price": 128,
     "category": "Tâm lý",
     "link": "https://cdn0.fahasa.com/media/catalog/product/t/_/t_i_n_t_m_l_-_b_a_1_1_.jpg",
-    "image": "tudientamly"
+    "image": "/thumbnails/tudientamly.jpg"
   },
   {
     "title": "Toàn như tâm lý học",
@@ -517,7 +517,7 @@
     "price": 126,
     "category": "Tâm lý",
     "link": "https://cf.shopee.vn/file/8d59ce2643031ba5adbc6710646ceea5",
-    "image": "toanthutamlyhoc"
+    "image": "/thumbnails/toanthutamlyhoc.jpg"
   },
   {
     "title": "Thánh kinh dưỡng da",
@@ -525,7 +525,7 @@
     "price": 105,
     "category": "Sức khỏe",
     "link": "https://lzd-img-global.slatic.net/g/p/92345442b38473e25f924d75654d8ceb.jpg_720x720q80.jpg_.webp",
-    "image": "thanhkinhduongda"
+    "image": "/thumbnails/thanhkinhduongda.jpg"
   },
   {
     "title": "Truyện Kiều",
@@ -533,7 +533,7 @@
     "price": 42,
     "category": "Văn học",
     "link": "https://www.nxbtre.com.vn/Images/Book/NXBTreStoryFull_03462015_104616.jpg",
-    "image": "truyenkieu"
+    "image": "/thumbnails/truyenkieu.jpg"
   },
   {
     "title": "Những ngày thơ ấu",
@@ -541,7 +541,7 @@
     "price": 39,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/ts/product/90/5d/eb/cf59cc1d8ebc478eba546401eac50e56.jpg",
-    "image": "nhungngaythoau"
+    "image": "/thumbnails/nhungngaythoau.jpg"
   },
   {
     "title": "Gáy người thì lạnh",
@@ -549,7 +549,7 @@
     "price": 55,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/n/x/nxbtre_thumb_14492017_024905.u2769.d20170319.t194656.161730.jpg",
-    "image": "gaynguoithilanh"
+    "image": "/thumbnails/gaynguoithilanh.jpg"
   },
   {
     "title": "Cảm ơn người lớn",
@@ -557,7 +557,7 @@
     "price": 110,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/c8/46/9a/ddd72dee5c2d4756ce2d13df50121614.jpg",
-    "image": "camonnguoilon"
+    "image": "/thumbnails/camonnguoilon.jpg"
   },
   {
     "title": "Ngồi khóc trên cây",
@@ -565,7 +565,7 @@
     "price": 99,
     "category": "Văn học",
     "link": "https://upload.wikimedia.org/wikipedia/vi/thumb/6/61/Ng%E1%BB%93i_kh%C3%B3c_tr%C3%AAn_c%C3%A2y_cover.jpg/220px-Ng%E1%BB%93i_kh%C3%B3c_tr%C3%AAn_c%C3%A2y_cover.jpg",
-    "image": "ngoikhoctrencay"
+    "image": "/thumbnails/ngoikhoctrencay.jpg"
   },
   {
     "title": "Con nghĩ đi, mẹ không biết",
@@ -573,7 +573,7 @@
     "price": 79,
     "category": "Nuôi dạy con",
     "link": "https://salt.tikicdn.com/media/catalog/product/s/a/sach-con-nghi-di-me-khong-biet-nha-van-thu-ha-showbizvn-25032016a9.u2487.d20161027.t152432.38007.jpg",
-    "image": "connghidimekhongbiet"
+    "image": "/thumbnails/connghidimekhongbiet.jpg"
   },
   {
     "title": "Nói sao cho trẻ chịu học",
@@ -581,7 +581,7 @@
     "price": 85,
     "category": "Nuôi dạy con",
     "link": "https://cdn0.fahasa.com/media/catalog/product/i/m/image_58520.jpg",
-    "image": "noisaochotrechiuhoc"
+    "image": "/thumbnails/noisaochotrechiuhoc.jpg"
   },
   {
     "title": "Nói sao cho trẻ chịu nghe",
@@ -589,7 +589,7 @@
     "price": 170,
     "category": "Nuôi dạy con",
     "link": "https://nhasachphuongnam.com/images/detailed/122/noi-sao-cho-tre-chiu-nghe-tb-2020.jpg",
-    "image": "noisaochotrechiunghe"
+    "image": "/thumbnails/noisaochotrechiunghe.jpg"
   },
   {
     "title": "Mắt biếc",
@@ -597,7 +597,7 @@
     "price": 110,
     "category": "Văn học",
     "link": "https://upload.wikimedia.org/wikipedia/vi/9/92/Mat_Biec.gif",
-    "image": "matbiec"
+    "image": "/thumbnails/matbiec.jpg"
   },
   {
     "title": "Vụ ám sát quý cô nửa mùa",
@@ -605,7 +605,7 @@
     "price": 85,
     "category": "Trinh thám",
     "link": "https://salt.tikicdn.com/cache/w300/media/catalog/product/v/u/vu-am-sat-quy-co-nua-mua.u5430.d20170919.t101626.459086.jpg",
-    "image": "vuamsatquyconuamua"
+    "image": "/thumbnails/vuamsatquyconuamua.jpg"
   },
   {
     "title": "Sáu ngày của thần ưng",
@@ -613,7 +613,7 @@
     "price": 60,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/s/a/sau-ngay-cua-than-ung---bia-1.u547.d20170220.t165008.532847.jpg",
-    "image": "saungaycuathanung"
+    "image": "/thumbnails/saungaycuathanung.jpg"
   },
   {
     "title": "Cách khen, cách mắng, cách phạt con",
@@ -621,7 +621,7 @@
     "price": 59,
     "category": "Nuôi dạy con",
     "link": "https://salt.tikicdn.com/cache/w300/ts/product/5c/34/e7/a7194cc56f2a75233b757d734806fe16.jpg",
-    "image": "cachkhencachmangcachphatcon"
+    "image": "/thumbnails/cachkhencachmangcachphatcon.jpg"
   },
   {
     "title": "Thần thoại Hy Lạp",
@@ -629,7 +629,7 @@
     "price": 205,
     "category": "Thiếu nhi",
     "link": "https://salt.tikicdn.com/ts/product/e2/c0/fa/4f8cff1f7ec6767ea3277f5788f74e9d.jpg",
-    "image": "thanthoaihylap"
+    "image": "/thumbnails/thanthoaihylap.jpg"
   },
   {
     "title": "Ngày xưa có một chuyện tình",
@@ -637,7 +637,7 @@
     "price": 115,
     "category": "Tiểu thuyết",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/1e/3e/d9/509396372f4095de7fc4daaa6a4aa98b.jpg",
-    "image": "ngayxuacomotchuyentinh"
+    "image": "/thumbnails/ngayxuacomotchuyentinh.jpg"
   },
   {
     "title": "Khi mây đen kéo tới",
@@ -645,7 +645,7 @@
     "price": 68,
     "category": "Kỹ năng sống",
     "link": "https://cdn0.fahasa.com/media/catalog/product/9/7/9786046847724.jpg",
-    "image": "khimaydenkeotoi"
+    "image": "/thumbnails/khimaydenkeotoi.jpg"
   },
   {
     "title": "Sen",
@@ -653,7 +653,7 @@
     "price": 89,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/media/catalog/product/s/e/sen2b1.u547.d20160705.t135244.jpg",
-    "image": "sen"
+    "image": "/thumbnails/sen.jpg"
   },
   {
     "title": "Thăm dò tiềm thức",
@@ -661,7 +661,7 @@
     "price": 60,
     "category": "Kiến thức tổng hợp",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/t/h/tham-do-tiem-thuc-bia-1.u2469.d20160927.t101233.449668.jpg",
-    "image": "thamdotiemthuc"
+    "image": "/thumbnails/thamdotiemthuc.jpg"
   },
   {
     "title": "Cỏ dại thênh thang",
@@ -669,7 +669,7 @@
     "price": 43,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/cache/w300/ts/product/e0/33/ef/6c2a22346fa7eb33b25e824ce6383c99.jpg",
-    "image": "codaithenhthang"
+    "image": "/thumbnails/codaithenhthang.jpg"
   },
   {
     "title": "Chuyện kể trăng nghe",
@@ -677,7 +677,7 @@
     "price": 59,
     "category": "Thiếu nhi",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/c/h/chuyen%20ke%20trang%20nghe.u2469.d20160831.t140937.710200.jpg",
-    "image": "chuyenketrangnghe"
+    "image": "/thumbnails/chuyenketrangnghe.jpg"
   },
   {
     "title": "Có một phố vừa đi qua phố",
@@ -685,7 +685,7 @@
     "price": 68,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/ba/16/87/73b6701aadff25b644d4b10a3cd9f4ee.jpg",
-    "image": "comotphovuadiquapho"
+    "image": "/thumbnails/comotphovuadiquapho.jpg"
   },
   {
     "title": "Những tấm lòng cao cả",
@@ -693,7 +693,7 @@
     "price": 66,
     "category": "Thiếu nhi",
     "link": "https://salt.tikicdn.com/media/catalog/product/n/h/nhung-tam-long-cao-ca--1-.u5131.d20170427.t090916.815347.jpg",
-    "image": "nhungtamlongcaoca"
+    "image": "/thumbnails/nhungtamlongcaoca.jpg"
   },
   {
     "title": "20 phút làm chủ thời gian",
@@ -701,7 +701,7 @@
     "price": 49,
     "category": "Kỹ năng làm việc",
     "link": "https://www.khaitam.com/Data/Sites/1/Product/6837/a.jpg",
-    "image": "20phutlamchuthoigian"
+    "image": "/thumbnails/20phutlamchuthoigian.jpg"
   },
   {
     "title": "Tuổi thơ dữ dội",
@@ -709,7 +709,7 @@
     "price": 130,
     "category": "Thiếu nhi",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/t/u/tuoi-tho-du-doi-a.jpg",
-    "image": "tuoithodudoi"
+    "image": "/thumbnails/tuoithodudoi.jpg"
   },
   {
     "title": "Ngữ pháp tiếng Anh căn bản",
@@ -717,7 +717,7 @@
     "price": 149,
     "category": "Kiến thức tổng hợp",
     "link": "https://salt.tikicdn.com/ts/product/94/1d/f8/cf7cf8dd4fac2523ed86b63f474e43f7.jpg",
-    "image": "nguphaptienganhcanban"
+    "image": "/thumbnails/nguphaptienganhcanban.jpg"
   },
   {
     "title": "Chăm sóc sức khỏe không dùng thuốc",
@@ -725,7 +725,7 @@
     "price": 190,
     "category": "Sức khỏe",
     "link": "https://www.khaitam.com/Data/Sites/1/Product/8559/cham-soc-suc-khoe.gif",
-    "image": "chamsocsuckhoekhongdungthuoc"
+    "image": "/thumbnails/chamsocsuckhoekhongdungthuoc.jpg"
   },
   {
     "title": "Người nam châm",
@@ -733,7 +733,7 @@
     "price": 65,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/media/catalog/product/n/g/nguoi-nam-cham-a.jpg",
-    "image": "nguoinamcham"
+    "image": "/thumbnails/nguoinamcham.jpg"
   },
   {
     "title": "Hành trang vào đời",
@@ -741,7 +741,7 @@
     "price": 50,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/h/a/hanhtrangvaodoi1.u5131.d20170426.t210442.461467.jpg",
-    "image": "hanhtrangvaodoi"
+    "image": "/thumbnails/hanhtrangvaodoi.jpg"
   },
   {
     "title": "Đi tìm lẽ sống",
@@ -749,7 +749,7 @@
     "price": 78,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/d/i/ditimlesong20161.u84.d20161125.t134037.152104.jpg",
-    "image": "ditimlesong"
+    "image": "/thumbnails/ditimlesong.jpg"
   },
   {
     "title": "Đời thay đổi khi chúng ta thay đổi",
@@ -757,7 +757,7 @@
     "price": 50,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/media/catalog/product/f/u/full-img-2741328146930.jpg",
-    "image": "doithaydoikhichungtathaydoi"
+    "image": "/thumbnails/doithaydoikhichungtathaydoi.jpg"
   },
   {
     "title": "Tony buổi sáng - Trên đường băng",
@@ -765,7 +765,7 @@
     "price": 75,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/61/87/8a/082a07cec3232115e2b22636fd71593c.jpg",
-    "image": "tonybuoisangtrenduongbang"
+    "image": "/thumbnails/tonybuoisangtrenduongbang.jpg"
   },
   {
     "title": "Tony buổi sáng - Cà phê cùng Tony",
@@ -773,7 +773,7 @@
     "price": 88,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/media/catalog/product/b/_/b_a-s_ch-ngo_i_2.u547.d20160922.t090016.520785.png",
-    "image": "tonybuoisangcaphecungtony"
+    "image": "/thumbnails/tonybuoisangcaphecungtony.jpg"
   },
   {
     "title": "Nghệ thuật mắng",
@@ -781,7 +781,7 @@
     "price": 32,
     "category": "Kỹ năng sống",
     "link": "https://cdn0.fahasa.com/media/flashmagazine/images/page_images/nghe_thuat_mang_tai_ban_2015/2021_06_19_08_59_19_1-390x510.jpg",
-    "image": "nghethuatmang"
+    "image": "/thumbnails/nghethuatmang.jpg"
   },
   {
     "title": "Việt nam sử lược",
@@ -789,7 +789,7 @@
     "price": 450,
     "category": "Lịch sử",
     "link": "https://salt.tikicdn.com/cache/280x280/ts/product/38/70/1d/2782d1dcdcd60b7ee548d8b30918d313.jpg",
-    "image": "vietnamsuhoc"
+    "image": "/thumbnails/vietnamsuhoc.jpg"
   },
   {
     "title": "Hình vẽ thông minh",
@@ -797,7 +797,7 @@
     "price": 135,
     "category": "Kỹ năng làm việc",
     "link": "https://www.dtv-ebook.com/images/files_2/2021/112021/hinh-ve-thong-minh.jpg",
-    "image": "hinhvethongminh"
+    "image": "/thumbnails/hinhvethongminh.jpg"
   },
   {
     "title": "Đột nhiên có tiếng gõ cửa",
@@ -805,7 +805,7 @@
     "price": 79,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/media/catalog/product/i/m/img267_11.jpg",
-    "image": "dotnhiencotienggocua"
+    "image": "/thumbnails/dotnhiencotienggocua.jpg"
   },
   {
     "title": "Con đường đi đến thành công bằng sự tử tế",
@@ -813,7 +813,7 @@
     "price": 70,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/04/48/f9/9c0eeede46a5d966d9126b1cc5d4acfc.jpg",
-    "image": "conduongdidenthanhcongbangsutute"
+    "image": "/thumbnails/conduongdidenthanhcongbangsutute.jpg"
   },
   {
     "title": "Hài lòng trong công việc bắt đầu từ chính mình",
@@ -821,7 +821,7 @@
     "price": 80,
     "category": "Kỹ năng làm việc",
     "link": "https://img1.baza.vn/upload/products-var-ShK8dsKk/t3jsaraxlarge.jpg?v=635567646713085274",
-    "image": "hailongtrongcongviecbatdautuchinhminh"
+    "image": "/thumbnails/hailongtrongcongviecbatdautuchinhminh.jpg"
   },
   {
     "title": "Taotto-chan bên cửa sổ",
@@ -829,7 +829,7 @@
     "price": 98,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/24/39/01/1718d16b33315c03026cee717adad4b3.jpg",
-    "image": "taottochanbencuaso"
+    "image": "/thumbnails/taottochanbencuaso.jpg"
   },
   {
     "title": "Bad luck 1",
@@ -837,7 +837,7 @@
     "price": 78,
     "category": "Truyện",
     "link": "https://salt.tikicdn.com/ts/product/44/13/52/ba218a08b91608565867dcf47b29ad04.jpg",
-    "image": "badluck1"
+    "image": "/thumbnails/badluck1.jpg"
   },
   {
     "title": "Cởi trói linh hồn",
@@ -845,7 +845,7 @@
     "price": 124,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/ts/product/f8/b2/95/41fd8e79c21f635e606f4a49ba0f0518.jpg",
-    "image": "coitroilinhhon"
+    "image": "/thumbnails/coitroilinhhon.jpg"
   },
   {
     "title": "Hệ miễn dịch - Kiệt tác của sự sống",
@@ -853,7 +853,7 @@
     "price": 118,
     "category": "Sức khỏe",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/ea/98/cb/f4f396747122641b595fb16c3e7706b7.jpg",
-    "image": "hemiendichkiettaccuasusong"
+    "image": "/thumbnails/hemiendichkiettaccuasusong.jpg"
   },
   {
     "title": "Trong sa mạc và trong rừng thẳm",
@@ -861,7 +861,7 @@
     "price": 99,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/ts/product/43/14/1f/abd801eace9d90142d643ac26a7940d4.jpg",
-    "image": "trongsamacvatrongrungtham"
+    "image": "/thumbnails/trongsamacvatrongrungtham.jpg"
   },
   {
     "title": "Truyện con chó tên là Trung Thành",
@@ -869,7 +869,7 @@
     "price": 45,
     "category": "Thiếu nhi",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/c/h/chuyen-con-cho-ten-la-trung-thanh-01.u5426.d20170829.t110125.99613.jpg",
-    "image": "truyenconchotenlatrungthanh"
+    "image": "/thumbnails/truyenconchotenlatrungthanh.jpg"
   },
   {
     "title": "Dạy con trong hoang mang",
@@ -877,7 +877,7 @@
     "price": 99,
     "category": "Nuôi dạy con",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/d/a/daycontronghoangmang_cover_bia1.u5168.d20170620.t171420.651545.jpg",
-    "image": "daycontronghoangmang"
+    "image": "/thumbnails/daycontronghoangmang.jpg"
   },
   {
     "title": "Hành trình của linh hồn",
@@ -885,7 +885,7 @@
     "price": 129,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/d2/52/b5/b4c0bffcf1f5006a3420ac2ffd63e8f3.jpg",
-    "image": "hanhtrinhcualinhhon"
+    "image": "/thumbnails/hanhtrinhcualinhhon.jpg"
   },
   {
     "title": "Thép đã tôi thế đấy",
@@ -893,7 +893,7 @@
     "price": 135,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/media/catalog/product/i/m/img094_15.jpg",
-    "image": "thepdatoitheday"
+    "image": "/thumbnails/thepdatoitheday.jpg"
   },
   {
     "title": "Thay đổi tí hon hiệu quả bất ngờ",
@@ -901,7 +901,7 @@
     "price": 190,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/53/b0/6e/103253b00bc34abbc2226237f06f66e2.jpg",
-    "image": "thaydoitihonhieuquabatngo"
+    "image": "/thumbnails/thaydoitihonhieuquabatngo.jpg"
   },
   {
     "title": "Nhân tố Enzyme | Trẻ hóa",
@@ -909,7 +909,7 @@
     "price": 79,
     "category": "Sức khỏe",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/96/42/b4/a948465591613fe0d27025a313a70cdc.jpg",
-    "image": "nhantoenzymetrehoa"
+    "image": "/thumbnails/nhantoenzymetrehoa.jpg"
   },
   {
     "title": "Cuộc hẹn bình minh",
@@ -917,7 +917,7 @@
     "price": 76,
     "category": "Văn học",
     "link": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1464022857l/28754620._SY475_.jpg",
-    "image": "cuochenbinhminh"
+    "image": "/thumbnails/cuochenbinhminh.jpg"
   },
   {
     "title": "Ta mù tịt",
@@ -925,7 +925,7 @@
     "price": 150,
     "category": "Kiến thức tổng hợp",
     "link": "https://salt.tikicdn.com/cache/280x280/ts/product/6e/7c/ac/589143ef5a5338dd6c50684cfce44be1.jpg",
-    "image": "tamutit"
+    "image": "/thumbnails/tamutit.jpg"
   },
   {
     "title": "Thiên nhiên hoang dã",
@@ -933,7 +933,7 @@
     "price": 52,
     "category": "Thiếu nhi",
     "link": "https://thuviensach.vn/img/news/2022/10/larger/1593-horrible-science-thien-nhien-hoang-da-1.jpg?v=6500",
-    "image": "thiennhienhoangda"
+    "image": "/thumbnails/thiennhienhoangda.jpg"
   },
   {
     "title": "Não bộ kể gì về bạn",
@@ -941,7 +941,7 @@
     "price": 149,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/17/e6/0d/3f5bc9780bae75a3e435024f3c039415.jpg",
-    "image": "naobokegiveban"
+    "image": "/thumbnails/naobokegiveban.jpg"
   },
   {
     "title": "Minh triết trong ăn uống của phương Đông ",
@@ -949,7 +949,7 @@
     "price": 138,
     "category": "Sức khỏe",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/m/i/minhtriettronganuong1.u547.d20161006.t144633.531556.jpg",
-    "image": "minhtriettronganuongcuaphuongdong"
+    "image": "/thumbnails/minhtriettronganuongcuaphuongdong.jpg"
   },
   {
     "title": "Hành trình về phương đông",
@@ -957,7 +957,7 @@
     "price": 118,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/x/d/xdsxfvgdg.u3059.d20171009.t113449.756666.jpg",
-    "image": "hanhtrinhvephuongdong"
+    "image": "/thumbnails/hanhtrinhvephuongdong.jpg"
   },
   {
     "title": "Đi tìm mảnh ghép gia đình",
@@ -965,7 +965,7 @@
     "price": 92,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/84/c6/c6/8ae0882e757ad2c8ba35ddf7a404289c.jpg",
-    "image": "ditimmanhghepgiadinh"
+    "image": "/thumbnails/ditimmanhghepgiadinh.jpg"
   },
   {
     "title": "Nuôi dạy một đứa trẻ hạnh phúc",
@@ -973,7 +973,7 @@
     "price": 144,
     "category": "Nuôi dạy con",
     "link": "https://cdn0.fahasa.com/media/catalog/product/n/u/nuoi_day_mot_dua_tre_hanh_phuc.jpg",
-    "image": "nuoidaymotduatrehanhphuc"
+    "image": "/thumbnails/nuoidaymotduatrehanhphuc.jpg"
   },
   {
     "title": "Chiêm tinh học nhập môn",
@@ -981,7 +981,7 @@
     "price": 99,
     "category": "Kiến thức tổng hợp",
     "link": "https://salt.tikicdn.com/ts/product/1d/3d/d7/25a5aca11c844440297a6809075b6d92.jpg",
-    "image": "chiemtinhhocnhapmon"
+    "image": "/thumbnails/chiemtinhhocnhapmon.jpg"
   },
   {
     "title": "Giữa trời và đất là tình yêu",
@@ -989,7 +989,7 @@
     "price": 78,
     "category": "Văn học",
     "link": "https://www.vinabook.com/images/detailed/219/P69615Mbia_truoc.jpg",
-    "image": "giuatroivadatlatinhyeu"
+    "image": "/thumbnails/giuatroivadatlatinhyeu.jpg"
   },
   {
     "title": "Chuyện con mèo dạy hải âu bay",
@@ -997,7 +997,7 @@
     "price": 49,
     "category": "Thiếu nhi",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/a9/e4/f9/9a0900b2352c6d7a608e003146ccda7e.jpg",
-    "image": "chuyenconmeodayhaiaubay"
+    "image": "/thumbnails/chuyenconmeodayhaiaubay.jpg"
   },
   {
     "title": "Chuyện con mèo và con chuột bạn thân của nó",
@@ -1005,7 +1005,7 @@
     "price": 39,
     "category": "Thiếu nhi",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/c/h/chuyen-con-meo.jpg",
-    "image": "chuyenconmeovaconchuotbanthancuano"
+    "image": "/thumbnails/chuyenconmeovaconchuotbanthancuano.jpg"
   },
   {
     "title": "Lời hứa về một cây bút chì",
@@ -1013,7 +1013,7 @@
     "price": 159,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/media/catalog/product/l/o/loi-hua.u335.d20160609.t152721.jpg",
-    "image": "loihuavemotcaybutchi"
+    "image": "/thumbnails/loihuavemotcaybutchi.jpg"
   },
   {
     "title": "Chuyện nhỏ Sài Gòn",
@@ -1021,7 +1021,7 @@
     "price": 59,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/cd/36/20/72ae2406024dea8d8f4a321e158ed46c.jpg",
-    "image": "chuyennhosaigon"
+    "image": "/thumbnails/chuyennhosaigon.jpg"
   },
   {
     "title": "Người cũ còn thương",
@@ -1029,7 +1029,7 @@
     "price": 79,
     "category": "Văn học",
     "link": "https://cdn0.fahasa.com/media/catalog/product/4/0/40138957_496481097483050_4748674099117555712_n.jpg",
-    "image": "nguoicuconthuong"
+    "image": "/thumbnails/nguoicuconthuong.jpg"
   },
   {
     "title": "Einstein và vũ trụ giãn nở",
@@ -1037,7 +1037,7 @@
     "price": 54,
     "category": "Kiến thức tổng hợp",
     "link": "https://salt.tikicdn.com/media/catalog/product/v/u/vu-tru_3.jpg",
-    "image": "einsteinvavutrugianno"
+    "image": "/thumbnails/einsteinvavutrugianno.jpg"
   },
   {
     "title": "Diary of a Wimpy Kid - The Ugly Truth",
@@ -1045,7 +1045,7 @@
     "price": 223,
     "category": "Thiếu nhi",
     "link": "https://salt.tikicdn.com/ts/product/58/86/e2/d3c25a6662d9337ce5c732fbe8737acf.JPG",
-    "image": "diaryofawimpykidtheuglytruth"
+    "image": "/thumbnails/diaryofawimpykidtheuglytruth.jpg"
   },
   {
     "title": "Đi đâu cũng nhớ Sài Gòn và em",
@@ -1053,7 +1053,7 @@
     "price": 70,
     "category": "Văn học",
     "link": "https://cdn0.fahasa.com/media/catalog/product/d/i/di_dau_cung_nho_sai_gon_va_em_1_2018_07_31_13_57_33.JPG",
-    "image": "didaucungnhosaigonvaem"
+    "image": "/thumbnails/didaucungnhosaigonvaem.jpg"
   },
   {
     "title": "Sức mạnh của hiện tại",
@@ -1061,7 +1061,7 @@
     "price": 168,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/ts/product/61/5f/7c/4858982c3dc3fb4449813cd70d1e8945.jpg",
-    "image": "sucmanhcuahientai"
+    "image": "/thumbnails/sucmanhcuahientai.jpg"
   },
   {
     "title": "Hiệu ứng chim mồi 1",
@@ -1069,7 +1069,7 @@
     "price": 75,
     "category": "Marketing - Bán hàng",
     "link": "https://salt.tikicdn.com/ts/product/82/f3/bc/acb1712824ed4291de75c8b8895450ce.jpg",
-    "image": "hieuungchimmoi1"
+    "image": "/thumbnails/hieuungchimmoi1.jpg"
   },
   {
     "title": "Hiệu ứng chim mồi 2",
@@ -1077,7 +1077,7 @@
     "price": 80,
     "category": "Marketing - Bán hàng",
     "link": "https://salt.tikicdn.com/ts/product/46/49/f8/ec81c7c6fb4fe302ec559ae0ce6239f0.jpg",
-    "image": "hieuungchimmoi2"
+    "image": "/thumbnails/hieuungchimmoi2.jpg"
   },
   {
     "title": "Hiệu ứng chim mồi 3",
@@ -1085,7 +1085,7 @@
     "price": 100,
     "category": "Marketing - Bán hàng",
     "link": "https://salt.tikicdn.com/ts/product/c9/ed/76/efe0a68fd16b3fde96155934a678cb06.jpg",
-    "image": "hieuungchimmoi3"
+    "image": "/thumbnails/hieuungchimmoi3.jpg"
   },
   {
     "title": "Hùng biện kiểu Ted",
@@ -1093,7 +1093,7 @@
     "price": 109,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/media/catalog/product/t/e/ted-2-01.u3059.d20170526.t104753.496261.jpg",
-    "image": "hungbienkieuted"
+    "image": "/thumbnails/hungbienkieuted.jpg"
   },
   {
     "title": "Bí mật của may mắn",
@@ -1101,7 +1101,7 @@
     "price": 48,
     "category": "Kỹ năng sống",
     "link": "https://cf.shopee.vn/file/236fe4d36dfaf903c83cabdb33562ea8",
-    "image": "bimatcuamayman"
+    "image": "/thumbnails/bimatcuamayman.jpg"
   },
   {
     "title": "Ông trăm tuổi trèo qua cửa sổ và biến mất",
@@ -1109,7 +1109,7 @@
     "price": 170,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/i/m/img448.u3059.d20170616.t101858.371205.jpg",
-    "image": "ongtramtuoitreoquacuasovabienmat"
+    "image": "/thumbnails/ongtramtuoitreoquacuasovabienmat.jpg"
   },
   {
     "title": "Tôi tự học",
@@ -1117,7 +1117,7 @@
     "price": 60,
     "category": "Kỹ năng sống",
     "link": "https://vcdn.tikicdn.com/media/catalog/product/n/x/nxbtre_full_28032017_020337.u5102.d20170331.t150309.516945.jpg",
-    "image": "toituhoc"
+    "image": "/thumbnails/toituhoc.jpg"
   },
   {
     "title": "Làm chủ trí nhớ của bạn",
@@ -1125,7 +1125,7 @@
     "price": 148,
     "category": "Kỹ năng sống",
     "link": "https://thuviensach.vn/img/news/2022/09/larger/1041-lam-chu-tri-nho-cua-ban-1.jpg?v=1329",
-    "image": "lamchutrinhocuaban"
+    "image": "/thumbnails/lamchutrinhocuaban.jpg"
   },
   {
     "title": "Phi lý trí",
@@ -1133,7 +1133,7 @@
     "price": 169,
     "category": "Tâm lý",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/e6/2e/91/b80a691db4ef95dc30deec4c3d74f63a.jpg",
-    "image": "philytri"
+    "image": "/thumbnails/philytri.jpg"
   },
   {
     "title": "Gần như là sống",
@@ -1141,7 +1141,7 @@
     "price": 95,
     "category": "Tiểu thuyết",
     "link": "https://cdn0.fahasa.com/media/catalog/product/8/9/8934974116813.jpg",
-    "image": "gannhulasong"
+    "image": "/thumbnails/gannhulasong.jpg"
   },
   {
     "title": "Truyện ngắn Nam Cao",
@@ -1149,7 +1149,7 @@
     "price": 59,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/media/catalog/product/n/a/nam-cao_1.jpg",
-    "image": "truyenngannamcao"
+    "image": "/thumbnails/truyenngannamcao.jpg"
   },
   {
     "title": "Giao tiếp bất kỳ ai",
@@ -1157,7 +1157,7 @@
     "price": 47,
     "category": "Kỹ năng làm việc",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/bf/30/a5/8c187e8ca6fc1efe678b3f2c802634ce.jpg",
-    "image": "giaotiepbatkyai"
+    "image": "/thumbnails/giaotiepbatkyai.jpg"
   },
   {
     "title": "Điều cuối cùng ở lại",
@@ -1165,7 +1165,7 @@
     "price": 65,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/media/catalog/product/i/m/img325.u84.d20161127.t142612.863666.gif",
-    "image": "dieucuoicungolai"
+    "image": "/thumbnails/dieucuoicungolai.jpg"
   },
   {
     "title": "Nhập môn triết học",
@@ -1173,7 +1173,7 @@
     "price": 32,
     "category": "Triết học",
     "link": "https://salt.tikicdn.com/cache/750x750/ts/product/4e/47/86/fe0deeea1c4c6d83c64caadea7ea6ebe.jpg.webp",
-    "image": "nhapmontriethoc"
+    "image": "/thumbnails/nhapmontriethoc.jpg"
   },
   {
     "title": "Tế bào gốc",
@@ -1181,7 +1181,7 @@
     "price": 199,
     "category": "Sức khỏe",
     "link": "https://www.khaitam.com/Data/Sites/1/Product/9814/te-bao-goc.png",
-    "image": "tebaogoc"
+    "image": "/thumbnails/tebaogoc.jpg"
   },
   {
     "title": "Mô hình xoán động",
@@ -1189,7 +1189,7 @@
     "price": 99,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/86/fa/27/94adb7ce20066b721e03fabd56880033.jpg",
-    "image": "mohinhxoandong"
+    "image": "/thumbnails/mohinhxoandong.jpg"
   },
   {
     "title": "Bí ẩn của não phải",
@@ -1197,7 +1197,7 @@
     "price": 118,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/media/catalog/product/i/m/img063.u2377.d20161022.t082321.258859.jpg",
-    "image": "biancuanaophai"
+    "image": "/thumbnails/biancuanaophai.jpg"
   },
   {
     "title": "Ngôn ngữ cơ thể",
@@ -1205,7 +1205,7 @@
     "price": 40,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/ts/product/6f/e9/0c/3008cc78076b1ac7240c55bc014580d7.jpg",
-    "image": "ngonngucothe"
+    "image": "/thumbnails/ngonngucothe.jpg"
   },
   {
     "title": "Chắc gì ta đã yêu nhau",
@@ -1213,7 +1213,7 @@
     "price": 86,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/ts/product/ca/a4/85/52895f5230145e0fd238a2ee357bd68b.jpg",
-    "image": "chacgitadayeunhau"
+    "image": "/thumbnails/chacgitadayeunhau.jpg"
   },
   {
     "title": "Từ câu sai đến câu hay",
@@ -1221,7 +1221,7 @@
     "price": 128,
     "category": "Kiến thức tổng hợp",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/1d/87/7b/fc7cc49d406f0f7b726726db8d49be8f.jpg",
-    "image": "tucausaidencauhay"
+    "image": "/thumbnails/tucausaidencauhay.jpg"
   },
   {
     "title": "Dẫn luận về Jung",
@@ -1229,7 +1229,7 @@
     "price": 84,
     "category": "Triết học",
     "link": "https://salt.tikicdn.com/ts/product/e9/45/16/2654be34ea57f431c44c2edc0ba74737.jpg",
-    "image": "danluanvejung"
+    "image": "/thumbnails/danluanvejung.jpg"
   },
   {
     "title": "Không có câu hỏi nào ngớ ngẩn",
@@ -1237,7 +1237,7 @@
     "price": 83,
     "category": "Thiếu nhi",
     "link": "https://salt.tikicdn.com/media/catalog/product/u/n/unimaged.u2469.d20160829.t142935.933158.jpg",
-    "image": "khongcocauhoinaongongan"
+    "image": "/thumbnails/khongcocauhoinaongongan.jpg"
   },
   {
     "title": "Vì sao chúng ta làm việc",
@@ -1245,7 +1245,7 @@
     "price": 55,
     "category": "Kỹ năng làm việc",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/8/_/8.u5465.d20170926.t084353.857468.jpg",
-    "image": "visaochungtalamviec"
+    "image": "/thumbnails/visaochungtalamviec.jpg"
   },
   {
     "title": "Chỉ cần mẩu khăn giấy",
@@ -1253,7 +1253,7 @@
     "price": 150,
     "category": "Kỹ năng làm việc",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/c/h/chi-can-mau-khan-giay.jpg",
-    "image": "chicanmaukhangiay"
+    "image": "/thumbnails/chicanmaukhangiay.jpg"
   },
   {
     "title": "Chuyện con ốc sên muốn biết tại sao nó chậm chạp",
@@ -1261,7 +1261,7 @@
     "price": 39,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/ts/product/15/f3/ee/a959ae23fcedf4f09ca61f1929ac3b94.jpg",
-    "image": "chuyenconocsenmuonbietvisaonochamchap"
+    "image": "/thumbnails/chuyenconocsenmuonbietvisaonochamchap.jpg"
   },
   {
     "title": "Phía bên kia nửa đêm",
@@ -1269,7 +1269,7 @@
     "price": 115,
     "category": "Trinh thám",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/85/0f/71/519045c961d290d6f99249e49c8de9f6.jpg",
-    "image": "phiabenkianuadem"
+    "image": "/thumbnails/phiabenkianuadem.jpg"
   },
   {
     "title": "Paper Towns",
@@ -1277,7 +1277,7 @@
     "price": 201,
     "category": "Văn học",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/p/a/paper-towns.jpg",
-    "image": "papertowns"
+    "image": "/thumbnails/papertowns.jpg"
   },
   {
     "title": "Ung thư - Tin đồn và sự thật",
@@ -1285,7 +1285,7 @@
     "price": 149,
     "category": "Sức khỏe",
     "link": "https://salt.tikicdn.com/cache/w1200/ts/product/90/16/b3/2b71c882c728bd9189a9bfa99cd6550b.jpg",
-    "image": "ungthutindonvasuthat"
+    "image": "/thumbnails/ungthutindonvasuthat.jpg"
   },
   {
     "title": "Lối sống tối giản của người Nhật",
@@ -1293,7 +1293,7 @@
     "price": 119,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/b/i/bia_loi-song-toi-gian-cua-nguoi-nhat.u2751.d20170222.t225522.277804.jpg",
-    "image": "loisongtoigiancuanguoinhat"
+    "image": "/thumbnails/loisongtoigiancuanguoinhat.jpg"
   },
   {
     "title": "Cẩn trọng cái đầu",
@@ -1301,7 +1301,7 @@
     "price": 71,
     "category": "Kỹ năng sống",
     "link": "https://salt.tikicdn.com/ts/product/b0/77/5d/bf2c937be18a04ea31b8d87303014f6e.jpg",
-    "image": "cantrongcaidau"
+    "image": "/thumbnails/cantrongcaidau.jpg"
   },
   {
     "title": "Tâm lý học trong nháy mắt 1",
@@ -1309,7 +1309,7 @@
     "price": 119,
     "category": "Tâm lý",
     "link": "https://cdn0.fahasa.com/media/flashmagazine/images/page_images/tam_ly_hoc_trong_nhay_mat_q4/2021_01_18_14_01_43_1-390x510.jpg",
-    "image": "tamlyhoctrongnhaymat1"
+    "image": "/thumbnails/tamlyhoctrongnhaymat1.jpg"
   },
   {
     "title": "Dạy con trong hoang mang 2",
@@ -1317,7 +1317,7 @@
     "price": 126,
     "category": "Nuôi dạy con",
     "link": "https://cdn0.fahasa.com/media/catalog/product/9/7/9786045845851.jpg",
-    "image": "daycontronghoangmang2"
+    "image": "/thumbnails/daycontronghoangmang2.jpg"
   },
   {
     "title": "Ấn độ và Trung hoa cổ đại",
@@ -1325,7 +1325,7 @@
     "price": 50,
     "category": "Lịch sử",
     "link": "https://salt.tikicdn.com/cache/w1200/media/catalog/product/0/0/007.u2377.d20160722.t163417.jpg",
-    "image": "andovatrunghoacodai"
+    "image": "/thumbnails/andovatrunghoacodai.jpg"
   },
   {
     "title": "Tâm lý học hài hước",
@@ -1333,6 +1333,6 @@
     "price": 89,
     "category": "Tâm lý",
     "link": "https://salt.tikicdn.com/ts/product/3e/b2/fc/e670e57f7ec3e102048f380ddbc5093c.jpg",
-    "image": "tamlyhochaihuoc"
+    "image": "/thumbnails/tamlyhochaihuoc.jpg"
   }
 ]

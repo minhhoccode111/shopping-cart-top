@@ -2,7 +2,6 @@ import { v4 as uuid } from 'uuid';
 import books from './data.json';
 import sortBy from 'sort-by';
 import { matchSorter } from 'match-sorter';
-import { getCarts } from './carts';
 
 export const carts: {
   inCart: boolean;
@@ -28,7 +27,7 @@ const data = books.map((book) => {
     price: book.price,
     author: book.author,
     category: book.category,
-    image: `/thumbnails/${book.image}.jpg`,
+    image: book.image,
     canDeleted: false,
     id: uuid().slice(0, 8), // unique id
     inCart: false,
