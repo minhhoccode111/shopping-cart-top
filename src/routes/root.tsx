@@ -3,6 +3,7 @@ import { Outlet, NavLink, Link, useLocation } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoIosCloseCircleOutline, IoIosCart, IoIosLogIn } from 'react-icons/io';
 import { getCarts } from '../methods/carts';
+import Footer from '../components/footer';
 
 const Root: React.FC = () => {
   const { pathname } = useLocation();
@@ -146,11 +147,7 @@ const Root: React.FC = () => {
       <main className="flex-1 flex flex-col">
         <Outlet context={{ increase, decrease, reset }} />
       </main>
-      {pathname !== '/' && (
-        <footer className="hidden">
-          <h2 className="text-xl">Made with love by minhhoccode</h2>
-        </footer>
-      )}
+      {pathname !== '/' && <Footer />}
     </>
   );
 };

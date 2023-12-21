@@ -40,7 +40,7 @@ const Checkout = () => {
   return (
     <>
       {sum !== 0 && !isFinished && (
-        <section className="mx-auto max-w-screen-xl px-4 pb-10 my-10 sm:px-6 lg:px-8 shadow-lg shadow-gray-400 rounded-xl">
+        <section className="mx-auto max-w-screen-xl min-w-[600px] px-4 pb-10 my-10 sm:px-6 lg:px-8 shadow-lg shadow-gray-400 rounded-xl">
           <div className="">
             <fetcher.Form
               method="post"
@@ -51,7 +51,7 @@ const Checkout = () => {
               className="mt-8 rounded-xl p-4 bg-white"
             >
               <header className="">
-                <h2 className="text-center text-3xl p-4 my-2">Order information</h2>
+                <h2 className="text-center text-3xl p-4 my-2 tracking-widest">Order information</h2>
               </header>
               <div className="flex flex-col gap-6">
                 <label className="relative text-lg block rounded-md sm:rounded-lg border border-gray-200 shadow-sm focus-within:border-sky-500 focus-within:ring-1 focus-within:ring-sky-500">
@@ -102,16 +102,9 @@ const Checkout = () => {
                     Phone
                   </span>
                 </label>
-                <label className="relative text-lg block rounded-md sm:rounded-lg border border-gray-200 shadow-sm focus-within:border-sky-500 focus-within:ring-1 focus-within:ring-sky-500">
-                  <textarea
-                    className="peer border-none bg-transparent placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 sm:text-lg"
-                    placeholder="Enter your notes"
-                    required
-                  />
-
-                  <span className="pointer-events-none absolute start-2.5 top-0 -translate-y-1/2 bg-white p-0.5 text-sm text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base peer-focus:-top-1 peer-focus:text-sm peer-focus:sm:text-base">
-                    Notes
-                  </span>
+                <label className="block font-medium text-gray-700">
+                  <span className="p-2">Order notes</span>
+                  <textarea className="w-full rounded-lg border p-2 align-top shadow-sm" rows={4} placeholder="Enter any additional order notes..."></textarea>
                 </label>
               </div>
               <div className="text-xl text-right py-4">
@@ -123,7 +116,10 @@ const Checkout = () => {
                 </h2>
               </div>
               <div className="">
-                <button className="block w-full border rounded-lg p-4 font-bold uppercase border-sky-500 text-sky-500 bg-white hover:bg-sky-500 hover:text-white transition-all" type="submit">
+                <button
+                  className="block w-full border rounded-lg p-4 font-bold uppercase border-sky-500 text-sky-500 bg-white hover:bg-sky-500 hover:text-white transition-all tracking-widest"
+                  type="submit"
+                >
                   Confirm
                 </button>
               </div>
