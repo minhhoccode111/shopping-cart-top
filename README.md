@@ -1,30 +1,54 @@
-# Shopping Cart TOP
+# Vai Quyen Sach (Shopping Cart TOP)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The **Vai Quyen Sach** project is created according to the assignment from **The Odin Project** [lesson](https://www.theodinproject.com/lessons/node-path-react-new-shopping-cart).
+<br>
+<br>
 
-Currently, two official plugins are available:
+![Preview](public/vaiquyensach-screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🔗 **Live preview** of the project is [here](https://vaiquyensach.netlify.app).
 
-## Expanding the ESLint configuration
+## **Features**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Navigate between routes without reload
+- Quotes fetching
+- Search, sort, filter books
+- Add, remove and keep track of number of item in Cart
+- Eyes pleasing UI :>
+- Passing data between routes using `post` and `get` form methods
+- Use context to manage app state like number of items in Cart instead of passing data into Child Component deep down many level
 
-- Configure the top-level `parserOptions` property like this:
+## **Outcome**
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-};
+- Used **React**
+- Used **Tailwindcss**
+- Used **Bun**
+- Used **Vite**
+- Used **Netlify**
+- Used **animista** for beautiful animations
+- Learned `react-router-dom`
+
+## **Getting Started**
+
+```bash
+HTTPS - git clone https://github.com/minhhoccode111/shopping-cart-top.git
+
+SSH - git clone git@github.com:minhhoccode111/shopping-cart-top.git
+
+cd shopping-cart-top
+
+npm install
+
+npm start
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## **Idea to implement**
+
+- A backend to handle user interactions
+- Switch language between Vietnamese and English feature
+- Change route animation
+
+## **Navigation**
+
+- See my previous project [CV Application](https://github.com/minhhoccode111/memory-card-top/)
+- See all my projects' live demos [This link](https://github.com/minhhoccode111/all-projects-live-demos)

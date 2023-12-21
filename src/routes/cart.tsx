@@ -5,6 +5,7 @@ import { FaCaretSquareDown, FaCaretSquareUp } from 'react-icons/fa';
 import { IoSyncCircleOutline } from 'react-icons/io5';
 import { useLoaderData, Link, Navigate, useFetcher, useNavigate, useOutletContext } from 'react-router-dom';
 import { getCarts, deleteCart, getCart, updateCart, sumCarts } from '../methods/carts';
+import PropTypes from 'prop-types';
 
 export const loader = async () => {
   const carts = await getCarts();
@@ -212,6 +213,10 @@ const Cart = () => {
       {willNavigate && <Navigate to={'checkout'} />}
     </>
   );
+};
+
+Cart.propTypes = {
+  cart: PropTypes.object.isRequired,
 };
 
 export default Cart;
