@@ -40,7 +40,7 @@ const Checkout = () => {
   return (
     <>
       {sum !== 0 && !isFinished && (
-        <section className="mx-auto max-w-screen-xl min-w-[600px] px-4 pb-10 my-10 sm:px-6 lg:px-8 shadow-lg shadow-gray-400 rounded-xl">
+        <section className="mx-auto max-w-screen-xl min-w-[400px] sm:min-w-[600px] px-4 pb-10 my-10 sm:px-6 lg:px-8 shadow-lg shadow-gray-400 rounded-xl">
           <div className="">
             <fetcher.Form
               method="post"

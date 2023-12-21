@@ -68,7 +68,7 @@ const Footer = () => {
               </li>
 
               <li>
-                <a href="/" rel="noreferrer" target="_blank" className="text-teal-700 transition hover:text-teal-700/75">
+                <a href="https://www.instagram.com/vaiquyensach/" rel="noreferrer" target="_blank" className="text-teal-700 transition hover:text-teal-700/75">
                   <span className="sr-only">Instagram</span>
                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path
@@ -90,7 +90,7 @@ const Footer = () => {
               </li>
 
               <li>
-                <a href="/" rel="noreferrer" target="_blank" className="text-teal-700 transition hover:text-teal-700/75">
+                <a href="https://github.com/minhhoccode111" rel="noreferrer" target="_blank" className="text-teal-700 transition hover:text-teal-700/75">
                   <span className="sr-only">GitHub</span>
                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path
