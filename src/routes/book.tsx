@@ -32,13 +32,17 @@ const Book: React.FC = () => {
   const { increase, decrease } = useOutletContext();
   return (
     <section className="p-2 sm:p-4">
+      {/* background image */}
+      <div className="fixed -z-10 top-0 left-0 w-screen h-screen bg-white overflow-hidden">
+        <img src="/bg-2.jpg" alt="Background image" className="object-cover border object-center h-full w-full brightness-90" />
+      </div>
       <div className="text-4xl">
         <button className="grid place-items-center w-12 h-12 bg-white border-2 border-sky-500 rounded-full hover:bg-sky-500 text-sky-500 hover:text-white transition-all" onClick={() => navigate(-1)}>
           <MdKeyboardBackspace />
         </button>
       </div>
 
-      <div className="grid grid-cols-1 my-8 shadow-lg shadow-gray-600 border-t p-4 mx-auto max-w-2xl gap-4">
+      <div className="grid grid-cols-1 my-8 shadow-lg shadow-gray-600 border-t p-4 mx-auto max-w-2xl gap-4 rounded-lg bg-[#ffffff]">
         <div className="">
           <div className="flow-root">
             <dl className="-my-3 divide-y divide-gray-100 text-sm sm:text-base">

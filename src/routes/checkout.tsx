@@ -40,7 +40,7 @@ const Checkout = () => {
   return (
     <>
       <div className="fixed -z-10 top-0 left-0 w-screen h-screen bg-white overflow-hidden">
-        <img src="/public/bg-2.jpg" alt="Background image" className="object-cover border object-center h-full w-full brightness-90" />
+        <img src="/bg-2.jpg" alt="Background image" className="object-cover border object-center h-full w-full brightness-90" />
       </div>
       {sum !== 0 && !isFinished && (
         <section className="mx-auto max-w-screen-xl min-w-[400px] sm:min-w-[600px] px-4 pb-10 my-10 sm:px-6 lg:px-8 shadow-lg shadow-gray-400 rounded-xl bg-white">

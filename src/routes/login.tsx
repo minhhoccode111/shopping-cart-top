@@ -10,7 +10,7 @@ const Login: React.FC = () => {
   return (
     <section className="mx-auto max-w-screen-xl px-4 py-16 my-10 sm:px-6 lg:px-8 shadow-lg shadow-gray-400 rounded-xl bg-[#ffffffcc] text-slate-900">
       <div className="fixed -z-10 top-0 left-0 w-screen h-screen bg-white overflow-hidden">
-        <img src="/public/bg-0.jpg" alt="Background image" className="object-cover border object-center h-full w-full brightness-90" />
+        <img src="/bg-0.jpg" alt="Background image" className="object-cover border object-center h-full w-full brightness-90" />
       </div>
       <div className="mx-auto max-w-lg text-center">
         <h1 className="text-2xl font-bold sm:text-3xl">Get started today!</h1>

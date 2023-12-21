@@ -143,8 +143,9 @@ const Cart = () => {
   }, [warnEmptyCart]);
   return (
     <>
+      {/* background image */}
       <div className="fixed -z-10 top-0 left-0 w-screen h-screen bg-white overflow-hidden">
-        <img src="/public/bg-2.jpg" alt="Background image" className="object-cover border object-center h-full w-full brightness-90" />
+        <img src="/bg-2.jpg" alt="Background image" className="object-cover border object-center h-full w-full brightness-90" />
       </div>
       <section className="">
         <div className="p-1 sm:p-2 md:p-3 max-w-3xl mx-auto">

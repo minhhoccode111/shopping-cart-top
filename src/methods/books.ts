@@ -40,7 +40,7 @@ const data = books.map((book) => {
       ...preparedBook,
       inCart: true,
       isBuying: true,
-      inputBuyQuantity: 0,
+      inputBuyQuantity: 1,
       inputBorrowQuantity: 0,
       borrowQuantity: book.price,
     });
