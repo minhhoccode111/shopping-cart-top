@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { CiSquareRemove } from 'react-icons/ci';
-import { MdKeyboardBackspace } from 'react-icons/md';
 import { FaCaretSquareDown, FaCaretSquareUp } from 'react-icons/fa';
 import { IoSyncCircleOutline } from 'react-icons/io5';
 import { useLoaderData, Link, Navigate, useFetcher, useNavigate, useOutletContext } from 'react-router-dom';
@@ -137,7 +136,6 @@ const Cart = () => {
   const { carts, sum } = useLoaderData();
   const [warnEmptyCart, setWarnEmptyCart] = useState(false);
   const [willNavigate, setWillNavigate] = useState(false);
-  const navigate = useNavigate();
   useEffect(() => {
     setTimeout(() => {
       setWarnEmptyCart(false);
@@ -145,15 +143,10 @@ const Cart = () => {
   }, [warnEmptyCart]);
   return (
     <>
+      <div className="fixed -z-10 top-0 left-0 w-screen h-screen bg-white overflow-hidden">
+        <img src="/public/bg-2.jpg" alt="Background image" className="object-cover border object-center h-full w-full brightness-90" />
+      </div>
       <section className="">
-        <div className="text-4xl p-4">
-          <button
-            className="grid place-items-center w-12 h-12 bg-white border-2 border-sky-500 rounded-full hover:bg-sky-500 text-sky-500 hover:text-white transition-all hover:shadow-lg hover:shadow-gray-400"
-            onClick={() => navigate(-1)}
-          >
-            <MdKeyboardBackspace />
-          </button>
-        </div>
         <div className="p-1 sm:p-2 md:p-3 max-w-3xl mx-auto">
           {carts.length ? (
             carts.map((cart) => (
@@ -184,7 +177,7 @@ const Cart = () => {
 
           {carts.length !== 0 && (
             <article className="max-w-3xl mx-auto my-8 p-1 flex flex-col items-end gap-2 sm:gap-4 md:gap-6">
-              <header className="">
+              <header className="self-stretch text-right p-4 rounded bg-white">
                 <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold text-slate-900">
                   Subtotal: {sum} {sum !== 0 ? '000' : ''}
                   <span className="underline">đ</span>
