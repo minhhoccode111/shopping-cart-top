@@ -46,7 +46,7 @@ export const action = async ({ request }) => {
 
 const CartForm = ({ cart }) => {
   const fetcher = useFetcher();
-  const { increase, decrease } = useOutletContext();
+  const { decrease } = useOutletContext();
   const percent = `-${cart.sale}%`;
   const before = Math.round(cart.price * (1 + cart.sale / 100));
   const after = cart.price;
@@ -143,73 +143,74 @@ const Cart = () => {
     }, 5000);
   }, [warnEmptyCart]);
   return (
-    <section className="">
-      <div className="text-4xl p-4">
-        <button
-          className="grid place-items-center w-12 h-12 bg-white border-2 border-sky-500 rounded-full hover:bg-sky-500 text-sky-500 hover:text-white transition-all hover:shadow-lg hover:shadow-gray-400"
-          onClick={() => navigate(-1)}
-        >
-          <MdKeyboardBackspace />
-        </button>
-      </div>
-      <div className="p-1 sm:p-2 md:p-3 max-w-3xl mx-auto">
-        {carts.length ? (
-          carts.map((cart) => (
-            <article key={cart.id} className="flex gap-2 sm:gap-3 p-2 sm:p-3 my-2 sm:my-3 md:my-4 bg-white shadow shadow-gray-400 rounded text-slate-700">
-              <Link to={`/shop/book/${cart.id}`} className="block">
-                <div className="w-32 sm:w-36 md:w-40 lg:w-48">
-                  <img src={cart.image} alt="Book image" className="object-center" />
+    <>
+      <section className="">
+        <div className="text-4xl p-4">
+          <button
+            className="grid place-items-center w-12 h-12 bg-white border-2 border-sky-500 rounded-full hover:bg-sky-500 text-sky-500 hover:text-white transition-all hover:shadow-lg hover:shadow-gray-400"
+            onClick={() => navigate(-1)}
+          >
+            <MdKeyboardBackspace />
+          </button>
+        </div>
+        <div className="p-1 sm:p-2 md:p-3 max-w-3xl mx-auto">
+          {carts.length ? (
+            carts.map((cart) => (
+              <article key={cart.id} className="flex gap-2 sm:gap-3 p-2 sm:p-3 my-2 sm:my-3 md:my-4 bg-white shadow shadow-gray-400 rounded text-slate-700">
+                <Link to={`/shop/book/${cart.id}`} className="block">
+                  <div className="w-32 sm:w-36 md:w-40 lg:w-48">
+                    <img src={cart.image} alt="Book image" className="object-center" />
+                  </div>
+                </Link>
+                <div className="flex-1 p-2 flex flex-col gap-2 justify-between">
+                  <CartForm cart={cart} />
                 </div>
-              </Link>
-              <div className="flex-1 p-2 flex flex-col gap-2 justify-between">
-                <CartForm cart={cart} />
+              </article>
+            ))
+          ) : (
+            <article className="max-w-3xl mx-auto uppercase font-bold text-center p-1">
+              <header className="">
+                <h2 className="text-xl sm:text-2xl md:text-4xl text-slate-900">Oops! Your cart is empty</h2>
+              </header>
+              <br className="my-4" />
+              <div className="">
+                <p className="underline decoration-dotted hover:decoration-solid text-sky-500">
+                  <Link to={'/shop'}>Shop now!</Link>
+                </p>
               </div>
             </article>
-          ))
-        ) : (
-          <article className="max-w-3xl mx-auto uppercase font-bold text-center p-1">
-            <header className="">
-              <h2 className="text-xl sm:text-2xl md:text-4xl text-slate-900">Oops! Your cart is empty</h2>
-            </header>
-            <br className="my-4" />
-            <div className="">
-              <p className="underline decoration-dotted hover:decoration-solid text-sky-500">
-                <Link to={'/shop'}>Shop now!</Link>
-              </p>
-            </div>
-          </article>
-        )}
+          )}
 
-        {carts.length !== 0 && (
-          <article className="max-w-3xl mx-auto my-8 p-1 flex flex-col items-end gap-2 sm:gap-4 md:gap-6">
-            <header className="">
-              <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold text-slate-900">
-                Subtotal: {sum} {sum !== 0 ? '000' : ''}
-                <span className="underline">đ</span>
-              </h2>
-            </header>
-            <div className="">
-              <p className="text-xl sm:text-2xl md:text-4xl text-red-500 font-bold">{warnEmptyCart && 'Nothing to checkout'}</p>
-            </div>
-            <div className="">
-              <button
-                name="sum"
-                value={sum}
-                className="text-xl sm:text-2xl md:text-4xl uppercase border-2 border-yellow-700 text-yellow-700 font-bold p-2 sm:p-4 md:p-6 transition-all bg-white hover:bg-yellow-700 hover:text-white hover:shadow-lg hover:shadow-gray-400 hover:scale-110"
-                onClick={() => {
-                  if (sum === 0) setWarnEmptyCart(true);
-                  else setWillNavigate(true);
-                }}
-              >
-                Checkout
-              </button>
-            </div>
-          </article>
-        )}
-      </div>
-
+          {carts.length !== 0 && (
+            <article className="max-w-3xl mx-auto my-8 p-1 flex flex-col items-end gap-2 sm:gap-4 md:gap-6">
+              <header className="">
+                <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold text-slate-900">
+                  Subtotal: {sum} {sum !== 0 ? '000' : ''}
+                  <span className="underline">đ</span>
+                </h2>
+              </header>
+              <div className="">
+                <p className="text-xl sm:text-2xl md:text-4xl text-red-500 font-bold">{warnEmptyCart && 'Nothing to checkout'}</p>
+              </div>
+              <div className="">
+                <button
+                  name="sum"
+                  value={sum}
+                  className="text-xl sm:text-2xl md:text-4xl uppercase border-2 border-yellow-700 text-yellow-700 font-bold p-2 sm:p-4 md:p-6 transition-all bg-white hover:bg-yellow-700 hover:text-white hover:shadow-lg hover:shadow-gray-400 hover:scale-110"
+                  onClick={() => {
+                    if (sum === 0) setWarnEmptyCart(true);
+                    else setWillNavigate(true);
+                  }}
+                >
+                  Checkout
+                </button>
+              </div>
+            </article>
+          )}
+        </div>
+      </section>
       {willNavigate && <Navigate to={'checkout'} />}
-    </section>
+    </>
   );
 };
 

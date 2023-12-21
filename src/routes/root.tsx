@@ -9,6 +9,7 @@ const Root: React.FC = () => {
   const [isVietnamese, setIsVietnamese] = useState(true);
   const [isShowMenu, setIsShowMenu] = useState(false);
   const [inCart, setInCart] = useState(0);
+  // init count items in cart with 2 default items
   useEffect(() => {
     const tmp = async () => {
       const carts = await getCarts();
@@ -18,6 +19,7 @@ const Root: React.FC = () => {
   }, []);
   const increase = () => setInCart((c) => c + 1);
   const decrease = () => setInCart((c) => c - 1);
+  const reset = () => setInCart((c) => 0);
   return (
     <>
       <header
@@ -142,7 +144,7 @@ const Root: React.FC = () => {
       </header>
 
       <main className="flex-1 flex flex-col">
-        <Outlet context={{ increase, decrease }} />
+        <Outlet context={{ increase, decrease, reset }} />
       </main>
       {pathname !== '/' && (
         <footer className="hidden">

@@ -72,16 +72,23 @@ const Book: React.FC = () => {
               </div>
             </dl>
           </div>
-          <div className="">
+          <div className="flex my-4 gap-4 items-center">
             <Form
               method="post"
-              className={'border-2 font-bold p-4 my-4' + ' ' + (book.inCart ? 'border-green-700 text-green-700' : 'border-sky-700 text-sky-700')}
+              className={'flex-1 self-stretch'}
               onSubmit={() => {
                 if (book.inCart) decrease();
                 else increase();
               }}
             >
-              <button type="submit" className="uppercase w-full flex items-center justify-center">
+              <button
+                type="submit"
+                className={
+                  'border-2 font-bold p-4 uppercase w-full flex items-center justify-center transition-all' +
+                  ' ' +
+                  (book.inCart ? 'border-green-700 text-green-700 bg-white hover:bg-green-700 hover:text-white' : 'border-sky-700 text-sky-700 bg-white hover:bg-sky-700 hover:text-white')
+                }
+              >
                 {book.inCart ? (
                   <>
                     <IoBagCheckOutline className="text-2xl" />
@@ -92,9 +99,11 @@ const Book: React.FC = () => {
                 )}
               </button>
             </Form>
-            <Link to={'/cart'} className="uppercase border-2 border-yellow-700 text-yellow-700 p-4 my-4 block font-bold text-center">
-              view cart
-            </Link>
+            <div className="flex-1 self-stretch border flex items-stretch justify-stretch">
+              <Link to={'/cart'} className="uppercase border-2 border-yellow-700 text-yellow-700 bg-white hover:bg-yellow-700 hover:text-white transition-all p-4 block font-bold text-center w-full">
+                view cart
+              </Link>
+            </div>
           </div>
         </div>
 

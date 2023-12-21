@@ -12,7 +12,10 @@ const Login: React.FC = () => {
       <div className="mx-auto max-w-lg text-center">
         <h1 className="text-2xl font-bold sm:text-3xl">Get started today!</h1>
 
-        <p className="mt-4 text-gray-500">This is a fake login page, you can't actually sign in</p>
+        <p className="mt-4 text-gray-500">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aliquam impedit dolorem? Delectus sapiente ab maxime animi cum velit, totam laborum quae quas nihil eligendi, perspiciatis at
+          atque dolores ipsa!
+        </p>
       </div>
 
       <form
