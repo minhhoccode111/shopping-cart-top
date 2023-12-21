@@ -3,7 +3,7 @@ import { CiSquareRemove } from 'react-icons/ci';
 import { MdKeyboardBackspace } from 'react-icons/md';
 import { FaCaretSquareDown, FaCaretSquareUp } from 'react-icons/fa';
 import { IoSyncCircleOutline } from 'react-icons/io5';
-import { useLoaderData, Link, Navigate, useFetcher, useNavigate } from 'react-router-dom';
+import { useLoaderData, Link, Navigate, useFetcher, useNavigate, useOutletContext } from 'react-router-dom';
 import { getCarts, deleteCart, getCart, updateCart, sumCarts } from '../methods/carts';
 
 export const loader = async () => {
@@ -46,6 +46,7 @@ export const action = async ({ request }) => {
 
 const CartForm = ({ cart }) => {
   const fetcher = useFetcher();
+  const { increase, decrease } = useOutletContext();
   const percent = `-${cart.sale}%`;
   const before = Math.round(cart.price * (1 + cart.sale / 100));
   const after = cart.price;
@@ -55,7 +56,7 @@ const CartForm = ({ cart }) => {
       <div className="">
         <header className="flex items-center justify-between">
           <h2 className="text-sm sm:text-base md:text-lg font-bold">{cart.title}</h2>
-          <fetcher.Form method="post" className="">
+          <fetcher.Form method="post" className="" onSubmit={() => decrease()}>
             <input type="text" hidden aria-hidden readOnly placeholder="read cart id" name="id" value={cart.id} />
             <button name="action" value={'delete'} className={'text-2xl sm:text-3xl md:text-4xl text-red-700 bg-white hover:scale-110'} type="submit">
               <CiSquareRemove className="" />

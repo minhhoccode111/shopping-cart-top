@@ -34,7 +34,7 @@ const data = books.map((book) => {
     sale: Math.floor(Math.random() * 25) + 5, // a random sale % between 5% and 30% to make user feel good but don't actually on sale
   };
   // default data
-  if (book.title === 'Chủ nghĩa khắc kỷ' || book.title === 'Sự an ủi của triết học') {
+  if (book.title === 'Làm đĩ' || book.title === 'Số đỏ') {
     preparedBook.inCart = true;
     carts.push({
       ...preparedBook,
@@ -105,11 +105,10 @@ export const updateBook = async (id, updates) => {
 };
 
 export const sortBooks = async (books, type) => {
-  if (!type) return books;
-  if (type === 'a-z') return books.sort(sortBy('title', 'price'));
-  if (type === 'z-a') return books.sort(sortBy('-title', 'price'));
-  if (type === '0-9') return books.sort(sortBy('price', 'title'));
-  return books.sort(sortBy('-price', 'title'));
+  if (!type || type === 'a-z') return books.sort(sortBy('image', 'price'));
+  if (type === 'z-a') return books.sort(sortBy('-image', 'price'));
+  if (type === '0-9') return books.sort(sortBy('price', 'image'));
+  return books.sort(sortBy('-price', 'image'));
 };
 
 export const searchBooks = async (books, query) => {

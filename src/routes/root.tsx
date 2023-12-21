@@ -89,28 +89,33 @@ const Root: React.FC = () => {
           >
             About
           </NavLink>
-          <NavLink
-            onClick={() => setIsShowMenu(!isShowMenu)}
-            className={({ isActive, isPending }) =>
-              (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') +
-              ' ' +
-              'transition-colors hover:bg-sky-500 hover:text-slate-100 hover:shadow-xl my-2 p-4 rounded-3xl'
-            }
-            to={'cart'}
-          >
-            Cart
-          </NavLink>
-          <NavLink
-            onClick={() => setIsShowMenu(!isShowMenu)}
-            className={({ isActive, isPending }) =>
-              (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') +
-              ' ' +
-              'transition-colors hover:bg-sky-500 hover:text-slate-100 hover:shadow-xl my-2 p-4 rounded-3xl'
-            }
-            to={'login'}
-          >
-            Login
-          </NavLink>
+
+          <div className="flex gap-2 justify-end">
+            <NavLink
+              onClick={() => setIsShowMenu(!isShowMenu)}
+              className={({ isActive, isPending }) =>
+                (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') +
+                ' ' +
+                'transition-colors hover:bg-sky-500 hover:text-slate-100 hover:shadow-xl my-2 p-4 rounded-3xl relative'
+              }
+              to={'cart'}
+            >
+              <IoIosCart className="text-6xl" />
+              <span className="absolute text-xl font-bold top-0 right-0 w-8 h-8 flex items-center justify-center rounded-full text-white bg-red-500">{inCart}</span>
+            </NavLink>
+            <div className="border border-slate-900 w-0"></div>
+            <NavLink
+              onClick={() => setIsShowMenu(!isShowMenu)}
+              className={({ isActive, isPending }) =>
+                (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') +
+                ' ' +
+                'transition-colors hover:bg-sky-500 hover:text-slate-100 hover:shadow-xl my-2 p-4 rounded-3xl'
+              }
+              to={'login'}
+            >
+              <IoIosLogIn className="text-6xl" />
+            </NavLink>
+          </div>
         </nav>
 
         <nav className="max-sm:hidden flex items-center gap-3 sm:gap-5 md:gap-7 lg:gap-9 text-lg md:text-xl">
@@ -123,8 +128,8 @@ const Root: React.FC = () => {
           <NavLink className={({ isActive, isPending }) => (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '')} to={'about'}>
             About
           </NavLink>
-          <div className="flex gap-2">
-            <NavLink className={({ isActive, isPending }) => (isActive ? 'underline hover:decoration-2 underline-offset-4 relative' : isPending ? 'pending' : '')} to={'cart'}>
+          <div className="flex gap-2 md:gap-4">
+            <NavLink className={({ isActive, isPending }) => (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') + ' ' + 'relative'} to={'cart'}>
               <IoIosCart className="text-2xl md:text-3xl" />
               <span className="absolute text-xs font-bold top-0 right-0 translate-x-1/2 -translate-y-1/2 w-4 h-4 flex items-center justify-center rounded-full text-white bg-red-500">{inCart}</span>
             </NavLink>
@@ -137,7 +142,7 @@ const Root: React.FC = () => {
       </header>
 
       <main className="flex-1 flex flex-col">
-        <Outlet context={[increase, decrease]} />
+        <Outlet context={{ increase, decrease }} />
       </main>
       {pathname !== '/' && (
         <footer className="hidden">

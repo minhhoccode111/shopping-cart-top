@@ -1,4 +1,4 @@
-import { useLoaderData, Link, Form, useNavigate } from 'react-router-dom';
+import { useLoaderData, Link, Form, useNavigate, useOutletContext } from 'react-router-dom';
 import { MdKeyboardBackspace } from 'react-icons/md';
 import { getBooks, getBook } from '../methods/books';
 import { addCart, deleteCart } from '../methods/carts';
@@ -29,6 +29,7 @@ export const action = async ({ params }) => {
 const Book: React.FC = () => {
   const { book } = useLoaderData();
   const navigate = useNavigate();
+  const { increase, decrease } = useOutletContext();
   return (
     <section className="p-2 sm:p-4">
       <div className="text-4xl">
@@ -37,7 +38,7 @@ const Book: React.FC = () => {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 shadow-lg shadow-gray-600 border-t p-4 mx-auto max-w-2xl gap-4">
+      <div className="grid grid-cols-1 my-8 shadow-lg shadow-gray-600 border-t p-4 mx-auto max-w-2xl gap-4">
         <div className="">
           <div className="flow-root">
             <dl className="-my-3 divide-y divide-gray-100 text-sm sm:text-base">
@@ -72,7 +73,14 @@ const Book: React.FC = () => {
             </dl>
           </div>
           <div className="">
-            <Form method="post" className={'border-2 font-bold p-4 my-4' + ' ' + (book.inCart ? 'border-green-700 text-green-700' : 'border-sky-700 text-sky-700')}>
+            <Form
+              method="post"
+              className={'border-2 font-bold p-4 my-4' + ' ' + (book.inCart ? 'border-green-700 text-green-700' : 'border-sky-700 text-sky-700')}
+              onSubmit={() => {
+                if (book.inCart) decrease();
+                else increase();
+              }}
+            >
               <button type="submit" className="uppercase w-full flex items-center justify-center">
                 {book.inCart ? (
                   <>
