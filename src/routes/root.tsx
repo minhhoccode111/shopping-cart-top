@@ -42,103 +42,55 @@ const Root: React.FC = () => {
           </button>
         </div>
 
+        {/* hamburger */}
         <nav className={'sm:hidden'}>
           <button className="mt-1 text-xl" onClick={() => setIsShowMenu(!isShowMenu)}>
             <GiHamburgerMenu />
           </button>
         </nav>
 
-        {/* mobile hamburger menu */}
         <nav
           className={
-            'flex flex-col gap-3 sm:gap-5 md:gap-7 lg:gap-9 text-4xl fixed top-0 bottom-0 right-0 z-20 bg-[#ffffff99] px-8 py-16 shadow-2xl text-right transition-all w-3/4 origin-right backdrop-blur-sm' +
+            'flex max-sm:flex-col max-sm:gap-8 max-sm:text-4xl max-sm:fixed max-sm:top-0 max-sm:bottom-0 max-sm:right-0 max-sm:z-20 max-sm:bg-[#ffffff99] max-sm:px-8 max-sm:py-20 max-sm:shadow-2xl max-sm:text-right max-sm:w-3/4 max-sm:backdrop-blur-sm max-sm:items-stretch transition-all origin-top items-center gap-1 md:gap-3 lg:gap-5 text-lg md:text-xl' +
             ' ' +
-            (isShowMenu ? 'scale-x-100' : 'scale-x-0')
+            (isShowMenu ? 'max-sm:scale-y-100' : 'max-sm:scale-y-0')
           }
         >
-          <button className="mt-1 text-4xl absolute top-0 right-0 p-4" onClick={() => setIsShowMenu(!isShowMenu)}>
-            <IoIosCloseCircleOutline className="text-red-500 rounded-full hover:text-white hover:bg-red-500 transition-colors" />
+          <button className="sm:hidden mt-1 text-4xl absolute top-0 right-0 p-4" onClick={() => setIsShowMenu(!isShowMenu)}>
+            <IoIosCloseCircleOutline className="text-red-500 rounded-full hover:text-white hover:bg-red-500 transition-all" />
           </button>
           <NavLink
-            onClick={() => setIsShowMenu(!isShowMenu)}
-            className={({ isActive, isPending }) =>
-              (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') +
-              ' ' +
-              'transition-colors hover:bg-sky-500 hover:text-slate-100 hover:shadow-xl my-2 p-4 rounded-3xl'
-            }
+            className={({ isActive }) => (isActive ? 'bg-sky-400 text-white' : 'hover:bg-gray-300 hover:text-black') + ' ' + 'max-sm:p-4 p-2 max-sm:rounded-xl rounded-md transition-all'}
             to={'/'}
           >
             Home
           </NavLink>
           <NavLink
-            onClick={() => setIsShowMenu(!isShowMenu)}
-            className={({ isActive, isPending }) =>
-              (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') +
-              ' ' +
-              'transition-colors hover:bg-sky-500 hover:text-slate-100 hover:shadow-xl my-2 p-4 rounded-3xl'
-            }
+            className={({ isActive }) => (isActive ? 'bg-sky-400 text-white' : 'hover:bg-gray-300 hover:text-black') + ' ' + 'max-sm:p-4 p-2 max-sm:rounded-xl rounded-md transition-all'}
             to={'shop'}
           >
             Shop
           </NavLink>
           <NavLink
-            onClick={() => setIsShowMenu(!isShowMenu)}
-            className={({ isActive, isPending }) =>
-              (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') +
-              ' ' +
-              'transition-colors hover:bg-sky-500 hover:text-slate-100 hover:shadow-xl my-2 p-4 rounded-3xl'
-            }
+            className={({ isActive }) => (isActive ? 'bg-sky-400 text-white' : 'hover:bg-gray-300 hover:text-black') + ' ' + 'max-sm:p-4 p-2 max-sm:rounded-xl rounded-md transition-all'}
             to={'about'}
           >
             About
           </NavLink>
-
-          <div className="flex gap-2 justify-end">
+          <div className="flex gap-2 md:gap-4 max-sm:justify-end">
             <NavLink
-              onClick={() => setIsShowMenu(!isShowMenu)}
-              className={({ isActive, isPending }) =>
-                (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') +
-                ' ' +
-                'transition-colors hover:bg-sky-500 hover:text-slate-100 hover:shadow-xl my-2 p-4 rounded-3xl relative'
-              }
+              className={({ isActive }) => (isActive ? 'bg-sky-400 text-white' : 'hover:bg-gray-300 hover:text-black') + ' ' + 'relative max-sm:p-4 p-2 max-sm:rounded-xl rounded-md transition-all'}
               to={'cart'}
             >
-              <IoIosCart className="text-6xl" />
-              <span className="absolute text-xl font-bold top-0 right-0 w-8 h-8 flex items-center justify-center rounded-full text-white bg-red-500">{inCart}</span>
+              <IoIosCart className="text-6xl sm:text-2xl md:text-3xl" />
+              <span className="absolute text-xl sm:text-xs font-bold top-0 right-0 w-6 h-6 sm:w-4 sm:h-4 flex items-center justify-center rounded-full text-white bg-red-500">{inCart}</span>
             </NavLink>
             <div className="border border-slate-900 w-0"></div>
             <NavLink
-              onClick={() => setIsShowMenu(!isShowMenu)}
-              className={({ isActive, isPending }) =>
-                (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') +
-                ' ' +
-                'transition-colors hover:bg-sky-500 hover:text-slate-100 hover:shadow-xl my-2 p-4 rounded-3xl'
-              }
+              className={({ isActive }) => (isActive ? 'bg-sky-400 text-white' : 'hover:bg-gray-300 hover:text-black') + ' ' + 'max-sm:p-4 p-2 max-sm:rounded-xl rounded-md transition-all'}
               to={'login'}
             >
-              <IoIosLogIn className="text-6xl" />
-            </NavLink>
-          </div>
-        </nav>
-
-        <nav className="max-sm:hidden flex items-center gap-3 sm:gap-5 md:gap-7 lg:gap-9 text-lg md:text-xl">
-          <NavLink className={({ isActive, isPending }) => (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '')} to={'/'}>
-            Home
-          </NavLink>
-          <NavLink className={({ isActive, isPending }) => (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '')} to={'shop'}>
-            Shop
-          </NavLink>
-          <NavLink className={({ isActive, isPending }) => (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '')} to={'about'}>
-            About
-          </NavLink>
-          <div className="flex gap-2 md:gap-4">
-            <NavLink className={({ isActive, isPending }) => (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '') + ' ' + 'relative'} to={'cart'}>
-              <IoIosCart className="text-2xl md:text-3xl" />
-              <span className="absolute text-xs font-bold top-0 right-0 translate-x-1/2 -translate-y-1/2 w-4 h-4 flex items-center justify-center rounded-full text-white bg-red-500">{inCart}</span>
-            </NavLink>
-            <div className="border border-slate-900 w-0"></div>
-            <NavLink className={({ isActive, isPending }) => (isActive ? 'underline hover:decoration-2 underline-offset-4' : isPending ? 'pending' : '')} to={'login'}>
-              <IoIosLogIn className="text-2xl md:text-3xl" />
+              <IoIosLogIn className="text-6xl sm:text-2xl md:text-3xl" />
             </NavLink>
           </div>
         </nav>
