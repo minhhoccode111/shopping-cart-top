@@ -26,7 +26,9 @@ The **Vai Quyen Sach** project is created according to the assignment from **The
 - Used **Vite**
 - Used **Netlify**
 - Used **animista** for beautiful animations
+- Used **[quotable](https://github.com/lukePeavey/quotable)** API, thanks to the generosity of [Luke Peavey](https://github.com/lukePeavey)
 - Learned `react-router-dom`
+- Learned Context API
 
 ## **Getting Started**
 
